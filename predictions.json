@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T17:03:28.587512+05:30",
+  "generated_at": "2026-04-23T19:47:06.248771+05:30",
   "market_date": "2026-04-23",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -2272,70 +2272,71 @@
       "rank": 14
     },
     {
-      "symbol": "SBIN",
-      "score": 33,
+      "symbol": "TATASTEEL",
+      "score": 32,
       "signal": "AVOID",
       "confidence": "LOW",
-      "current_price": 1094.25,
-      "change_pct": -0.82,
-      "change": -9.05,
-      "target_price": 1251.84,
-      "stop_loss": 1028.6,
-      "risk_reward": 2.6,
-      "holding_category": "medium",
-      "sector": "Banking",
-      "penalty": 0,
+      "current_price": 210.91,
+      "change_pct": -1.0,
+      "change": -2.12,
+      "target_price": 305.82,
+      "stop_loss": 198.26,
+      "risk_reward": 7.8,
+      "holding_category": "long",
+      "sector": "Metals",
+      "penalty": 10,
       "scores": {
-        "trend": 14,
+        "trend": 22,
         "momentum": 5,
         "volume": 4,
         "breakout": 5,
-        "price_action": 4
+        "price_action": 6
       },
       "indicators": {
-        "rsi": 72.2,
+        "rsi": 85.9,
         "macd_signal": "Bullish",
-        "sma_alignment": "Above 200 SMA",
-        "volume_ratio": 0.69,
-        "week52_pct": 11.4,
-        "bb_position": 0.78,
+        "sma_alignment": "Full Bull (>20>50>200)",
+        "volume_ratio": 0.63,
+        "week52_pct": 2.6,
+        "bb_position": 0.75,
         "adx": null
       },
       "reasons": [
-        "Above 200 SMA",
+        "Full bullish SMA alignment",
         "EMA 12/26 bullish",
         "MACD bullish",
         "OBV trending up",
-        "Near upper BB"
+        "Near upper BB",
+        "Near 52W high (2.6%)"
       ],
       "trade_plan": {
-        "category": "medium",
-        "cat_score": 6,
-        "atr": 28.65,
-        "atr_pct": 2.62,
+        "category": "long",
+        "cat_score": 10,
+        "atr": 4.76,
+        "atr_pct": 2.26,
         "entry": {
-          "ideal_price": 1079.92,
-          "limit_order": 1079.16,
-          "acceptable_max": 1099.72,
-          "entry_window": "09:15\u201310:15 AM IST",
-          "order_strategy": "Patient limit order",
-          "note": "Prev close \u20b91,094.25 | Dip ~\u20b914.33"
+          "ideal_price": 207.34,
+          "limit_order": 207.19,
+          "acceptable_max": 213.02,
+          "entry_window": "09:15 AM IST (GTC)",
+          "order_strategy": "GTC limit \u2014 no urgency",
+          "note": "Prev close \u20b9210.91 | Dip ~\u20b93.57"
         },
         "exit": {
-          "target_conservative": 1194.54,
-          "target_ideal": 1251.84,
-          "target_stretch": 1323.48,
-          "upside_conservative": 10.6,
-          "upside_ideal": 15.9,
-          "upside_stretch": 22.6,
-          "hold_min_days": 30,
-          "hold_max_days": 90,
-          "hold_duration": "4\u201312 weeks",
-          "sell_trigger": "Exit on weekly MACD bearish cross or \u20b91,251.84",
-          "hold_note": "Review weekly"
+          "target_conservative": 263.64,
+          "target_ideal": 305.82,
+          "target_stretch": 348.0,
+          "upside_conservative": 27.2,
+          "upside_ideal": 47.5,
+          "upside_stretch": 67.8,
+          "hold_min_days": 180,
+          "hold_max_days": 540,
+          "hold_duration": "6\u201318 months",
+          "sell_trigger": "Exit if fundamentals deteriorate or \u20b9305.82 hit",
+          "hold_note": "Review monthly"
         }
       },
-      "name": "State Bank of India",
+      "name": "Tata Steel",
       "verdict": "HOLD",
       "forecasts": {
         "1d": {
@@ -2343,14 +2344,14 @@
           "days": 1,
           "bias": "Bearish",
           "confidence": "Medium",
-          "composite": 29.7,
+          "composite": 27.2,
           "price_band": {
-            "low": 1045.54,
-            "mid": 1077.06,
-            "high": 1108.58,
-            "move_pct_mid": -1.57
+            "low": 202.82,
+            "mid": 208.05,
+            "high": 213.29,
+            "move_pct_mid": -1.35
           },
-          "catalyst": "RSI at 72 \u2014 momentum carryover likely",
+          "catalyst": "RSI at 86 \u2014 momentum carryover likely",
           "primary_risk": "Gap risk at open; size positions accordingly"
         },
         "1w": {
@@ -2358,14 +2359,14 @@
           "days": 5,
           "bias": "Bearish",
           "confidence": "Medium",
-          "composite": 30.3,
+          "composite": 28.4,
           "price_band": {
-            "low": 985.34,
-            "mid": 1055.81,
-            "high": 1126.28,
-            "move_pct_mid": -3.51
+            "low": 192.82,
+            "mid": 204.52,
+            "high": 216.23,
+            "move_pct_mid": -3.03
           },
-          "catalyst": "Weak setup (33/100) \u2014 expect continued pressure",
+          "catalyst": "Weak setup (32/100) \u2014 expect continued pressure",
           "primary_risk": "Regime shift or sector rotation could invalidate setup"
         },
         "1m": {
@@ -2373,18 +2374,18 @@
           "days": 21,
           "bias": "Bearish",
           "confidence": "Medium",
-          "composite": 31.7,
+          "composite": 30.2,
           "price_band": {
-            "low": 871.06,
-            "mid": 1015.48,
-            "high": 1159.9,
-            "move_pct_mid": -7.2
+            "low": 173.83,
+            "mid": 197.82,
+            "high": 221.82,
+            "move_pct_mid": -6.21
           },
           "catalyst": "Structural weakness; BEAR regime adds pressure",
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "RSI is stretched and the volume is thinning. That's the kind of setup where profit-taking hits without warning. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. RSI is at 72 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is mildly positive \u2014 2 items in the last 48 hours \u2014 'Q4 Results Today Highlights: Trent Q4 profit up y-o-y, Tech Mahindra & Havells Q4 profit rise,' (Hindu BusinessLine) is the headline to watch. Market headwinds are real \u2014 49% breadth in a bearish regime means even good setups get sold. Banking is lagging the broader tape (score 21) \u2014 an extra headwind. Downside risk towards \u20b91,061 is real. Capital preservation first. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Bearish \u2192 Bearish \u2192 Bearish.",
+      "narrative": "RSI is stretched and the volume is thinning. That's the kind of setup where profit-taking hits without warning. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. With RSI at 86, this is the part of the move where late buyers provide exit liquidity for early ones. Market headwinds are real \u2014 49% breadth in a bearish regime means even good setups get sold. Metals is lagging the broader tape (score 30) \u2014 an extra headwind. Downside risk towards \u20b9205 is real. Capital preservation first. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Bearish \u2192 Bearish \u2192 Bearish.",
       "rank": 15
     }
   ],
@@ -2515,10 +2516,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-23T17:03:41.265755+05:30",
+    "generated_at": "2026-04-23T19:47:20.794259+05:30",
     "date": "2026-04-23",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "Risk-off: 49% breadth, tighten stops; macro mildly negative",
+    "headline": "Risk-off: 49% breadth, tighten stops; macro neutral",
     "regime": {
       "label": "BEAR",
       "breadth_pct": 49.0,
@@ -2527,21 +2528,29 @@
       "notes": "49 stocks analyzed"
     },
     "macro_context": {
-      "label": "MILDLY_NEGATIVE",
-      "score": -0.32,
+      "label": "NEUTRAL",
+      "score": -0.21,
       "count": 155,
       "highlights": [
         {
-          "title": "Euro zone short-dated yields climb for fourth day amid Iran-US stalemate",
-          "source": "ET Markets",
+          "title": "US stock market today: S&P 500, Nasdaq futures slide up to 0.7% as oil rally dents sentiment; Brent reclaims $100",
+          "source": "Mint Markets",
           "category": "market",
-          "sentiment": "BEARISH",
+          "sentiment": "BULLISH",
           "sectors": [
-            "Banking",
-            "Oil & Gas",
-            "Telecom"
+            "Oil & Gas"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/bonds/euro-zone-short-dated-yields-climb-for-fourth-day-amid-iran-us-stalemate/articleshow/130460183.cms"
+          "link": "https://www.livemint.com/market/stock-market-news/us-stock-market-today-s-p-500-nasdaq-futures-slide-up-to-0-7-as-oil-rally-dents-sentiment-brent-reclaims-100-11776941606535.html"
+        },
+        {
+          "title": "IEX Q4 Results: Net profit rises 11% YoY to \u20b9130 crore; board declares \u20b92 final dividend",
+          "source": "Mint Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Power"
+          ],
+          "link": "https://www.livemint.com/market/iex-q4-results-net-profit-rises-11-yoy-to-rs-130-crore-board-declares-rs-2-final-dividend-11776948579912.html"
         },
         {
           "title": "India\u2019s private sector gains momentum in April on manufacturing strength",
@@ -2570,28 +2579,20 @@
           "link": "https://economictimes.indiatimes.com/news/economy/indicators/hsbc-downgrades-india-to-underweight-as-oil-clouds-outlook/articleshow/130456800.cms"
         },
         {
-          "title": "\u2018The last thing we needed\u2019: US farmers hit by spiralling prices due to Iran war",
+          "title": "US farmers reel from spiralling prices due to Iran war",
           "source": "FT Markets",
           "category": "global",
           "sentiment": "BEARISH",
           "sectors": [],
           "link": "https://www.ft.com/content/c3b70fde-3e8a-4661-a4cb-7dc1564f43b1"
-        },
-        {
-          "title": "China weathered Trump's tariffs - but the Iran war is taking a toll",
-          "source": "BBC Business",
-          "category": "global",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.bbc.com/news/articles/cn0ep28drllo?at_medium=RSS&at_campaign=rss"
         }
       ]
     },
-    "key_insight": "Risk-off regime with 49% breadth and median momentum -0.7%. Raise cash, honour stops, resist bottom-fishing until breadth recovers above 55%. Macro flow is mildly negative with 155 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Mining leads at 49 while Conglomerate lags at 4 \u2014 a stock-picker's tape.",
+    "key_insight": "Risk-off regime with 49% breadth and median momentum -0.7%. Raise cash, honour stops, resist bottom-fishing until breadth recovers above 55%. Macro flow is neutral with 155 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Mining leads at 49 while Conglomerate lags at 4 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: BEAR \u00b7 breadth 49% \u00b7 median momentum -0.7% \u00b7 ATR 2.7%",
       "Book: 1 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 3 EXIT",
-      "Macro tone: MILDLY NEGATIVE from 155 items across 11 sources",
+      "Macro tone: NEUTRAL from 155 items across 11 sources",
       "Strongest sector: Mining (avg score 49)"
     ],
     "market_pulse": {
@@ -2652,7 +2653,7 @@
         "change_pct": -4.13,
         "price": 4251.4,
         "action": "HOLD",
-        "score": 22
+        "score": 24
       },
       {
         "symbol": "DIXON",
@@ -3184,8 +3185,8 @@
         "avg_score": 48.0,
         "count": 1,
         "trend": "flat",
-        "news_count": 14,
-        "news_label": "BEARISH"
+        "news_count": 12,
+        "news_label": "BULLISH"
       },
       {
         "sector": "Consumer Disc.",
@@ -3216,7 +3217,7 @@
         "avg_score": 33.0,
         "count": 2,
         "trend": "down",
-        "news_count": 5,
+        "news_count": 6,
         "news_label": "BULLISH"
       },
       {
@@ -3224,7 +3225,7 @@
         "avg_score": 30.0,
         "count": 4,
         "trend": "down",
-        "news_count": 4,
+        "news_count": 3,
         "news_label": "NEUTRAL"
       },
       {
@@ -3237,35 +3238,35 @@
       },
       {
         "sector": "Infrastructure",
-        "avg_score": 29.0,
+        "avg_score": 30.0,
         "count": 2,
         "trend": "down",
         "news_count": 5,
         "news_label": "NEUTRAL"
       },
       {
-        "sector": "Automobiles",
-        "avg_score": 24.8,
-        "count": 4,
-        "trend": "down",
-        "news_count": 1,
-        "news_label": "NEUTRAL"
-      },
-      {
         "sector": "Retail",
-        "avg_score": 22.0,
+        "avg_score": 24.0,
         "count": 1,
         "trend": "down",
         "news_count": 0,
         "news_label": "NEUTRAL"
       },
       {
+        "sector": "Automobiles",
+        "avg_score": 23.5,
+        "count": 4,
+        "trend": "down",
+        "news_count": 1,
+        "news_label": "NEUTRAL"
+      },
+      {
         "sector": "Banking",
-        "avg_score": 21.3,
+        "avg_score": 20.8,
         "count": 6,
         "trend": "down",
         "news_count": 23,
-        "news_label": "BEARISH"
+        "news_label": "NEUTRAL"
       }
     ],
     "action_plan": [
@@ -3316,6 +3317,18 @@
     ],
     "news_highlights": [
       {
+        "title": "Infosys Q4 Results: Cons profit jumps 21% YoY to Rs 8,501 cr, revenue rises 13%; Rs 25/share dividend declared",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "INFY"
+        ],
+        "sectors": [],
+        "published": "2026-04-23T11:48:30+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/infosys-q4-results-cons-profit-jumps-21-yoy-to-rs-8501-cr-revenue-rises-13-rs-25/share-dividend-declared/articleshow/130464357.cms"
+      },
+      {
         "title": "HCLTech stock plunges on weak guidance, AI-led growth concerns",
         "source": "Mint Companies",
         "category": "market",
@@ -3330,6 +3343,18 @@
         "link": "https://www.livemint.com/companies/company-results/hcltech-stock-plunges-on-weak-guidance-ai-led-growth-concerns-11776838458110.html"
       },
       {
+        "title": "Tata Capital Q4 Results: Cons PAT soars 43% YoY to Rs 1,502 crore, revenue rises 9%",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "TATACAP"
+        ],
+        "sectors": [],
+        "published": "2026-04-23T11:57:00+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/tata-capital-q4-results-cons-pat-jumps-43-yoy-to-rs-1502-crore-revenue-rises-9/articleshow/130467721.cms"
+      },
+      {
         "title": "Worst of market uncertainty likely behind us: Trideep Bhattacharya",
         "source": "ET Markets",
         "category": "market",
@@ -3342,18 +3367,16 @@
         "link": "https://economictimes.indiatimes.com/markets/expert-view/worst-of-market-uncertainty-likely-behind-us-trideep-bhattacharya/articleshow/130461355.cms"
       },
       {
-        "title": "Euro zone short-dated yields climb for fourth day amid Iran-US stalemate",
-        "source": "ET Markets",
+        "title": "US stock market today: S&P 500, Nasdaq futures slide up to 0.7% as oil rally dents sentiment; Brent reclaims $100",
+        "source": "Mint Markets",
         "category": "market",
-        "sentiment": "BEARISH",
+        "sentiment": "BULLISH",
         "tickers": [],
         "sectors": [
-          "Banking",
-          "Oil & Gas",
-          "Telecom"
+          "Oil & Gas"
         ],
-        "published": "2026-04-23T07:00:43+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/bonds/euro-zone-short-dated-yields-climb-for-fourth-day-amid-iran-us-stalemate/articleshow/130460183.cms"
+        "published": "2026-04-23T12:42:04+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/us-stock-market-today-s-p-500-nasdaq-futures-slide-up-to-0-7-as-oil-rally-dents-sentiment-brent-reclaims-100-11776941606535.html"
       },
       {
         "title": "Top Gainers & Losers on April 23: Union Bank, Trent, Havells, Ashok Leyland, OLA, Canara Bank among top losers",
@@ -3369,14 +3392,16 @@
         "link": "https://www.livemint.com/market/stock-market-news/top-gainers-losers-on-april-23-union-bank-trent-havells-ashok-leyland-ola-canara-bank-among-top-losers-11776937628206.html"
       },
       {
-        "title": "OFSS shares rocket 9% after strong Q4 results, Rs 270/share dividend",
+        "title": "L&T Tech Q4 Results: Profit jumps 24% YoY to Rs 347 crore; co declares Rs 40 dividend",
         "source": "ET Markets",
         "category": "market",
         "sentiment": "BULLISH",
-        "tickers": [],
+        "tickers": [
+          "LT"
+        ],
         "sectors": [],
-        "published": "2026-04-23T07:33:18+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/oracle-financial-services-shares-rocket-9-after-strong-q4-results-rs-270/share-dividend/articleshow/130460970.cms"
+        "published": "2026-04-23T12:57:08+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/lt-tech-q4-results-profit-jumps-24-yoy-to-rs-347-crore-co-declares-rs-40-dividend/articleshow/130469300.cms"
       },
       {
         "title": "India\u2019s private sector gains momentum in April on manufacturing strength",
@@ -3401,6 +3426,30 @@
         "link": "https://economictimes.indiatimes.com/news/economy/indicators/hsbc-downgrades-india-to-underweight-as-oil-clouds-outlook/articleshow/130456800.cms"
       },
       {
+        "title": "IEX Q4 Results: Net profit rises 11% YoY to \u20b9130 crore; board declares \u20b92 final dividend",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [
+          "Power"
+        ],
+        "published": "2026-04-23T13:57:51+00:00",
+        "link": "https://www.livemint.com/market/iex-q4-results-net-profit-rises-11-yoy-to-rs-130-crore-board-declares-rs-2-final-dividend-11776948579912.html"
+      },
+      {
+        "title": "Tata Capital Q4 Results: Profit jumps 43% YoY to \u20b91,502 crore; first-ever dividend declared",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "TATACAP"
+        ],
+        "sectors": [],
+        "published": "2026-04-23T11:51:17+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/tata-capital-q4-results-profit-jumps-47-yoy-to-rs-1-466-crore-first-ever-dividend-declared-11776944994860.html"
+      },
+      {
         "title": "Copper, zinc, aluminium trade mix amid US-Iran war uncertainty; what's the outlook ahead for base metals?",
         "source": "Mint Markets",
         "category": "market",
@@ -3411,56 +3460,14 @@
         "sectors": [],
         "published": "2026-04-23T09:56:30+00:00",
         "link": "https://www.livemint.com/market/commodities/copper-zinc-aluminium-trade-mix-amid-us-iran-war-uncertainty-whats-the-outlook-ahead-for-base-metals-11776935930180.html"
-      },
-      {
-        "title": "Union Bank of India Q4 Results: Net profit jumps 6.6% YoY to \u20b95,316 crore; \u20b95 dividend declared",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [
-          "Banking"
-        ],
-        "published": "2026-04-23T07:09:37+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/union-bank-of-india-q4-results-psu-banks-net-profit-jumps-6-6-yoy-to-rs-5-316-crore-rs-5-dividend-declared-11776928116339.html"
-      },
-      {
-        "title": "Sensex plunges 850 points, Nifty 50 ends below 24,200: Key factors behind stock market crash explained",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-23T06:27:56+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/sensex-crashes-1-600-points-in-2-days-nifty-50-falls-below-24-150-key-factors-driving-the-benchmarks-down-explained-11776924771822.html"
-      },
-      {
-        "title": "Rupee may weaken past 94, oil surge wipes large part of relief rally",
-        "source": "Hindu BusinessLine",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-23T03:38:42+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/forex/rupee-may-weaken-past-94-oil-surge-wipes-large-part-of-relief-rally/article70895599.ece"
-      },
-      {
-        "title": "Wall Street's mystery traders minted millions in 6 cases amid Iran-US war. Coincidence or insider trading?",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-04-23T10:18:31+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/wall-streets-mystery-traders-minted-millions-in-6-cases-amid-iran-us-war-coincidence-or-insider-trading/articleshow/130464529.cms"
       }
     ],
     "news_stats": {
-      "total_items": 275,
+      "total_items": 273,
       "sources": 11,
-      "with_tickers": 58,
-      "bullish": 66,
-      "bearish": 92
+      "with_tickers": 60,
+      "bullish": 72,
+      "bearish": 88
     }
   }
 }
