@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T17:29:52.589365+05:30",
+  "generated_at": "2026-04-27T17:41:12.562554+05:30",
   "market_date": "2026-04-27",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -48,6 +48,123 @@
   "short_term": {
     "label": "Short Term (5\u201315 days)",
     "picks": [
+      {
+        "symbol": "INDUSINDBK",
+        "score": 57,
+        "signal": "BUY",
+        "confidence": "MEDIUM",
+        "current_price": 900.15,
+        "change_pct": 6.16,
+        "change": 52.2,
+        "target_price": 973.88,
+        "stop_loss": 846.14,
+        "risk_reward": 1.5,
+        "holding_category": "short",
+        "sector": "Banking",
+        "penalty": 0,
+        "scores": {
+          "trend": 18,
+          "momentum": 9,
+          "volume": 14,
+          "breakout": 10,
+          "price_action": 7
+        },
+        "indicators": {
+          "rsi": 74.6,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Bull (>50>200)",
+          "volume_ratio": 3.47,
+          "week52_pct": 7.1,
+          "bb_position": 1.0,
+          "adx": null
+        },
+        "reasons": [
+          "Bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "Volume surge 3.5x",
+          "OBV trending up"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 15,
+          "atr": 26.33,
+          "atr_pct": 2.93,
+          "entry": {
+            "ideal_price": 892.78,
+            "limit_order": 892.16,
+            "acceptable_max": 902.85,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b9900.15 | Dip ~\u20b97.37"
+          },
+          "exit": {
+            "target_conservative": 947.55,
+            "target_ideal": 973.88,
+            "target_stretch": 1005.48,
+            "upside_conservative": 6.1,
+            "upside_ideal": 9.1,
+            "upside_stretch": 12.6,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b9973.88",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "IndusInd Bank",
+        "verdict": "BUY",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 55.5,
+            "price_band": {
+              "low": 877.77,
+              "mid": 906.73,
+              "high": 935.7,
+              "move_pct_mid": 0.73
+            },
+            "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.1,
+            "price_band": {
+              "low": 850.11,
+              "mid": 914.87,
+              "high": 979.63,
+              "move_pct_mid": 1.64
+            },
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.5,
+            "price_band": {
+              "low": 797.59,
+              "mid": 930.31,
+              "high": 1063.04,
+              "move_pct_mid": 3.35
+            },
+            "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          }
+        },
+        "narrative": "INDUSINDBK scores 57/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 2 recent items \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9980 if volume confirms. Bear case: fades below \u20b9850 \u2014 failed rally territory. Look for a close above \u20b9922 as confirmation. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
+        "rank": 1
+      },
       {
         "symbol": "SUNPHARMA",
         "score": 57,
@@ -162,124 +279,7 @@
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
-        "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 11 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
-        "rank": 1
-      },
-      {
-        "symbol": "INDUSINDBK",
-        "score": 56,
-        "signal": "BUY",
-        "confidence": "MEDIUM",
-        "current_price": 900.15,
-        "change_pct": 6.16,
-        "change": 52.2,
-        "target_price": 973.88,
-        "stop_loss": 846.14,
-        "risk_reward": 1.5,
-        "holding_category": "short",
-        "sector": "Banking",
-        "penalty": 0,
-        "scores": {
-          "trend": 18,
-          "momentum": 9,
-          "volume": 14,
-          "breakout": 10,
-          "price_action": 7
-        },
-        "indicators": {
-          "rsi": 74.6,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Bull (>50>200)",
-          "volume_ratio": 3.47,
-          "week52_pct": 7.1,
-          "bb_position": 1.0,
-          "adx": null
-        },
-        "reasons": [
-          "Bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "Volume surge 3.5x",
-          "OBV trending up"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 15,
-          "atr": 26.33,
-          "atr_pct": 2.93,
-          "entry": {
-            "ideal_price": 892.78,
-            "limit_order": 892.16,
-            "acceptable_max": 902.85,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b9900.15 | Dip ~\u20b97.37"
-          },
-          "exit": {
-            "target_conservative": 947.55,
-            "target_ideal": 973.88,
-            "target_stretch": 1005.48,
-            "upside_conservative": 6.1,
-            "upside_ideal": 9.1,
-            "upside_stretch": 12.6,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b9973.88",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "IndusInd Bank",
-        "verdict": "BUY",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 53.0,
-            "price_band": {
-              "low": 871.19,
-              "mid": 900.15,
-              "high": 929.11,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 54.2,
-            "price_band": {
-              "low": 835.39,
-              "mid": 900.15,
-              "high": 964.91,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Bull (>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Mildly Bullish",
-            "confidence": "Medium",
-            "composite": 55.1,
-            "price_band": {
-              "low": 797.59,
-              "mid": 930.31,
-              "high": 1063.04,
-              "move_pct_mid": 3.35
-            },
-            "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
-            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
-          }
-        },
-        "narrative": "INDUSINDBK scores 56/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 1 recent item \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9965 if volume confirms. Bear case: fades below \u20b9835 \u2014 failed rally territory. Needs to resolve \u20b9873\u2013\u20b9922 before a directional bet pays. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Neutral \u2192 Neutral \u2192 Mildly Bullish.",
+        "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 12 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "rank": 2
       },
       {
@@ -1463,6 +1463,123 @@
   },
   "top_picks": [
     {
+      "symbol": "INDUSINDBK",
+      "score": 57,
+      "signal": "BUY",
+      "confidence": "MEDIUM",
+      "current_price": 900.15,
+      "change_pct": 6.16,
+      "change": 52.2,
+      "target_price": 973.88,
+      "stop_loss": 846.14,
+      "risk_reward": 1.5,
+      "holding_category": "short",
+      "sector": "Banking",
+      "penalty": 0,
+      "scores": {
+        "trend": 18,
+        "momentum": 9,
+        "volume": 14,
+        "breakout": 10,
+        "price_action": 7
+      },
+      "indicators": {
+        "rsi": 74.6,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Bull (>50>200)",
+        "volume_ratio": 3.47,
+        "week52_pct": 7.1,
+        "bb_position": 1.0,
+        "adx": null
+      },
+      "reasons": [
+        "Bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "Volume surge 3.5x",
+        "OBV trending up"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 15,
+        "atr": 26.33,
+        "atr_pct": 2.93,
+        "entry": {
+          "ideal_price": 892.78,
+          "limit_order": 892.16,
+          "acceptable_max": 902.85,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b9900.15 | Dip ~\u20b97.37"
+        },
+        "exit": {
+          "target_conservative": 947.55,
+          "target_ideal": 973.88,
+          "target_stretch": 1005.48,
+          "upside_conservative": 6.1,
+          "upside_ideal": 9.1,
+          "upside_stretch": 12.6,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9973.88",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "IndusInd Bank",
+      "verdict": "BUY",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 55.5,
+          "price_band": {
+            "low": 877.77,
+            "mid": 906.73,
+            "high": 935.7,
+            "move_pct_mid": 0.73
+          },
+          "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
+          "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 56.1,
+          "price_band": {
+            "low": 850.11,
+            "mid": 914.87,
+            "high": 979.63,
+            "move_pct_mid": 1.64
+          },
+          "catalyst": "Range-bound week; Bull (>50>200) bias",
+          "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 56.5,
+          "price_band": {
+            "low": 797.59,
+            "mid": 930.31,
+            "high": 1063.04,
+            "move_pct_mid": 3.35
+          },
+          "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
+          "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+        }
+      },
+      "narrative": "INDUSINDBK scores 57/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 2 recent items \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9980 if volume confirms. Bear case: fades below \u20b9850 \u2014 failed rally territory. Look for a close above \u20b9922 as confirmation. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
+      "rank": 1
+    },
+    {
       "symbol": "SUNPHARMA",
       "score": 57,
       "signal": "BUY",
@@ -1576,124 +1693,7 @@
           "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
         }
       },
-      "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 11 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
-      "rank": 1
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "score": 56,
-      "signal": "BUY",
-      "confidence": "MEDIUM",
-      "current_price": 900.15,
-      "change_pct": 6.16,
-      "change": 52.2,
-      "target_price": 973.88,
-      "stop_loss": 846.14,
-      "risk_reward": 1.5,
-      "holding_category": "short",
-      "sector": "Banking",
-      "penalty": 0,
-      "scores": {
-        "trend": 18,
-        "momentum": 9,
-        "volume": 14,
-        "breakout": 10,
-        "price_action": 7
-      },
-      "indicators": {
-        "rsi": 74.6,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Bull (>50>200)",
-        "volume_ratio": 3.47,
-        "week52_pct": 7.1,
-        "bb_position": 1.0,
-        "adx": null
-      },
-      "reasons": [
-        "Bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "Volume surge 3.5x",
-        "OBV trending up"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 15,
-        "atr": 26.33,
-        "atr_pct": 2.93,
-        "entry": {
-          "ideal_price": 892.78,
-          "limit_order": 892.16,
-          "acceptable_max": 902.85,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b9900.15 | Dip ~\u20b97.37"
-        },
-        "exit": {
-          "target_conservative": 947.55,
-          "target_ideal": 973.88,
-          "target_stretch": 1005.48,
-          "upside_conservative": 6.1,
-          "upside_ideal": 9.1,
-          "upside_stretch": 12.6,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9973.88",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "IndusInd Bank",
-      "verdict": "BUY",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 53.0,
-          "price_band": {
-            "low": 871.19,
-            "mid": 900.15,
-            "high": 929.11,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Medium",
-          "composite": 54.2,
-          "price_band": {
-            "low": 835.39,
-            "mid": 900.15,
-            "high": 964.91,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Bull (>50>200) bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Mildly Bullish",
-          "confidence": "Medium",
-          "composite": 55.1,
-          "price_band": {
-            "low": 797.59,
-            "mid": 930.31,
-            "high": 1063.04,
-            "move_pct_mid": 3.35
-          },
-          "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
-          "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
-        }
-      },
-      "narrative": "INDUSINDBK scores 56/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 1 recent item \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9965 if volume confirms. Bear case: fades below \u20b9835 \u2014 failed rally territory. Needs to resolve \u20b9873\u2013\u20b9922 before a directional bet pays. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Neutral \u2192 Neutral \u2192 Mildly Bullish.",
+      "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 12 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
       "rank": 2
     },
     {
@@ -3348,7 +3348,7 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-27T17:30:04.780831+05:30",
+    "generated_at": "2026-04-27T17:41:23.754356+05:30",
     "date": "2026-04-27",
     "source": "rules_engine_v4_news_fusion",
     "headline": "SIDEWAYS regime \u2014 51% breadth, selective stance; macro neutral",
@@ -3361,9 +3361,19 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.07,
+      "score": -0.03,
       "count": 111,
       "highlights": [
+        {
+          "title": "AU SFB Q4 Results: PAT jumps 65% YoY to Rs 832 crore, NII rises 23%",
+          "source": "ET Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/au-sfb-q4-results-pat-jumps-65-yoy-to-rs-832-crore-nii-rises-23/articleshow/130553040.cms"
+        },
         {
           "title": "NBFC stock jumps 17% after the announcement of Q4 results 2026. Do you own?",
           "source": "Mint Markets",
@@ -3413,14 +3423,6 @@
             "Telecom"
           ],
           "link": "https://www.livemint.com/economy/mapping-fallout-indian-sectors-face-risk-from-west-asia-war-strait-of-hormuz-energy-crisis-fertilisers-ceramics-11777264467231.html"
-        },
-        {
-          "title": "The FTA cautionary tale: What India-Korea trade warns us about new global deals",
-          "source": "Mint Economy",
-          "category": "macro",
-          "sentiment": "BEARISH",
-          "sectors": [],
-          "link": "https://www.livemint.com/economy/fta-cautionary-tale-india-korea-trade-new-global-deals-doubling-bilateral-trade-piyush-goyal-cepa-trade-pact-review-fta-11777034312490.html"
         }
       ]
     },
@@ -3455,7 +3457,7 @@
         "change_pct": 6.16,
         "price": 900.15,
         "action": "ADD",
-        "score": 56
+        "score": 57
       },
       {
         "symbol": "COFORGE",
@@ -3463,7 +3465,7 @@
         "change_pct": 4.47,
         "price": 1202.4,
         "action": "HOLD",
-        "score": 1
+        "score": 4
       },
       {
         "symbol": "DIXON",
@@ -3479,7 +3481,7 @@
         "change_pct": 2.86,
         "price": 1365.8,
         "action": "HOLD",
-        "score": 21
+        "score": 22
       }
     ],
     "top_movers_down": [
@@ -3526,6 +3528,74 @@
     ],
     "conviction_board": [
       {
+        "symbol": "INDUSINDBK",
+        "name": "IndusInd Bank",
+        "sector": "Banking",
+        "action": "ADD",
+        "verdict": "BUY",
+        "score": 57,
+        "rsi": 74.6,
+        "trend": "Bull (>50>200)",
+        "reason": "Bullish SMA alignment",
+        "narrative": "INDUSINDBK scores 57/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 2 recent items \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9980 if volume confirms. Bear case: fades below \u20b9850 \u2014 failed rally territory. Look for a close above \u20b9922 as confirmation. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 55.5,
+            "price_band": {
+              "low": 877.77,
+              "mid": 906.73,
+              "high": 935.7,
+              "move_pct_mid": 0.73
+            },
+            "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.1,
+            "price_band": {
+              "low": 850.11,
+              "mid": 914.87,
+              "high": 979.63,
+              "move_pct_mid": 1.64
+            },
+            "catalyst": "Range-bound week; Bull (>50>200) bias",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.5,
+            "price_band": {
+              "low": 797.59,
+              "mid": 930.31,
+              "high": 1063.04,
+              "move_pct_mid": 3.35
+            },
+            "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
+            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
+          }
+        },
+        "news_info": {
+          "score": -0.6,
+          "label": "MILDLY_BEARISH",
+          "count": 2,
+          "modifier": -1,
+          "top_headline": "Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results 2026?",
+          "top_source": "Mint Markets",
+          "top_link": "https://www.livemint.com/market/stock-market-news/axis-bank-vs-indusind-vs-idfc-first-which-bank-stock-should-investors-pick-post-q4-results-2026-11777278756836.html"
+        }
+      },
+      {
         "symbol": "SUNPHARMA",
         "name": "Sun Pharmaceutical",
         "sector": "Pharma",
@@ -3535,7 +3605,7 @@
         "rsi": 55.4,
         "trend": "Above 200 SMA",
         "reason": "Above 200 SMA",
-        "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 11 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
+        "narrative": "SUNPHARMA scores 57/100 on our engine. Above the 200 SMA. That's the bare minimum for trend followers, and it's only just been reclaimed. The momentum profile is constructive. RSI at 55 means the move is early-to-mid phase, not late innings. Volume at 5.3x average is speaking loudly. Newsflow is mildly positive \u2014 12 items in the last 48 hours \u2014 'Sun Pharma shares surge over 5% on $11.75-billion Organon deal' (Hindu BusinessLine) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 36) \u2014 an extra headwind. Bull case: momentum carries to \u20b91,883 if volume confirms. Bear case: fades below \u20b91,639 \u2014 failed rally territory. Look for a close above \u20b91,775 as confirmation. Verdict: BUY. Entry zone near \u20b91,739 \u2014 speed matters. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
         "forecasts": {
           "1d": {
             "label": "Tomorrow",
@@ -3584,81 +3654,13 @@
           }
         },
         "news_info": {
-          "score": 1.41,
+          "score": 1.47,
           "label": "MILDLY_BULLISH",
-          "count": 11,
+          "count": 12,
           "modifier": 2,
           "top_headline": "Sun Pharma shares surge over 5% on $11.75-billion Organon deal",
           "top_source": "Hindu BusinessLine",
           "top_link": "https://www.thehindubusinessline.com/markets/stock-markets/sun-pharma-shares-surge-over-5-on-1175-billion-organon-deal/article70910759.ece"
-        }
-      },
-      {
-        "symbol": "INDUSINDBK",
-        "name": "IndusInd Bank",
-        "sector": "Banking",
-        "action": "ADD",
-        "verdict": "BUY",
-        "score": 56,
-        "rsi": 74.6,
-        "trend": "Bull (>50>200)",
-        "reason": "Bullish SMA alignment",
-        "narrative": "INDUSINDBK scores 56/100 on our engine. Trend-following signals are turning positive. Not enough for an aggressive bet, but enough to stay constructive. RSI at 75 with 3.5x volume \u2014 buyers mean business. Volume at 3.5x average is speaking loudly. News sentiment is cautious across 1 recent item \u2014 'Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results' (Mint Markets) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 30) \u2014 an extra headwind. Bull case: momentum carries to \u20b9965 if volume confirms. Bear case: fades below \u20b9835 \u2014 failed rally territory. Needs to resolve \u20b9873\u2013\u20b9922 before a directional bet pays. Verdict: BUY. Entry zone near \u20b9903 \u2014 speed matters. Outlook: Neutral \u2192 Neutral \u2192 Mildly Bullish.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 53.0,
-            "price_band": {
-              "low": 871.19,
-              "mid": 900.15,
-              "high": 929.11,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Heavy volume today (3.5x avg) with bull (>50>200)",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Medium",
-            "composite": 54.2,
-            "price_band": {
-              "low": 835.39,
-              "mid": 900.15,
-              "high": 964.91,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Bull (>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Mildly Bullish",
-            "confidence": "Medium",
-            "composite": 55.1,
-            "price_band": {
-              "low": 797.59,
-              "mid": 930.31,
-              "high": 1063.04,
-              "move_pct_mid": 3.35
-            },
-            "catalyst": "Structural trend bull (>50>200); SIDEWAYS regime supportive",
-            "primary_risk": "Overbought (RSI 75) \u2014 chase risk high"
-          }
-        },
-        "news_info": {
-          "score": -1.2,
-          "label": "MILDLY_BEARISH",
-          "count": 1,
-          "modifier": -2,
-          "top_headline": "Axis Bank vs IndusInd vs IDFC First: Which bank stock should investors pick post Q4 results 2026?",
-          "top_source": "Mint Markets",
-          "top_link": "https://www.livemint.com/market/stock-market-news/axis-bank-vs-indusind-vs-idfc-first-which-bank-stock-should-investors-pick-post-q4-results-2026-11777278756836.html"
         }
       },
       {
@@ -4078,10 +4080,10 @@
       },
       {
         "sector": "Banking",
-        "avg_score": 30.5,
+        "avg_score": 30.7,
         "count": 6,
         "trend": "down",
-        "news_count": 19,
+        "news_count": 20,
         "news_label": "BULLISH"
       },
       {
@@ -4094,7 +4096,7 @@
       },
       {
         "sector": "Automobiles",
-        "avg_score": 21.5,
+        "avg_score": 22.2,
         "count": 4,
         "trend": "down",
         "news_count": 2,
@@ -4127,22 +4129,22 @@
       {
         "priority": 3,
         "type": "ADD",
-        "symbol": "SUNPHARMA",
-        "name": "Sun Pharmaceutical",
-        "price": 1733.5,
-        "instruction": "GTC limit \u2264 \u20b91,739",
-        "reason": "Above 200 SMA",
+        "symbol": "INDUSINDBK",
+        "name": "IndusInd Bank",
+        "price": 900.15,
+        "instruction": "GTC limit \u2264 \u20b9903",
+        "reason": "Bullish SMA alignment",
         "confidence": "MEDIUM",
         "verdict": "BUY"
       },
       {
         "priority": 3,
         "type": "ADD",
-        "symbol": "INDUSINDBK",
-        "name": "IndusInd Bank",
-        "price": 900.15,
-        "instruction": "GTC limit \u2264 \u20b9903",
-        "reason": "Bullish SMA alignment",
+        "symbol": "SUNPHARMA",
+        "name": "Sun Pharmaceutical",
+        "price": 1733.5,
+        "instruction": "GTC limit \u2264 \u20b91,739",
+        "reason": "Above 200 SMA",
         "confidence": "MEDIUM",
         "verdict": "BUY"
       }
@@ -4159,6 +4161,18 @@
         "sectors": [],
         "published": "2026-04-27T11:11:33+00:00",
         "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/maruti-suzuki-q4-preview-revenue-to-surge-up-to-30-yoy-led-by-volumes-higher-asps-brokerages-mixed-on-pat/articleshow/130552508.cms"
+      },
+      {
+        "title": "AU SFB Q4 Results: PAT jumps 65% YoY to Rs 832 crore, NII rises 23%",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [
+          "Banking"
+        ],
+        "published": "2026-04-27T11:48:30+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/au-sfb-q4-results-pat-jumps-65-yoy-to-rs-832-crore-nii-rises-23/articleshow/130553040.cms"
       },
       {
         "title": "Hindustan Zinc shares: Jefferies, HSBC to Nuvama \u2014 why are brokerages bullish on Vedanta group stock? Explained",
@@ -4272,26 +4286,14 @@
         "sectors": [],
         "published": "2026-04-27T04:59:03+00:00",
         "link": "https://www.livemint.com/market/mark-to-market/reliance-industries-ril-q4fy26-o2c-segment-retail-ebitda-hyper-local-commerce-jio-platforms-11777258290265.html"
-      },
-      {
-        "title": "Reserve Bank of India imposes monetary penalty on Bandhan Bank Limited",
-        "source": "RBI Press",
-        "category": "policy",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "RELIANCE"
-        ],
-        "sectors": [],
-        "published": "2026-04-27T11:59:53.683866+00:00",
-        "link": "http://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62618"
       }
     ],
     "news_stats": {
-      "total_items": 216,
+      "total_items": 218,
       "sources": 11,
-      "with_tickers": 53,
+      "with_tickers": 54,
       "bullish": 80,
-      "bearish": 42
+      "bearish": 43
     }
   }
 }
