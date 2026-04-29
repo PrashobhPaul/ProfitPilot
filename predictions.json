@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T17:36:45.127803+05:30",
+  "generated_at": "2026-04-29T20:05:33.253151+05:30",
   "market_date": "2026-04-29",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -400,6 +400,122 @@
         "rank": 3
       },
       {
+        "symbol": "LT",
+        "score": 53,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 4096.1,
+        "change_pct": 1.45,
+        "change": 58.4,
+        "target_price": 5939.35,
+        "stop_loss": 3850.33,
+        "risk_reward": 7.8,
+        "holding_category": "short",
+        "sector": "Infrastructure",
+        "penalty": 0,
+        "scores": {
+          "trend": 22,
+          "momentum": 17,
+          "volume": 4,
+          "breakout": 3,
+          "price_action": 5
+        },
+        "indicators": {
+          "rsi": 56.6,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Full Bull (>20>50>200)",
+          "volume_ratio": 0.63,
+          "week52_pct": 7.7,
+          "bb_position": 0.71,
+          "adx": null
+        },
+        "reasons": [
+          "Full bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "RSI ideal zone (56.6)",
+          "MACD bullish",
+          "OBV trending up"
+        ],
+        "trade_plan": {
+          "category": "long",
+          "cat_score": 12,
+          "atr": 91.84,
+          "atr_pct": 2.24,
+          "entry": {
+            "ideal_price": 4027.22,
+            "limit_order": 4024.4,
+            "acceptable_max": 4137.06,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "GTC limit \u2014 no urgency",
+            "note": "Prev close \u20b94,096.10 | Dip ~\u20b968.88"
+          },
+          "exit": {
+            "target_conservative": 5120.13,
+            "target_ideal": 5939.35,
+            "target_stretch": 6758.57,
+            "upside_conservative": 27.1,
+            "upside_ideal": 47.5,
+            "upside_stretch": 67.8,
+            "hold_min_days": 180,
+            "hold_max_days": 540,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit if fundamentals deteriorate or \u20b95,939.35 hit",
+            "hold_note": "Review monthly"
+          }
+        },
+        "name": "Larsen & Toubro",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.0,
+            "price_band": {
+              "low": 4018.04,
+              "mid": 4119.06,
+              "high": 4220.08,
+              "move_pct_mid": 0.56
+            },
+            "catalyst": "Full Bull (>20>50>200) setup, score 53/100",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 54.8,
+            "price_band": {
+              "low": 3870.2,
+              "mid": 4096.1,
+              "high": 4322.0,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 53.9,
+            "price_band": {
+              "low": 3633.15,
+              "mid": 4096.1,
+              "high": 4559.05,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "narrative": "LT scores 53/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Larsen & Toubro to divest entire stake in L&T Metro Rail (Hyderabad) for Rs 1,461.47 crore' (ET Industry) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b94,194 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Neutral \u2192 Neutral.",
+        "rank": 4
+      },
+      {
         "symbol": "ONGC",
         "score": 52,
         "signal": "WATCH",
@@ -514,122 +630,6 @@
           }
         },
         "narrative": "ONGC scores 52/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Buyers are in control (RSI 73), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b9301 and pushes towards \u20b9316 as trend followers pile in. Bear case: a slip below \u20b9287 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b9292\u2013\u20b9309 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "rank": 4
-      },
-      {
-        "symbol": "LT",
-        "score": 51,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 4096.1,
-        "change_pct": 1.45,
-        "change": 58.4,
-        "target_price": 5939.35,
-        "stop_loss": 3850.33,
-        "risk_reward": 7.8,
-        "holding_category": "short",
-        "sector": "Infrastructure",
-        "penalty": 0,
-        "scores": {
-          "trend": 22,
-          "momentum": 17,
-          "volume": 4,
-          "breakout": 3,
-          "price_action": 5
-        },
-        "indicators": {
-          "rsi": 56.6,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Full Bull (>20>50>200)",
-          "volume_ratio": 0.63,
-          "week52_pct": 7.7,
-          "bb_position": 0.71,
-          "adx": null
-        },
-        "reasons": [
-          "Full bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "RSI ideal zone (56.6)",
-          "MACD bullish",
-          "OBV trending up"
-        ],
-        "trade_plan": {
-          "category": "long",
-          "cat_score": 12,
-          "atr": 91.84,
-          "atr_pct": 2.24,
-          "entry": {
-            "ideal_price": 4027.22,
-            "limit_order": 4024.4,
-            "acceptable_max": 4137.06,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "GTC limit \u2014 no urgency",
-            "note": "Prev close \u20b94,096.10 | Dip ~\u20b968.88"
-          },
-          "exit": {
-            "target_conservative": 5120.13,
-            "target_ideal": 5939.35,
-            "target_stretch": 6758.57,
-            "upside_conservative": 27.1,
-            "upside_ideal": 47.5,
-            "upside_stretch": 67.8,
-            "hold_min_days": 180,
-            "hold_max_days": 540,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit if fundamentals deteriorate or \u20b95,939.35 hit",
-            "hold_note": "Review monthly"
-          }
-        },
-        "name": "Larsen & Toubro",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3995.08,
-              "mid": 4096.1,
-              "high": 4197.12,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Full Bull (>20>50>200) setup, score 51/100",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3870.2,
-              "mid": 4096.1,
-              "high": 4322.0,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3633.15,
-              "mid": 4096.1,
-              "high": 4559.05,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "LT scores 51/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b93,973\u2013\u20b94,194 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 5
       }
     ]
@@ -1810,6 +1810,122 @@
       "rank": 3
     },
     {
+      "symbol": "LT",
+      "score": 53,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 4096.1,
+      "change_pct": 1.45,
+      "change": 58.4,
+      "target_price": 5939.35,
+      "stop_loss": 3850.33,
+      "risk_reward": 7.8,
+      "holding_category": "long",
+      "sector": "Infrastructure",
+      "penalty": 0,
+      "scores": {
+        "trend": 22,
+        "momentum": 17,
+        "volume": 4,
+        "breakout": 3,
+        "price_action": 5
+      },
+      "indicators": {
+        "rsi": 56.6,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Full Bull (>20>50>200)",
+        "volume_ratio": 0.63,
+        "week52_pct": 7.7,
+        "bb_position": 0.71,
+        "adx": null
+      },
+      "reasons": [
+        "Full bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "RSI ideal zone (56.6)",
+        "MACD bullish",
+        "OBV trending up"
+      ],
+      "trade_plan": {
+        "category": "long",
+        "cat_score": 12,
+        "atr": 91.84,
+        "atr_pct": 2.24,
+        "entry": {
+          "ideal_price": 4027.22,
+          "limit_order": 4024.4,
+          "acceptable_max": 4137.06,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "GTC limit \u2014 no urgency",
+          "note": "Prev close \u20b94,096.10 | Dip ~\u20b968.88"
+        },
+        "exit": {
+          "target_conservative": 5120.13,
+          "target_ideal": 5939.35,
+          "target_stretch": 6758.57,
+          "upside_conservative": 27.1,
+          "upside_ideal": 47.5,
+          "upside_stretch": 67.8,
+          "hold_min_days": 180,
+          "hold_max_days": 540,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit if fundamentals deteriorate or \u20b95,939.35 hit",
+          "hold_note": "Review monthly"
+        }
+      },
+      "name": "Larsen & Toubro",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 56.0,
+          "price_band": {
+            "low": 4018.04,
+            "mid": 4119.06,
+            "high": 4220.08,
+            "move_pct_mid": 0.56
+          },
+          "catalyst": "Full Bull (>20>50>200) setup, score 53/100",
+          "primary_risk": "Gap risk at open; size positions accordingly"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 54.8,
+          "price_band": {
+            "low": 3870.2,
+            "mid": 4096.1,
+            "high": 4322.0,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 53.9,
+          "price_band": {
+            "low": 3633.15,
+            "mid": 4096.1,
+            "high": 4559.05,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Consolidation phase in SIDEWAYS regime",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+        }
+      },
+      "narrative": "LT scores 53/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Larsen & Toubro to divest entire stake in L&T Metro Rail (Hyderabad) for Rs 1,461.47 crore' (ET Industry) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b94,194 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Neutral \u2192 Neutral.",
+      "rank": 4
+    },
+    {
       "symbol": "ONGC",
       "score": 52,
       "signal": "WATCH",
@@ -1924,122 +2040,6 @@
         }
       },
       "narrative": "ONGC scores 52/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Buyers are in control (RSI 73), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b9301 and pushes towards \u20b9316 as trend followers pile in. Bear case: a slip below \u20b9287 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b9292\u2013\u20b9309 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-      "rank": 4
-    },
-    {
-      "symbol": "LT",
-      "score": 51,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 4096.1,
-      "change_pct": 1.45,
-      "change": 58.4,
-      "target_price": 5939.35,
-      "stop_loss": 3850.33,
-      "risk_reward": 7.8,
-      "holding_category": "long",
-      "sector": "Infrastructure",
-      "penalty": 0,
-      "scores": {
-        "trend": 22,
-        "momentum": 17,
-        "volume": 4,
-        "breakout": 3,
-        "price_action": 5
-      },
-      "indicators": {
-        "rsi": 56.6,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Full Bull (>20>50>200)",
-        "volume_ratio": 0.63,
-        "week52_pct": 7.7,
-        "bb_position": 0.71,
-        "adx": null
-      },
-      "reasons": [
-        "Full bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "RSI ideal zone (56.6)",
-        "MACD bullish",
-        "OBV trending up"
-      ],
-      "trade_plan": {
-        "category": "long",
-        "cat_score": 12,
-        "atr": 91.84,
-        "atr_pct": 2.24,
-        "entry": {
-          "ideal_price": 4027.22,
-          "limit_order": 4024.4,
-          "acceptable_max": 4137.06,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "GTC limit \u2014 no urgency",
-          "note": "Prev close \u20b94,096.10 | Dip ~\u20b968.88"
-        },
-        "exit": {
-          "target_conservative": 5120.13,
-          "target_ideal": 5939.35,
-          "target_stretch": 6758.57,
-          "upside_conservative": 27.1,
-          "upside_ideal": 47.5,
-          "upside_stretch": 67.8,
-          "hold_min_days": 180,
-          "hold_max_days": 540,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit if fundamentals deteriorate or \u20b95,939.35 hit",
-          "hold_note": "Review monthly"
-        }
-      },
-      "name": "Larsen & Toubro",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 51.0,
-          "price_band": {
-            "low": 3995.08,
-            "mid": 4096.1,
-            "high": 4197.12,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Full Bull (>20>50>200) setup, score 51/100",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 51.0,
-          "price_band": {
-            "low": 3870.2,
-            "mid": 4096.1,
-            "high": 4322.0,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 51.0,
-          "price_band": {
-            "low": 3633.15,
-            "mid": 4096.1,
-            "high": 4559.05,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "LT scores 51/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b93,973\u2013\u20b94,194 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 5
     },
     {
@@ -3208,20 +3208,20 @@
   ],
   "watchlist": [
     {
+      "symbol": "LT",
+      "name": "Larsen & Toubro",
+      "sector": "Infrastructure",
+      "current_price": 4096.1,
+      "score": 53,
+      "signal": "WATCH",
+      "reason": "Full bullish SMA alignment"
+    },
+    {
       "symbol": "ONGC",
       "name": "ONGC",
       "sector": "Oil & Gas",
       "current_price": 301.4,
       "score": 52,
-      "signal": "WATCH",
-      "reason": "Full bullish SMA alignment"
-    },
-    {
-      "symbol": "LT",
-      "name": "Larsen & Toubro",
-      "sector": "Infrastructure",
-      "current_price": 4096.1,
-      "score": 51,
       "signal": "WATCH",
       "reason": "Full bullish SMA alignment"
     },
@@ -3342,10 +3342,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-04-29T17:36:58.264826+05:30",
+    "generated_at": "2026-04-29T20:05:46.355387+05:30",
     "date": "2026-04-29",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 1 cautious; 166 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 3 ADDs, 2 cautious; 162 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 51.0,
@@ -3355,19 +3355,9 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": 0.05,
-      "count": 166,
+      "score": 0.03,
+      "count": 162,
       "highlights": [
-        {
-          "title": "China\u2019s property prices crash to 2005 levels: Could India face a similar housing slump?",
-          "source": "ET Industry",
-          "category": "sector",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Cement"
-          ],
-          "link": "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/chinas-property-prices-crash-to-2005-levels-could-india-face-a-similar-housing-slump/articleshow/130595446.cms"
-        },
         {
           "title": "Indian Bank Q4 Results: Standalone profit grows 5% YoY to Rs 3,103 crore; Rs 18.25/share dividend declared",
           "source": "ET Markets",
@@ -3377,16 +3367,6 @@
             "Banking"
           ],
           "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/indian-bank-q4-results-standalone-profit-grows-5-yoy-to-rs-3103-crore-rs-18-25/share-dividend-declared/articleshow/130602423.cms"
-        },
-        {
-          "title": "Bandhan Bank surges 10% to 52-week high as Q4 results beat estimates",
-          "source": "Hindu BusinessLine",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Banking"
-          ],
-          "link": "https://www.thehindubusinessline.com/markets/stock-markets/bandhan-bank-surges-10-to-52-week-high-as-q4-results-beat-estimates/article70919221.ece"
         },
         {
           "title": "Crude oil price jumps to $115, highest level since June 2022 amid stalled Iran war talks. Brace for $150?",
@@ -3417,22 +3397,42 @@
             "Banking"
           ],
           "link": "https://www.livemint.com/market/stock-market-news/indian-bank-q4-results-net-profit-rises-5-yoy-to-rs-3-103-crore-asset-quality-improves-declares-rs-18-25-dividend-11777454063551.html"
+        },
+        {
+          "title": "Markets Downplay War\u2019s Impact on Petrochemicals, Pipeline CEO Says",
+          "source": "Mint Markets",
+          "category": "market",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Telecom"
+          ],
+          "link": "https://www.livemint.com/market/markets-downplay-war-s-impact-on-petrochemicals-pipeline-ceo-says-11777453152718.html"
+        },
+        {
+          "title": "\u20b92 lakh wiped from peak! Silver price in India loses all gains of 2026 YTD - Should you still buy the white metal?",
+          "source": "Mint Markets",
+          "category": "market",
+          "sentiment": "BULLISH",
+          "sectors": [
+            "Telecom"
+          ],
+          "link": "https://www.livemint.com/market/commodities/rs-2-lakh-wiped-from-peak-silver-price-in-india-loses-all-gains-of-2026-ytd-should-you-still-buy-white-metal-11777448579994.html"
         }
       ]
     },
-    "key_insight": "Range-bound tape with 51% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 166 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Mining leads at 64 while IT lags at 0 \u2014 a stock-picker's tape.",
+    "key_insight": "Range-bound tape with 51% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 162 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Mining leads at 64 while IT lags at 0 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 51% \u00b7 median momentum +0.5% \u00b7 ATR 2.4%",
-      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 1 EXIT",
-      "Macro tone: NEUTRAL from 166 items across 11 sources",
+      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 44 HOLD \u00b7 2 EXIT",
+      "Macro tone: NEUTRAL from 162 items across 11 sources",
       "Strongest sector: Mining (avg score 64)"
     ],
     "market_pulse": {
       "total_analyzed": 49,
       "strong_buys": 0,
       "actionable_buys": 3,
-      "holds": 45,
-      "risk_alerts": 1,
+      "holds": 44,
+      "risk_alerts": 2,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -3720,6 +3720,74 @@
         }
       },
       {
+        "symbol": "LT",
+        "name": "Larsen & Toubro",
+        "sector": "Infrastructure",
+        "action": "HOLD",
+        "verdict": "HOLD",
+        "score": 53,
+        "rsi": 56.6,
+        "trend": "Full Bull (>20>50>200)",
+        "reason": "Full bullish SMA alignment",
+        "narrative": "LT scores 53/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Larsen & Toubro to divest entire stake in L&T Metro Rail (Hyderabad) for Rs 1,461.47 crore' (ET Industry) is the headline to watch. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b94,194 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Neutral \u2192 Neutral.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 56.0,
+            "price_band": {
+              "low": 4018.04,
+              "mid": 4119.06,
+              "high": 4220.08,
+              "move_pct_mid": 0.56
+            },
+            "catalyst": "Full Bull (>20>50>200) setup, score 53/100",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 54.8,
+            "price_band": {
+              "low": 3870.2,
+              "mid": 4096.1,
+              "high": 4322.0,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 53.9,
+            "price_band": {
+              "low": 3633.15,
+              "mid": 4096.1,
+              "high": 4559.05,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "news_info": {
+          "score": 1.1,
+          "label": "MILDLY_BULLISH",
+          "count": 1,
+          "modifier": 2,
+          "top_headline": "Larsen & Toubro to divest entire stake in L&T Metro Rail (Hyderabad) for Rs 1,461.47 crore",
+          "top_source": "ET Industry",
+          "top_link": "https://economictimes.indiatimes.com/industry/transportation/railways/larsen-toubro-sells-entire-stake-in-lt-metro-rail-hyderabad-for-rs-1461-47-crores/articleshow/130606726.cms"
+        }
+      },
+      {
         "symbol": "ONGC",
         "name": "ONGC",
         "sector": "Oil & Gas",
@@ -3771,72 +3839,6 @@
               "low": 271.61,
               "mid": 301.4,
               "high": 331.19,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "news_info": {
-          "score": 0,
-          "label": "NEUTRAL",
-          "count": 0,
-          "modifier": 0,
-          "top_headline": null
-        }
-      },
-      {
-        "symbol": "LT",
-        "name": "Larsen & Toubro",
-        "sector": "Infrastructure",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 51,
-        "rsi": 56.6,
-        "trend": "Full Bull (>20>50>200)",
-        "reason": "Full bullish SMA alignment",
-        "narrative": "LT scores 51/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is picking up nicely \u2014 RSI at 57 has room to run before hitting overbought territory. The tape is chopping sideways with 51% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b94,096 and pushes towards \u20b94,322 as trend followers pile in. Bear case: a slip below \u20b93,870 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b93,973\u2013\u20b94,194 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3995.08,
-              "mid": 4096.1,
-              "high": 4197.12,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Full Bull (>20>50>200) setup, score 51/100",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3870.2,
-              "mid": 4096.1,
-              "high": 4322.0,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 51.0,
-            "price_band": {
-              "low": 3633.15,
-              "mid": 4096.1,
-              "high": 4559.05,
               "move_pct_mid": 0.0
             },
             "catalyst": "Consolidation phase in SIDEWAYS regime",
@@ -3976,6 +3978,16 @@
         "verdict": "HOLD"
       },
       {
+        "symbol": "ICICIBANK",
+        "name": "ICICI Bank",
+        "action": "EXIT",
+        "flags": [
+          "rule \u2192 EXIT",
+          "negative news (1)"
+        ],
+        "verdict": "EXIT"
+      },
+      {
         "symbol": "HCLTECH",
         "name": "HCL Technologies",
         "action": "HOLD",
@@ -3983,17 +3995,6 @@
           "RSI 18 oversold"
         ],
         "verdict": "HOLD"
-      },
-      {
-        "symbol": "PERSISTENT",
-        "name": "Persistent Systems",
-        "action": "EXIT",
-        "flags": [
-          "RSI 26 oversold",
-          "rule \u2192 EXIT",
-          "negative news (1)"
-        ],
-        "verdict": "EXIT"
       }
     ],
     "breakout_watch": [
@@ -4026,15 +4027,15 @@
         "avg_score": 52.0,
         "count": 1,
         "trend": "flat",
-        "news_count": 33,
+        "news_count": 34,
         "news_label": "BEARISH"
       },
       {
         "sector": "Infrastructure",
-        "avg_score": 45.5,
+        "avg_score": 46.5,
         "count": 2,
         "trend": "flat",
-        "news_count": 3,
+        "news_count": 2,
         "news_label": "NEUTRAL"
       },
       {
@@ -4090,7 +4091,7 @@
         "avg_score": 32.0,
         "count": 2,
         "trend": "down",
-        "news_count": 5,
+        "news_count": 4,
         "news_label": "BEARISH"
       },
       {
@@ -4106,11 +4107,22 @@
         "avg_score": 27.0,
         "count": 1,
         "trend": "down",
-        "news_count": 11,
+        "news_count": 10,
         "news_label": "NEUTRAL"
       }
     ],
     "action_plan": [
+      {
+        "priority": 1,
+        "type": "EXIT",
+        "symbol": "ICICIBANK",
+        "name": "ICICI Bank",
+        "price": 1281.0,
+        "instruction": "Market order at open \u2014 rule ladder triggered.",
+        "reason": "EMA 12/26 bullish",
+        "confidence": "LOW",
+        "verdict": "EXIT"
+      },
       {
         "priority": 1,
         "type": "EXIT",
@@ -4188,18 +4200,6 @@
         "sectors": [],
         "published": "2026-04-29T09:22:21+00:00",
         "link": "https://www.livemint.com/market/stock-market-news/350-rally-in-5-years-multibagger-small-cap-stock-avi-polymers-hits-upper-circuit-after-promoters-plan-to-raise-stake-11777452114313.html"
-      },
-      {
-        "title": "China\u2019s property prices crash to 2005 levels: Could India face a similar housing slump?",
-        "source": "ET Industry",
-        "category": "sector",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [
-          "Cement"
-        ],
-        "published": "2026-04-29T04:08:46+00:00",
-        "link": "https://economictimes.indiatimes.com/industry/services/property-/-cstruction/chinas-property-prices-crash-to-2005-levels-could-india-face-a-similar-housing-slump/articleshow/130595446.cms"
       },
       {
         "title": "Bajaj Finance Q4 Results: Profit rises 22% YoY to Rs 5,553 crore; co declares Rs 6/share final dividend",
@@ -4296,14 +4296,26 @@
         "sectors": [],
         "published": "2026-04-29T07:46:53+00:00",
         "link": "https://www.livemint.com/market/stock-market-news/indian-stock-market-nifty-50-set-to-snap-its-4-month-losing-streak-in-april-but-dont-expect-a-sustained-rally-ahead-11777445612535.html"
+      },
+      {
+        "title": "Reserve Bank of India imposes monetary penalty on Bandhan Bank Limited",
+        "source": "RBI Press",
+        "category": "policy",
+        "sentiment": "BEARISH",
+        "tickers": [
+          "RELIANCE"
+        ],
+        "sectors": [],
+        "published": "2026-04-29T14:35:33.591153+00:00",
+        "link": "http://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62618"
       }
     ],
     "news_stats": {
       "total_items": 271,
       "sources": 11,
-      "with_tickers": 46,
-      "bullish": 93,
-      "bearish": 48
+      "with_tickers": 51,
+      "bullish": 88,
+      "bearish": 52
     }
   }
 }
