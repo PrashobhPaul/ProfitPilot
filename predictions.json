@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T17:54:05.446589+05:30",
+  "generated_at": "2026-07-28T20:25:47.171139+05:30",
   "market_date": "2026-07-28",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -283,6 +283,123 @@
         "rank": 2
       },
       {
+        "symbol": "BAJAJ-AUTO",
+        "score": 62,
+        "signal": "BUY",
+        "confidence": "MEDIUM",
+        "current_price": 11374.0,
+        "change_pct": 1.7,
+        "change": 190.5,
+        "target_price": 12061.9,
+        "stop_loss": 10691.56,
+        "risk_reward": 1.1,
+        "holding_category": "short",
+        "sector": "Automobiles",
+        "penalty": 0,
+        "scores": {
+          "trend": 22,
+          "momentum": 9,
+          "volume": 4,
+          "breakout": 10,
+          "price_action": 9
+        },
+        "indicators": {
+          "rsi": 77.5,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Full Bull (>20>50>200)",
+          "volume_ratio": 0.73,
+          "week52_pct": 0.3,
+          "bb_position": 0.97,
+          "adx": null
+        },
+        "reasons": [
+          "Full bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "OBV trending up",
+          "Near upper BB"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 12,
+          "atr": 245.68,
+          "atr_pct": 2.16,
+          "entry": {
+            "ideal_price": 11305.21,
+            "limit_order": 11297.3,
+            "acceptable_max": 11408.12,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b911,374.00 | Dip ~\u20b968.79"
+          },
+          "exit": {
+            "target_conservative": 11816.22,
+            "target_ideal": 12061.9,
+            "target_stretch": 12356.71,
+            "upside_conservative": 4.5,
+            "upside_ideal": 6.7,
+            "upside_stretch": 9.3,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b912,061.90",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Bajaj Auto",
+        "verdict": "BUY",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Bullish",
+            "confidence": "High",
+            "composite": 74.0,
+            "price_band": {
+              "low": 11251.16,
+              "mid": 11521.41,
+              "high": 11791.66,
+              "move_pct_mid": 1.3
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Bullish",
+            "confidence": "High",
+            "composite": 69.2,
+            "price_band": {
+              "low": 11099.32,
+              "mid": 11703.61,
+              "high": 12307.91,
+              "move_pct_mid": 2.9
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Mildly Bullish",
+            "confidence": "High",
+            "composite": 65.6,
+            "price_band": {
+              "low": 10417.03,
+              "mid": 11655.46,
+              "high": 12893.89,
+              "move_pct_mid": 2.47
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          }
+        },
+        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is positive \u2014 1 item in the last 48 hours \u2014 'TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month' (ET Markets) is the headline to watch. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b912,308 as trend followers pile in. Bear case: a slip below \u20b911,099 triggers trailing stops and dents the short-term thesis. A push through \u20b911,647 triggers the next wave of buying. Verdict: BUY. Entry zone near \u20b911,408 \u2014 speed matters. Outlook: Bullish \u2192 Bullish \u2192 Mildly Bullish.",
+        "rank": 3
+      },
+      {
         "symbol": "SUNPHARMA",
         "score": 60,
         "signal": "BUY",
@@ -397,123 +514,6 @@
           }
         },
         "narrative": "SUNPHARMA scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI at 70 with 2.0x volume \u2014 buyers mean business. Volume at 2.0x average is speaking loudly. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 35) \u2014 an extra headwind. Bull case: sustains above \u20b91,977 and pushes towards \u20b92,071 as trend followers pile in. Bear case: a slip below \u20b91,918 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b92,024 as confirmation. Verdict: BUY. Entry zone near \u20b91,996 \u2014 no urgency. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
-        "rank": 3
-      },
-      {
-        "symbol": "BAJAJ-AUTO",
-        "score": 54,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 11374.0,
-        "change_pct": 1.7,
-        "change": 190.5,
-        "target_price": 12061.9,
-        "stop_loss": 10691.56,
-        "risk_reward": 1.1,
-        "holding_category": "short",
-        "sector": "Automobiles",
-        "penalty": 0,
-        "scores": {
-          "trend": 22,
-          "momentum": 9,
-          "volume": 4,
-          "breakout": 10,
-          "price_action": 9
-        },
-        "indicators": {
-          "rsi": 77.5,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Full Bull (>20>50>200)",
-          "volume_ratio": 0.73,
-          "week52_pct": 0.3,
-          "bb_position": 0.97,
-          "adx": null
-        },
-        "reasons": [
-          "Full bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "OBV trending up",
-          "Near upper BB"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 12,
-          "atr": 245.68,
-          "atr_pct": 2.16,
-          "entry": {
-            "ideal_price": 11305.21,
-            "limit_order": 11297.3,
-            "acceptable_max": 11408.12,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b911,374.00 | Dip ~\u20b968.79"
-          },
-          "exit": {
-            "target_conservative": 11816.22,
-            "target_ideal": 12061.9,
-            "target_stretch": 12356.71,
-            "upside_conservative": 4.5,
-            "upside_ideal": 6.7,
-            "upside_stretch": 9.3,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b912,061.90",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "Bajaj Auto",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 11103.75,
-              "mid": 11374.0,
-              "high": 11644.25,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 78 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 10769.71,
-              "mid": 11374.0,
-              "high": 11978.29,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 10135.57,
-              "mid": 11374.0,
-              "high": 12612.43,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b911,978 as trend followers pile in. Bear case: a slip below \u20b910,770 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b911,033\u2013\u20b911,647 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 4
       },
       {
@@ -1341,7 +1341,7 @@
           }
         },
         "narrative": "SUNPHARMA scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI at 70 with 2.0x volume \u2014 buyers mean business. Volume at 2.0x average is speaking loudly. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 35) \u2014 an extra headwind. Bull case: sustains above \u20b91,977 and pushes towards \u20b92,071 as trend followers pile in. Bear case: a slip below \u20b91,918 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b92,024 as confirmation. Verdict: BUY. Entry zone near \u20b91,996 \u2014 no urgency. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
-        "rank": 3
+        "rank": 4
       },
       {
         "symbol": "BAJFINANCE",
@@ -1576,6 +1576,123 @@
         "rank": 3
       },
       {
+        "symbol": "DIVISLAB",
+        "score": 42,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 7425.0,
+        "change_pct": 0.15,
+        "change": 11.0,
+        "target_price": 10766.25,
+        "stop_loss": 6979.5,
+        "risk_reward": 7.8,
+        "holding_category": "long",
+        "sector": "Pharma",
+        "penalty": 10,
+        "scores": {
+          "trend": 22,
+          "momentum": 5,
+          "volume": 6,
+          "breakout": 5,
+          "price_action": 6
+        },
+        "indicators": {
+          "rsi": 83.2,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Full Bull (>20>50>200)",
+          "volume_ratio": 0.96,
+          "week52_pct": 0.7,
+          "bb_position": 0.82,
+          "adx": null
+        },
+        "reasons": [
+          "Full bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "OBV trending up",
+          "Near upper BB",
+          "Near 52W high (0.7%)"
+        ],
+        "trade_plan": {
+          "category": "long",
+          "cat_score": 10,
+          "atr": 155.5,
+          "atr_pct": 2.09,
+          "entry": {
+            "ideal_price": 7308.38,
+            "limit_order": 7303.26,
+            "acceptable_max": 7499.25,
+            "entry_window": "09:15 AM IST (GTC)",
+            "order_strategy": "GTC limit \u2014 no urgency",
+            "note": "Prev close \u20b97,425.00 | Dip ~\u20b9116.62"
+          },
+          "exit": {
+            "target_conservative": 9281.25,
+            "target_ideal": 10766.25,
+            "target_stretch": 12251.25,
+            "upside_conservative": 27.0,
+            "upside_ideal": 47.3,
+            "upside_stretch": 67.6,
+            "hold_min_days": 180,
+            "hold_max_days": 540,
+            "hold_duration": "6\u201318 months",
+            "sell_trigger": "Exit if fundamentals deteriorate or \u20b910,766.25 hit",
+            "hold_note": "Review monthly"
+          }
+        },
+        "name": "Divi's Laboratories",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 54.0,
+            "price_band": {
+              "low": 7253.95,
+              "mid": 7425.0,
+              "high": 7596.05,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 49.2,
+            "price_band": {
+              "low": 7042.52,
+              "mid": 7425.0,
+              "high": 7807.48,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 45.6,
+            "price_band": {
+              "low": 6641.15,
+              "mid": 7425.0,
+              "high": 8208.85,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "News-driven spike may fade without volume confirmation"
+          }
+        },
+        "narrative": "The newsflow around DIVISLAB is constructive \u2014 'TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month' is the lead story driving sentiment. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. With RSI at 83, this is the part of the move where late buyers provide exit liquidity for early ones. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 35) \u2014 an extra headwind. Needs to resolve \u20b97,202\u2013\u20b97,603 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+        "rank": 4
+      },
+      {
         "symbol": "ICICIBANK",
         "score": 40,
         "signal": "WATCH",
@@ -1688,7 +1805,7 @@
           }
         },
         "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is flat \u2014 RSI at 67 sits in no-man's land. The stock is waiting for a trigger. Above-average volume (1.5x) adds weight to the move. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 18) \u2014 an extra headwind. \u20b91,388 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
-        "rank": 4
+        "rank": 5
       }
     ]
   },
@@ -1928,6 +2045,123 @@
       "rank": 2
     },
     {
+      "symbol": "BAJAJ-AUTO",
+      "score": 62,
+      "signal": "BUY",
+      "confidence": "MEDIUM",
+      "current_price": 11374.0,
+      "change_pct": 1.7,
+      "change": 190.5,
+      "target_price": 12061.9,
+      "stop_loss": 10691.56,
+      "risk_reward": 1.1,
+      "holding_category": "short",
+      "sector": "Automobiles",
+      "penalty": 0,
+      "scores": {
+        "trend": 22,
+        "momentum": 9,
+        "volume": 4,
+        "breakout": 10,
+        "price_action": 9
+      },
+      "indicators": {
+        "rsi": 77.5,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Full Bull (>20>50>200)",
+        "volume_ratio": 0.73,
+        "week52_pct": 0.3,
+        "bb_position": 0.97,
+        "adx": null
+      },
+      "reasons": [
+        "Full bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "OBV trending up",
+        "Near upper BB"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 12,
+        "atr": 245.68,
+        "atr_pct": 2.16,
+        "entry": {
+          "ideal_price": 11305.21,
+          "limit_order": 11297.3,
+          "acceptable_max": 11408.12,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b911,374.00 | Dip ~\u20b968.79"
+        },
+        "exit": {
+          "target_conservative": 11816.22,
+          "target_ideal": 12061.9,
+          "target_stretch": 12356.71,
+          "upside_conservative": 4.5,
+          "upside_ideal": 6.7,
+          "upside_stretch": 9.3,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b912,061.90",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Bajaj Auto",
+      "verdict": "BUY",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Bullish",
+          "confidence": "High",
+          "composite": 74.0,
+          "price_band": {
+            "low": 11251.16,
+            "mid": 11521.41,
+            "high": 11791.66,
+            "move_pct_mid": 1.3
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Bullish",
+          "confidence": "High",
+          "composite": 69.2,
+          "price_band": {
+            "low": 11099.32,
+            "mid": 11703.61,
+            "high": 12307.91,
+            "move_pct_mid": 2.9
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Mildly Bullish",
+          "confidence": "High",
+          "composite": 65.6,
+          "price_band": {
+            "low": 10417.03,
+            "mid": 11655.46,
+            "high": 12893.89,
+            "move_pct_mid": 2.47
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+        }
+      },
+      "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is positive \u2014 1 item in the last 48 hours \u2014 'TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month' (ET Markets) is the headline to watch. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b912,308 as trend followers pile in. Bear case: a slip below \u20b911,099 triggers trailing stops and dents the short-term thesis. A push through \u20b911,647 triggers the next wave of buying. Verdict: BUY. Entry zone near \u20b911,408 \u2014 speed matters. Outlook: Bullish \u2192 Bullish \u2192 Mildly Bullish.",
+      "rank": 3
+    },
+    {
       "symbol": "SUNPHARMA",
       "score": 60,
       "signal": "BUY",
@@ -2042,123 +2276,6 @@
         }
       },
       "narrative": "SUNPHARMA scores 60/100 on our engine. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI at 70 with 2.0x volume \u2014 buyers mean business. Volume at 2.0x average is speaking loudly. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 35) \u2014 an extra headwind. Bull case: sustains above \u20b91,977 and pushes towards \u20b92,071 as trend followers pile in. Bear case: a slip below \u20b91,918 triggers trailing stops and dents the short-term thesis. Look for a close above \u20b92,024 as confirmation. Verdict: BUY. Entry zone near \u20b91,996 \u2014 no urgency. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Mildly Bullish.",
-      "rank": 3
-    },
-    {
-      "symbol": "BAJAJ-AUTO",
-      "score": 54,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 11374.0,
-      "change_pct": 1.7,
-      "change": 190.5,
-      "target_price": 12061.9,
-      "stop_loss": 10691.56,
-      "risk_reward": 1.1,
-      "holding_category": "short",
-      "sector": "Automobiles",
-      "penalty": 0,
-      "scores": {
-        "trend": 22,
-        "momentum": 9,
-        "volume": 4,
-        "breakout": 10,
-        "price_action": 9
-      },
-      "indicators": {
-        "rsi": 77.5,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Full Bull (>20>50>200)",
-        "volume_ratio": 0.73,
-        "week52_pct": 0.3,
-        "bb_position": 0.97,
-        "adx": null
-      },
-      "reasons": [
-        "Full bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "OBV trending up",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 12,
-        "atr": 245.68,
-        "atr_pct": 2.16,
-        "entry": {
-          "ideal_price": 11305.21,
-          "limit_order": 11297.3,
-          "acceptable_max": 11408.12,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b911,374.00 | Dip ~\u20b968.79"
-        },
-        "exit": {
-          "target_conservative": 11816.22,
-          "target_ideal": 12061.9,
-          "target_stretch": 12356.71,
-          "upside_conservative": 4.5,
-          "upside_ideal": 6.7,
-          "upside_stretch": 9.3,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b912,061.90",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Bajaj Auto",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 11103.75,
-            "mid": 11374.0,
-            "high": 11644.25,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "RSI at 78 \u2014 momentum carryover likely",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 10769.71,
-            "mid": 11374.0,
-            "high": 11978.29,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 10135.57,
-            "mid": 11374.0,
-            "high": 12612.43,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b911,978 as trend followers pile in. Bear case: a slip below \u20b910,770 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b911,033\u2013\u20b911,647 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 4
     },
     {
@@ -3094,6 +3211,123 @@
       "rank": 12
     },
     {
+      "symbol": "DIVISLAB",
+      "score": 42,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 7425.0,
+      "change_pct": 0.15,
+      "change": 11.0,
+      "target_price": 10766.25,
+      "stop_loss": 6979.5,
+      "risk_reward": 7.8,
+      "holding_category": "long",
+      "sector": "Pharma",
+      "penalty": 10,
+      "scores": {
+        "trend": 22,
+        "momentum": 5,
+        "volume": 6,
+        "breakout": 5,
+        "price_action": 6
+      },
+      "indicators": {
+        "rsi": 83.2,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Full Bull (>20>50>200)",
+        "volume_ratio": 0.96,
+        "week52_pct": 0.7,
+        "bb_position": 0.82,
+        "adx": null
+      },
+      "reasons": [
+        "Full bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "OBV trending up",
+        "Near upper BB",
+        "Near 52W high (0.7%)"
+      ],
+      "trade_plan": {
+        "category": "long",
+        "cat_score": 10,
+        "atr": 155.5,
+        "atr_pct": 2.09,
+        "entry": {
+          "ideal_price": 7308.38,
+          "limit_order": 7303.26,
+          "acceptable_max": 7499.25,
+          "entry_window": "09:15 AM IST (GTC)",
+          "order_strategy": "GTC limit \u2014 no urgency",
+          "note": "Prev close \u20b97,425.00 | Dip ~\u20b9116.62"
+        },
+        "exit": {
+          "target_conservative": 9281.25,
+          "target_ideal": 10766.25,
+          "target_stretch": 12251.25,
+          "upside_conservative": 27.0,
+          "upside_ideal": 47.3,
+          "upside_stretch": 67.6,
+          "hold_min_days": 180,
+          "hold_max_days": 540,
+          "hold_duration": "6\u201318 months",
+          "sell_trigger": "Exit if fundamentals deteriorate or \u20b910,766.25 hit",
+          "hold_note": "Review monthly"
+        }
+      },
+      "name": "Divi's Laboratories",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 54.0,
+          "price_band": {
+            "low": 7253.95,
+            "mid": 7425.0,
+            "high": 7596.05,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 49.2,
+          "price_band": {
+            "low": 7042.52,
+            "mid": 7425.0,
+            "high": 7807.48,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 45.6,
+          "price_band": {
+            "low": 6641.15,
+            "mid": 7425.0,
+            "high": 8208.85,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "primary_risk": "News-driven spike may fade without volume confirmation"
+        }
+      },
+      "narrative": "The newsflow around DIVISLAB is constructive \u2014 'TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month' is the lead story driving sentiment. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. With RSI at 83, this is the part of the move where late buyers provide exit liquidity for early ones. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Pharma is lagging the broader tape (score 35) \u2014 an extra headwind. Needs to resolve \u20b97,202\u2013\u20b97,603 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+      "rank": 13
+    },
+    {
       "symbol": "ICICIBANK",
       "score": 40,
       "signal": "WATCH",
@@ -3206,7 +3440,7 @@
         }
       },
       "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is flat \u2014 RSI at 67 sits in no-man's land. The stock is waiting for a trigger. Above-average volume (1.5x) adds weight to the move. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 18) \u2014 an extra headwind. \u20b91,388 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
-      "rank": 13
+      "rank": 14
     },
     {
       "symbol": "DIXON",
@@ -3320,134 +3554,10 @@
         }
       },
       "narrative": "DIXON scores 39/100 on our engine. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. The momentum profile is constructive. RSI at 65 means the move is early-to-mid phase, not late innings. Volume is thin (0.3x) \u2014 take any move with a pinch of salt. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. \u20b913,486 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
-      "rank": 14
-    },
-    {
-      "symbol": "HAL",
-      "score": 38,
-      "signal": "AVOID",
-      "confidence": "LOW",
-      "current_price": 4600.1,
-      "change_pct": -0.41,
-      "change": -18.9,
-      "target_price": 6670.15,
-      "stop_loss": 4324.09,
-      "risk_reward": 7.7,
-      "holding_category": "long",
-      "sector": "Defence",
-      "penalty": 0,
-      "scores": {
-        "trend": 22,
-        "momentum": 5,
-        "volume": 2,
-        "breakout": 5,
-        "price_action": 4
-      },
-      "indicators": {
-        "rsi": 72.4,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Full Bull (>20>50>200)",
-        "volume_ratio": 1.11,
-        "week52_pct": 6.8,
-        "bb_position": 0.86,
-        "adx": null
-      },
-      "reasons": [
-        "Full bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "Near upper BB"
-      ],
-      "trade_plan": {
-        "category": "long",
-        "cat_score": 8,
-        "atr": 88.05,
-        "atr_pct": 1.91,
-        "entry": {
-          "ideal_price": 4534.06,
-          "limit_order": 4530.89,
-          "acceptable_max": 4646.1,
-          "entry_window": "09:15 AM IST (GTC)",
-          "order_strategy": "GTC limit \u2014 no urgency",
-          "note": "Prev close \u20b94,600.10 | Dip ~\u20b966.04"
-        },
-        "exit": {
-          "target_conservative": 5750.13,
-          "target_ideal": 6670.15,
-          "target_stretch": 7590.17,
-          "upside_conservative": 26.8,
-          "upside_ideal": 47.1,
-          "upside_stretch": 67.4,
-          "hold_min_days": 180,
-          "hold_max_days": 540,
-          "hold_duration": "6\u201318 months",
-          "sell_trigger": "Exit if fundamentals deteriorate or \u20b96,670.15 hit",
-          "hold_note": "Review monthly"
-        }
-      },
-      "name": "Hindustan Aeronautics",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 38.0,
-          "price_band": {
-            "low": 4481.23,
-            "mid": 4578.09,
-            "high": 4674.94,
-            "move_pct_mid": -0.48
-          },
-          "catalyst": "RSI at 72 \u2014 momentum carryover likely",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 38.0,
-          "price_band": {
-            "low": 4334.3,
-            "mid": 4550.88,
-            "high": 4767.45,
-            "move_pct_mid": -1.07
-          },
-          "catalyst": "Weak setup (38/100) \u2014 expect continued pressure",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Mildly Bearish",
-          "confidence": "Medium",
-          "composite": 38.0,
-          "price_band": {
-            "low": 4055.38,
-            "mid": 4499.23,
-            "high": 4943.07,
-            "move_pct_mid": -2.19
-          },
-          "catalyst": "Structural weakness; SIDEWAYS regime adds pressure",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "HAL scores 38/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Buyers are in control (RSI 72), but the stock is getting ahead of itself. Best entries come after a pause. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Defence is lagging the broader tape (score 19) \u2014 an extra headwind. \u20b94,462 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Mildly Bearish.",
       "rank": 15
     }
   ],
   "watchlist": [
-    {
-      "symbol": "BAJAJ-AUTO",
-      "name": "Bajaj Auto",
-      "sector": "Automobiles",
-      "current_price": 11374.0,
-      "score": 54,
-      "signal": "WATCH",
-      "reason": "Full bullish SMA alignment"
-    },
     {
       "symbol": "APOLLOHOSP",
       "name": "Apollo Hospitals",
@@ -3483,6 +3593,15 @@
       "score": 47,
       "signal": "WATCH",
       "reason": "Above 200 SMA"
+    },
+    {
+      "symbol": "CIPLA",
+      "name": "Cipla",
+      "sector": "Pharma",
+      "current_price": 1444.6,
+      "score": 47,
+      "signal": "WATCH",
+      "reason": "Full bullish SMA alignment"
     }
   ],
   "avoid": [
@@ -3574,10 +3693,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-07-28T17:54:18.514406+05:30",
+    "generated_at": "2026-07-28T20:26:02.703232+05:30",
     "date": "2026-07-28",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 4 cautious; 140 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 4 ADDs, 3 cautious; 140 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 50.0,
@@ -3587,7 +3706,7 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.18,
+      "score": -0.08,
       "count": 140,
       "highlights": [
         {
@@ -3631,16 +3750,6 @@
           "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-barclays-posts-robust-h1-results-raises-guidance-on-investment-banking-momentum/articleshow/132679691.cms"
         },
         {
-          "title": "From AI boom to valuation worries: Why investors are rethinking big tech bets",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Infrastructure"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/from-ai-boom-to-valuation-worries-why-investors-are-rethinking-big-tech-bets/slideshow/132677383.cms"
-        },
-        {
           "title": "Weak investments, higher oil prices to slow India's GDP growth to 6.6% in FY27: Poll",
           "source": "ET Economy",
           "category": "macro",
@@ -3649,22 +3758,30 @@
             "Oil & Gas"
           ],
           "link": "https://economictimes.indiatimes.com/news/economy/indicators/weak-investments-higher-oil-prices-to-slow-indias-gdp-growth-to-6-6-in-fy27-poll/articleshow/132674815.cms"
+        },
+        {
+          "title": "Shein slumps to loss ahead of planned Hong Kong listing",
+          "source": "FT Markets",
+          "category": "global",
+          "sentiment": "BEARISH",
+          "sectors": [],
+          "link": "https://www.ft.com/content/9ed6a6f4-c6a6-4027-9c54-19bffcd88913?syn-25a6b1a6=1"
         }
       ]
     },
     "key_insight": "Range-bound tape with 50% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 140 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Paints leads at 65 while Conglomerate lags at 0 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 50% \u00b7 median momentum +0.1% \u00b7 ATR 1.9%",
-      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 41 HOLD \u00b7 4 EXIT",
+      "Book: 4 ADD \u00b7 0 ACCUMULATE \u00b7 41 HOLD \u00b7 3 EXIT",
       "Macro tone: NEUTRAL from 140 items across 11 sources",
       "Strongest sector: Paints (avg score 65)"
     ],
     "market_pulse": {
       "total_analyzed": 48,
       "strong_buys": 0,
-      "actionable_buys": 3,
+      "actionable_buys": 4,
       "holds": 41,
-      "risk_alerts": 4,
+      "risk_alerts": 3,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -3699,7 +3816,7 @@
         "change_pct": 3.04,
         "price": 5428.4,
         "action": "EXIT",
-        "score": 23
+        "score": 24
       },
       {
         "symbol": "CIPLA",
@@ -3749,7 +3866,7 @@
         "change_pct": -2.01,
         "price": 343.75,
         "action": "HOLD",
-        "score": 6
+        "score": 8
       }
     ],
     "conviction_board": [
@@ -3886,6 +4003,74 @@
         }
       },
       {
+        "symbol": "BAJAJ-AUTO",
+        "name": "Bajaj Auto",
+        "sector": "Automobiles",
+        "action": "ADD",
+        "verdict": "BUY",
+        "score": 62,
+        "rsi": 77.5,
+        "trend": "Full Bull (>20>50>200)",
+        "reason": "Full bullish SMA alignment",
+        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. Structurally, this is textbook. Every major moving average is lined up, and dip-buyers have been rewarded consistently. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. Newsflow is positive \u2014 1 item in the last 48 hours \u2014 'TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month' (ET Markets) is the headline to watch. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b912,308 as trend followers pile in. Bear case: a slip below \u20b911,099 triggers trailing stops and dents the short-term thesis. A push through \u20b911,647 triggers the next wave of buying. Verdict: BUY. Entry zone near \u20b911,408 \u2014 speed matters. Outlook: Bullish \u2192 Bullish \u2192 Mildly Bullish.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Bullish",
+            "confidence": "High",
+            "composite": 74.0,
+            "price_band": {
+              "low": 11251.16,
+              "mid": 11521.41,
+              "high": 11791.66,
+              "move_pct_mid": 1.3
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Bullish",
+            "confidence": "High",
+            "composite": 69.2,
+            "price_band": {
+              "low": 11099.32,
+              "mid": 11703.61,
+              "high": 12307.91,
+              "move_pct_mid": 2.9
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Mildly Bullish",
+            "confidence": "High",
+            "composite": 65.6,
+            "price_band": {
+              "low": 10417.03,
+              "mid": 11655.46,
+              "high": 12893.89,
+              "move_pct_mid": 2.47
+            },
+            "catalyst": "News flow: TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+            "primary_risk": "Overbought (RSI 78) \u2014 chase risk high"
+          }
+        },
+        "news_info": {
+          "score": 7.2,
+          "label": "BULLISH",
+          "count": 1,
+          "modifier": 8,
+          "top_headline": "TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
+          "top_source": "ET Markets",
+          "top_link": "https://economictimes.indiatimes.com/markets/stocks/news/tvs-motor-company-among-9-stocks-to-hit-52-week-highs-amp-rally-up-to-15-in-a-month/slideshow/132686439.cms"
+        }
+      },
+      {
         "symbol": "SUNPHARMA",
         "name": "Sun Pharmaceutical",
         "sector": "Pharma",
@@ -3940,72 +4125,6 @@
               "move_pct_mid": 1.8
             },
             "catalyst": "Structural trend full bull (>20>50>200); SIDEWAYS regime supportive",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "news_info": {
-          "score": 0,
-          "label": "NEUTRAL",
-          "count": 0,
-          "modifier": 0,
-          "top_headline": null
-        }
-      },
-      {
-        "symbol": "BAJAJ-AUTO",
-        "name": "Bajaj Auto",
-        "sector": "Automobiles",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 54,
-        "rsi": 77.5,
-        "trend": "Full Bull (>20>50>200)",
-        "reason": "Full bullish SMA alignment",
-        "narrative": "The move higher is happening on thin volume. Low-conviction rallies have a habit of fading just when you commit. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. RSI is at 78 \u2014 momentum is real but getting stretched. A consolidation here would be healthy, not alarming. The tape is chopping sideways with 50% breadth. Stock-picking matters more than market direction here. Automobiles is lagging the broader tape (score 34) \u2014 an extra headwind. Bull case: sustains above \u20b911,374 and pushes towards \u20b911,978 as trend followers pile in. Bear case: a slip below \u20b910,770 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b911,033\u2013\u20b911,647 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 11103.75,
-              "mid": 11374.0,
-              "high": 11644.25,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 78 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 10769.71,
-              "mid": 11374.0,
-              "high": 11978.29,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 10135.57,
-              "mid": 11374.0,
-              "high": 12612.43,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
@@ -4175,7 +4294,7 @@
         "action": "EXIT",
         "flags": [
           "rule \u2192 EXIT",
-          "negative news (2)"
+          "negative news (1)"
         ],
         "verdict": "EXIT"
       },
@@ -4229,6 +4348,13 @@
       }
     ],
     "breakout_watch": [
+      {
+        "symbol": "BAJAJ-AUTO",
+        "name": "Bajaj Auto",
+        "pct_from_52h": 0.3,
+        "score": 62,
+        "action": "ADD"
+      },
       {
         "symbol": "SUNPHARMA",
         "name": "Sun Pharmaceutical",
@@ -4287,7 +4413,7 @@
       },
       {
         "sector": "Pharma",
-        "avg_score": 35.2,
+        "avg_score": 37.2,
         "count": 4,
         "trend": "down",
         "news_count": 1,
@@ -4295,7 +4421,7 @@
       },
       {
         "sector": "Automobiles",
-        "avg_score": 34.8,
+        "avg_score": 36.8,
         "count": 4,
         "trend": "down",
         "news_count": 0,
@@ -4319,19 +4445,11 @@
       },
       {
         "sector": "IT",
-        "avg_score": 25.2,
+        "avg_score": 25.3,
         "count": 6,
         "trend": "down",
         "news_count": 3,
         "news_label": "BEARISH"
-      },
-      {
-        "sector": "Telecom",
-        "avg_score": 20.0,
-        "count": 1,
-        "trend": "down",
-        "news_count": 6,
-        "news_label": "NEUTRAL"
       },
       {
         "sector": "Defence",
@@ -4340,6 +4458,14 @@
         "trend": "down",
         "news_count": 3,
         "news_label": "NEUTRAL"
+      },
+      {
+        "sector": "Banking",
+        "avg_score": 18.7,
+        "count": 6,
+        "trend": "down",
+        "news_count": 20,
+        "news_label": "BULLISH"
       }
     ],
     "action_plan": [
@@ -4377,17 +4503,6 @@
         "verdict": "EXIT"
       },
       {
-        "priority": 1,
-        "type": "EXIT",
-        "symbol": "HDFCBANK",
-        "name": "HDFC Bank",
-        "price": 735.4,
-        "instruction": "Market order at open \u2014 rule ladder triggered.",
-        "reason": "MACD histogram expanding",
-        "confidence": "LOW",
-        "verdict": "EXIT"
-      },
-      {
         "priority": 3,
         "type": "ADD",
         "symbol": "NESTLEIND",
@@ -4407,6 +4522,17 @@
         "instruction": "GTC limit \u2264 \u20b92,744",
         "reason": "Full bullish SMA alignment",
         "confidence": "HIGH",
+        "verdict": "BUY"
+      },
+      {
+        "priority": 3,
+        "type": "ADD",
+        "symbol": "BAJAJ-AUTO",
+        "name": "Bajaj Auto",
+        "price": 11374.0,
+        "instruction": "GTC limit \u2264 \u20b911,408",
+        "reason": "Full bullish SMA alignment",
+        "confidence": "MEDIUM",
         "verdict": "BUY"
       },
       {
@@ -4435,14 +4561,17 @@
         "link": "https://www.livemint.com/market/stock-market-news/idfc-first-bank-shares-extend-post-q1fy27-results-rally-will-it-climb-to-a-new-52-week-high-11785212579934.html"
       },
       {
-        "title": "FIIs triple stake in Sterlite Tech after a stellar 400% surge this year. More legs to the rally?",
+        "title": "TVS Motor Company among 9 stocks to hit 52-week highs & rally up to 15% in a month",
         "source": "ET Markets",
         "category": "market",
         "sentiment": "BULLISH",
-        "tickers": [],
+        "tickers": [
+          "DIVISLAB",
+          "BAJAJ-AUTO"
+        ],
         "sectors": [],
-        "published": "2026-07-28T07:28:18+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-triple-stake-in-sterlite-tech-after-a-stellar-400-surge-this-year-more-legs-to-the-rally/articleshow/132678108.cms"
+        "published": "2026-07-28T13:50:48+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/tvs-motor-company-among-9-stocks-to-hit-52-week-highs-amp-rally-up-to-15-in-a-month/slideshow/132686439.cms"
       },
       {
         "title": "Varun Beverages Q2 Results: Net profit rises 15% to \u20b91,525 crore, revenue up 20%; dividend declared",
@@ -4455,14 +4584,34 @@
         "link": "https://www.livemint.com/market/stock-market-news/varun-beverages-q2-results-net-profit-rises-15-to-rs-1-525-crore-revenue-up-20-11785221941040.html"
       },
       {
-        "title": "Japan\u2019s Nikkei tumbles over 3% as chip stock selloff deepens after Wall Street decline",
-        "source": "Hindu BusinessLine",
+        "title": "US Stocks: Nasdaq falls as AI worries mount ahead of pivotal earning",
+        "source": "ET Markets",
         "category": "market",
         "sentiment": "BEARISH",
         "tickers": [],
         "sectors": [],
-        "published": "2026-07-28T02:17:40+00:00",
-        "link": "https://www.thehindubusinessline.com/markets/stock-markets/japans-nikkei-tumbles-over-3-as-chip-stock-selloff-deepens-after-wall-street-decline/article71275340.ece"
+        "published": "2026-07-28T13:33:48+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-nasdaq-opens-lower-as-ai-worries-mount-ahead-of-pivotal-earnings/articleshow/132685767.cms"
+      },
+      {
+        "title": "Birlasoft Q1 Results: Net profit jumps 51% YoY to \u20b9161 crore; TCV rises 20%",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-07-28T12:38:11+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/birlasoft-q1-results-net-profit-jumps-51-yoy-to-rs-161-crore-tcv-rises-20-11785241695017.html"
+      },
+      {
+        "title": "Radico Khaitan Q1 Results: Profit jumps 76% to Rs 229 crore, revenue up at Rs 5,867 crore",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-07-28T13:01:27+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/radico-khaitan-q1-results-profit-jumps-76-to-rs-229-crore-revenue-up-at-rs-5867-crore/articleshow/132685137.cms"
       },
       {
         "title": "Vedanta Aluminium shares in a sweet spot, says ICICI Securities; initiates coverage with Buy rating",
@@ -4527,40 +4676,16 @@
         "sectors": [
           "Banking"
         ],
-        "published": "2026-07-28T12:24:06.628083+00:00",
+        "published": "2026-07-28T14:55:48.492402+00:00",
         "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63243"
-      },
-      {
-        "title": "RBI imposes monetary penalty on Jilla Sahakari Kendriya Bank Maryadit, Shajapur, Madhya Pradesh",
-        "source": "RBI Press",
-        "category": "policy",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [
-          "Banking"
-        ],
-        "published": "2026-07-28T12:24:06.628275+00:00",
-        "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63241"
-      },
-      {
-        "title": "Employee work-hour rules: Why Infosys\u2019 time-tracking system triggered \u20b91.90 crore fine in France",
-        "source": "Mint Companies",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "INFY"
-        ],
-        "sectors": [],
-        "published": "2026-07-27T16:49:19+00:00",
-        "link": "https://www.livemint.com/companies/news/employee-work-hour-rules-why-infosys-time-tracking-system-triggered-1-90-crore-fine-in-france-11785166476797.html"
       }
     ],
     "news_stats": {
-      "total_items": 261,
+      "total_items": 264,
       "sources": 11,
-      "with_tickers": 52,
-      "bullish": 75,
-      "bearish": 64
+      "with_tickers": 48,
+      "bullish": 81,
+      "bearish": 62
     }
   }
 }
