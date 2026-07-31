@@ -915,36 +915,77 @@ def main():
     # Re-sort after news adjustment
     results.sort(key=lambda x: x["score"], reverse=True)
 
-    # ── Force top 5 per category ──
-    used = set()
-    def top5(cat):
-        picks = [r for r in results
-                 if r["holding_category"] == cat and r["signal"] in ("STRONG BUY", "BUY")]
-        used.update(r["symbol"] for r in picks[:5])
-        if len(picks) < 5:
-            extras = [r for r in results
-                      if r["symbol"] not in used and r["signal"] in ("STRONG BUY", "BUY", "WATCH")]
-            for r in extras:
-                if len(picks) >= 5:
-                    break
-                rc = dict(r); rc["holding_category"] = cat
-                if cat == "short":
-                    rc["trade_plan"]["entry"]["entry_window"] = "09:15–09:45 AM IST"
-                    rc["trade_plan"]["exit"]["hold_duration"] = "5–15 trading days"
-                elif cat == "medium":
-                    rc["trade_plan"]["entry"]["entry_window"] = "09:15–10:15 AM IST"
-                    rc["trade_plan"]["exit"]["hold_duration"] = "4–12 weeks"
-                else:
-                    rc["trade_plan"]["entry"]["entry_window"] = "09:15 AM IST (GTC)"
-                    rc["trade_plan"]["exit"]["hold_duration"] = "6–18 months"
-                picks.append(rc); used.add(rc["symbol"])
-        for i, r in enumerate(picks[:5]):
-            r["rank"] = i + 1
-        return picks[:5]
+    # ── Category selection with an HONEST relaxation ladder ──
+    # The old behaviour FORCED exactly 5 picks per horizon and, when fewer than
+    # 5 stocks qualified, padded the list with sub-threshold WATCH names — even
+    # silently relabelling their horizon. That is the root cause of "the picks
+    # we shortlisted never met the constraints": the engine manufactured picks
+    # to hit a quota of 5.
+    #
+    # New rules:
+    #   1. A genuine pick = correct horizon AND signal in {STRONG BUY, BUY}.
+    #   2. If a horizon has fewer than MIN_PICKS genuine picks, relax by score
+    #      (>= RELAX_FLOOR) to reach the minimum — but tag those as
+    #      qualified=False / tier="watch" so the UI can label them honestly as
+    #      "below buy threshold", never passing them off as qualified buys.
+    #   3. Never silently relabel a stock's true horizon.
+    #   4. A horizon may legitimately return 0 genuine picks in a weak regime;
+    #      that is surfaced via picks_meta, not hidden by padding.
+    MIN_PICKS    = 3     # try to show at least this many if anything reasonable exists
+    TARGET_PICKS = 5     # soft cap per horizon
+    RELAX_FLOOR  = 45    # a relaxed (non-buy) candidate must still score >= this
 
-    short_picks = top5("short")
-    medium_picks = top5("medium")
-    long_picks = top5("long")
+    # Tag every scored stock with an honest qualification tier once.
+    for r in results:
+        if r["signal"] in ("STRONG BUY", "BUY"):
+            r["tier"], r["qualified"] = "buy", True
+        elif r["signal"] == "WATCH":
+            r["tier"], r["qualified"] = "watch", False
+        else:
+            r["tier"], r["qualified"] = "avoid", False
+
+    def build_picks(cat):
+        qualified = [r for r in results
+                     if r["holding_category"] == cat and r["qualified"]]
+        picks = qualified[:TARGET_PICKS]
+
+        # Relax ONLY to reach the minimum, and only with same-horizon names.
+        if len(picks) < MIN_PICKS:
+            relaxed = sorted(
+                [r for r in results
+                 if r["holding_category"] == cat and not r["qualified"]
+                 and r["score"] >= RELAX_FLOOR],
+                key=lambda r: -r["score"],
+            )
+            for r in relaxed:
+                if len(picks) >= MIN_PICKS:
+                    break
+                rc = dict(r)
+                rc["tier"], rc["qualified"] = "watch", False
+                picks.append(rc)
+
+        for i, r in enumerate(picks):
+            r["rank"] = i + 1
+        return picks
+
+    short_picks  = build_picks("short")
+    medium_picks = build_picks("medium")
+    long_picks   = build_picks("long")
+
+    def _meta(cat, picks):
+        return {
+            "qualified": sum(1 for r in results if r["holding_category"] == cat and r["qualified"]),
+            "shown": len(picks),
+            "relaxed": sum(1 for r in picks if not r.get("qualified")),
+        }
+    picks_meta = {
+        "short":  _meta("short", short_picks),
+        "medium": _meta("medium", medium_picks),
+        "long":   _meta("long", long_picks),
+        "note": ("Picks tagged qualified=false scored below the BUY threshold and are shown "
+                 "only to fill the minimum — they are not endorsed buys."),
+    }
+
     top_picks = results[:15]
     for i, r in enumerate(top_picks):
         r["rank"] = i + 1
@@ -1014,10 +1055,16 @@ def main():
             "unchanged": int((len(results) - adv - dec) * k),
             "new_52w_high": 0, "new_52w_low": 0,
         },
+        "picks_meta": picks_meta,
         "short_term": {"label": "Short Term (5–15 days)", "picks": [clean_result(r) for r in short_picks]},
         "medium_term": {"label": "Medium Term (4–12 weeks)", "picks": [clean_result(r) for r in medium_picks]},
         "long_term": {"label": "Long Term (6–18 months)", "picks": [clean_result(r) for r in long_picks]},
         "top_picks": [clean_result(r) for r in top_picks],
+        # Full scored universe — every tracked stock with its complete analysis.
+        # This powers client-side budget/risk/sector filters (so a shortlist can
+        # ALWAYS be built from stocks that actually meet the user's constraints)
+        # and per-holding portfolio evaluation, without another network round-trip.
+        "universe": [clean_result(r) for r in results],
         "watchlist": [{"symbol": r["symbol"], "name": r.get("name", ""), "sector": r.get("sector", ""),
                        "current_price": r.get("current_price"), "score": r.get("score", 0),
                        "signal": "WATCH",
