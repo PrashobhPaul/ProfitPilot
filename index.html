@@ -444,6 +444,29 @@
     }
     @media (min-width: 1200px) { .picks-list { grid-template-columns: repeat(3, 1fr); } }
 
+    /* ═══════ FILTER BAR (budget / risk / sector) ═══════ */
+    .filter-bar { margin: 10px 12px 0; padding: 10px 12px; border-radius: 14px;
+      background: var(--surface, rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.06);
+      display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; }
+    @media (min-width: 768px) { .filter-bar { max-width: 1200px; margin-left: auto; margin-right: auto; } }
+    .filter-bar .fb-field { display: flex; flex-direction: column; gap: 3px; flex: 1 1 120px; min-width: 110px; }
+    .filter-bar label { font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-tertiary); }
+    .filter-bar input, .filter-bar select { width: 100%; box-sizing: border-box; background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.1); color: var(--text-primary, #e8f5e8); border-radius: 9px;
+      padding: 8px 10px; font-size: 13px; font-family: inherit; -webkit-appearance: none; appearance: none; }
+    .filter-bar input:focus, .filter-bar select:focus { outline: none; border-color: var(--hz-color, var(--accent)); }
+    .fb-reset { flex: 0 0 auto; align-self: flex-end; background: transparent; border: 1px solid rgba(255,255,255,.14);
+      color: var(--text-secondary); border-radius: 9px; padding: 8px 12px; font-size: 12px; font-family: inherit; cursor: pointer; }
+    .fb-reset:active { transform: scale(.95); }
+    .fb-summary { flex-basis: 100%; font-size: 11px; color: var(--text-tertiary); margin-top: 2px; }
+    .fb-summary strong { color: var(--hz-color, var(--accent)); }
+
+    /* Honest "below buy threshold" ribbon for relaxed / non-qualified picks */
+    .pc-tier-watch { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;
+      font-size: 9.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+      color: #ffcf5c; background: rgba(255,193,7,.12); border: 1px solid rgba(255,193,7,.35);
+      padding: 3px 7px; border-radius: 999px; }
+
     /* ═══════ PICK CARD ═══════ */
     .pcard {
       background: var(--bg-card);
@@ -1317,6 +1340,7 @@ function makeCard(p, cat) {
             <span class="pc-tag">${p.sector}</span>
             ${tp.atr?`<span class="pc-tag">ATR \u20B9${fmt(tp.atr)}</span>`:''}
           </div>
+          ${(p.qualified===false||p.tier==='watch')?`<div class="pc-tier-watch" title="Scored below the BUY threshold \u2014 shown to fill the list or because it matched your filter, not an endorsed buy">\u26A0 Below buy threshold</div>`:''}
         </div>
         <div class="pc-right">
           <div class="${sigClass} signal-badge"><span class="signal-dot"></span>${p.signal}</div>
@@ -1375,11 +1399,124 @@ function makeCard(p, cat) {
   </div>`;
 }
 
+// \u2500\u2500 Constraint filters (budget / risk / sector) over the full universe \u2500\u2500
+// Default (no filter) shows the engine's honest picks. When the user sets ANY
+// constraint, we rebuild the shortlist from the FULL scored universe so the
+// result ALWAYS satisfies the constraint (or we say plainly that none match).
+// This is the fix for "the ones we shortlisted never met the constraints".
+const pfilter = { maxPrice: null, risk: 'any', sector: 'any' };
+
+function getUniverse() {
+  if (Array.isArray(data.universe) && data.universe.length) return data.universe;
+  // Fallback for older predictions.json that predates the universe array.
+  const seen = {}, out = [];
+  [].concat(data.top_picks||[], (data.short_term||{}).picks||[],
+            (data.medium_term||{}).picks||[], (data.long_term||{}).picks||[])
+    .forEach(p => { if (p && p.symbol && !seen[p.symbol]) { seen[p.symbol]=1; out.push(p); } });
+  return out;
+}
+
+// Transparent conviction \u2192 risk band. Higher score + HIGH confidence = lower risk.
+function riskBand(p) {
+  const s = p.score||0, c = (p.confidence||'').toUpperCase();
+  if (s >= 63 && c === 'HIGH') return 'lower';
+  if (s < 50 || p.qualified === false || c === 'LOW') return 'higher';
+  return 'medium';
+}
+
+function filterActive() {
+  return !!pfilter.maxPrice || pfilter.risk !== 'any' || pfilter.sector !== 'any';
+}
+
+function filteredPicks(cat) {
+  if (!filterActive()) return (data[cat+'_term']||{}).picks || [];
+  let u = getUniverse().filter(p => p.holding_category === cat);
+  if (pfilter.maxPrice)        u = u.filter(p => (p.current_price||0) <= pfilter.maxPrice);
+  if (pfilter.sector !== 'any') u = u.filter(p => p.sector === pfilter.sector);
+  if (pfilter.risk !== 'any')   u = u.filter(p => riskBand(p) === pfilter.risk);
+  u = u.slice().sort((a,b) => (b.score||0)-(a.score||0)).slice(0,12);
+  u.forEach((p,i) => p.rank = i+1);
+  return u;
+}
+
+function sectorOptions() {
+  const set = new Set();
+  getUniverse().forEach(p => { if (p.sector) set.add(p.sector); });
+  return Array.from(set).sort();
+}
+
+function syncFilterUI() {
+  const focused = document.activeElement;
+  document.querySelectorAll('.filter-bar').forEach(bar => {
+    const mp = bar.querySelector('[data-fb="maxPrice"]');
+    const rk = bar.querySelector('[data-fb="risk"]');
+    const sc = bar.querySelector('[data-fb="sector"]');
+    // Never overwrite a control the user is currently interacting with.
+    if (mp && mp !== focused) mp.value = pfilter.maxPrice == null ? '' : pfilter.maxPrice;
+    if (rk && rk !== focused) rk.value = pfilter.risk;
+    if (sc && sc !== focused) sc.value = pfilter.sector;
+  });
+}
+
+function installFilterBars() {
+  const secs = sectorOptions();
+  ['short','medium','long'].forEach(cat => {
+    const panel = document.getElementById('panel-'+cat);
+    if (!panel || panel.querySelector('.filter-bar')) return;
+    const list = document.getElementById('picks-'+cat);
+    if (!list) return;
+    const bar = document.createElement('div');
+    bar.className = 'filter-bar';
+    bar.innerHTML =
+      '<div class="fb-field"><label>Max price (\u20B9)</label><input type="number" min="0" step="50" inputmode="numeric" placeholder="Any" data-fb="maxPrice"></div>' +
+      '<div class="fb-field"><label>Risk</label><select data-fb="risk"><option value="any">Any</option><option value="lower">Lower</option><option value="medium">Medium</option><option value="higher">Higher</option></select></div>' +
+      '<div class="fb-field"><label>Sector</label><select data-fb="sector"><option value="any">All sectors</option>' +
+        secs.map(s => `<option value="${s}">${s}</option>`).join('') + '</select></div>' +
+      '<button class="fb-reset" type="button">Reset</button>' +
+      '<div class="fb-summary"></div>';
+    panel.insertBefore(bar, list);
+    bar.querySelectorAll('[data-fb]').forEach(elm => {
+      const sync = () => {
+        const key = elm.getAttribute('data-fb');
+        pfilter[key] = key === 'maxPrice' ? (parseFloat(elm.value) || null) : elm.value;
+        syncFilterUI();
+        renderHorizon(activeTab);
+      };
+      elm.addEventListener('input', sync);
+      elm.addEventListener('change', sync);
+    });
+    bar.querySelector('.fb-reset').addEventListener('click', () => {
+      pfilter.maxPrice = null; pfilter.risk = 'any'; pfilter.sector = 'any';
+      syncFilterUI();
+      ['short','medium','long'].forEach(renderHorizon);
+    });
+  });
+  syncFilterUI();
+}
+
 function renderHorizon(cat) {
-  const bucket = (data[cat+'_term']||{}).picks || [];
+  const bucket = filteredPicks(cat);
   const el = document.getElementById('picks-'+cat);
   const nc = document.getElementById('nc-'+cat);
   if (nc) { nc.textContent = bucket.length||'0'; nc.classList.toggle('visible', bucket.length>0); }
+
+  // Filter summary line (below the filter bar).
+  const sumEl = document.getElementById('panel-'+cat)?.querySelector('.fb-summary');
+  if (sumEl) {
+    const inHorizon = getUniverse().filter(p => p.holding_category === cat).length;
+    if (filterActive()) {
+      const parts = [];
+      if (pfilter.maxPrice)        parts.push(`\u2264 \u20B9${fmt(pfilter.maxPrice)}`);
+      if (pfilter.risk !== 'any')  parts.push(`${pfilter.risk} risk`);
+      if (pfilter.sector !== 'any')parts.push(pfilter.sector);
+      sumEl.innerHTML = `<strong>${bucket.length}</strong> of ${inHorizon} ${cat}-term stocks match \u00B7 ${parts.join(' \u00B7 ')}`;
+    } else {
+      const m = (data.picks_meta||{})[cat];
+      sumEl.innerHTML = m
+        ? `Engine picks \u00B7 <strong>${m.qualified}</strong> met the BUY bar${m.relaxed?` \u00B7 ${m.relaxed} below threshold`:''}`
+        : 'Engine picks';
+    }
+  }
 
   if (!bucket.length) {
     const icons = {short:'\u26A1', medium:'\uD83D\uDCC8', long:'\uD83C\uDFDB'};
@@ -1388,7 +1525,9 @@ function renderHorizon(cat) {
     const analyzed = data.stocks_analyzed||0;
     const mktOpen = isOpen();
 
-    if (analyzed === 0) {
+    if (filterActive()) {
+      el.innerHTML = `<div class="empty-state"><div class="empty-icon">\uD83D\uDD0D</div><div class="empty-title">No ${cat}-term stocks match</div><div class="empty-text">None of the analyzed ${cat}-term stocks fit your current filters.<br><br><span style="color:var(--text-tertiary)">Loosen the budget, risk or sector \u2014 or tap <strong style="color:${colors[cat]}">Reset</strong>.</span></div></div>`;
+    } else if (analyzed === 0) {
       el.innerHTML = `<div class="empty-state"><div class="empty-icon">${icons[cat]}</div><div class="empty-title">Fresh picks on the way</div><div class="empty-text">Today's analysis hasn't landed yet. Picks are generated after market close at <strong style="color:${colors[cat]}">4:15 PM IST</strong>.<br><br><span style="color:var(--text-tertiary)">${mktOpen?'Market is open \u2014 check back after close.':'Market is closed \u2014 picks refresh next trading day.'}</span></div></div>`;
     } else {
       el.innerHTML = `<div class="empty-state"><div class="empty-icon">${icons[cat]}</div><div class="empty-title">No ${cat}-term picks today</div><div class="empty-text">Analyzed <strong style="color:${colors[cat]}">${analyzed} NSE stocks</strong> \u2014 no high-confidence ${labels[cat]} setups met our criteria.<br><br><span style="color:var(--text-tertiary)">This is by design. Check the other tabs for picks.</span></div></div>`;
@@ -1471,6 +1610,7 @@ function renderAI() {
 }
 
 function renderAll() {
+  installFilterBars();
   renderTicker(); renderHorizon('short'); renderHorizon('medium'); renderHorizon('long');
   renderIndices(); renderBreadth(); renderSectors(); renderLists();
   if (data.daily_brief) renderAI();
