@@ -119,9 +119,35 @@ def fetch_prices_resilient(tickers, period="1y", interval="1d",
     if not got:
         print("      ✗ All fetches failed. Returning empty frame.")
         return pd.DataFrame()
-    frames = {t: df for t, df in got.items()}
+
+    # Normalize every frame's DatetimeIndex to tz-naive before concat. The batch
+    # path (yf.download) and the per-ticker fallback (Ticker.history) can return
+    # a MIX of tz-aware and tz-naive indices under newer yfinance/pandas, and
+    # `pd.concat(..., axis=1)` then raises:
+    #   "TypeError: Cannot join tz-naive with tz-aware DatetimeIndex".
+    # That crash — not any API/rate-limit issue — is what froze the daily data.
+    frames = {}
+    for t, df in got.items():
+        try:
+            df = df.copy()
+            idx = df.index
+            if not isinstance(idx, pd.DatetimeIndex):
+                idx = pd.to_datetime(idx, errors="coerce")
+            if getattr(idx, "tz", None) is not None:
+                idx = idx.tz_localize(None)
+            df.index = idx
+            df = df[~df.index.isna()]
+            if not df.empty:
+                frames[t] = df
+        except Exception as e:
+            print(f"        ⚠ skipping {t} during tz-normalize: {e}")
+
+    if not frames:
+        print("      ✗ All frames unusable after normalize. Returning empty frame.")
+        return pd.DataFrame()
+
     combined = pd.concat(frames, axis=1)  # MultiIndex: (ticker, OHLCV)
-    print(f"      ✓ final usable tickers: {len(got)}/{len(tickers)}")
+    print(f"      ✓ final usable tickers: {len(frames)}/{len(tickers)}")
     return combined
 
 
