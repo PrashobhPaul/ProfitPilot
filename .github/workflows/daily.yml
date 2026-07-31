@@ -47,26 +47,40 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Pin to a known-good modern yfinance + curl_cffi session shim.
-          # The old 0.2.36 pin was the root cause of the Apr 2026 outage —
-          # Yahoo tightened bot detection and the old parser returned
-          # "Expecting value: line 1 column 1 (char 0)" for every ticker.
-          pip install "yfinance>=0.2.50" "curl_cffi>=0.7.0" \
-                      pandas numpy requests pytz feedparser
+          # Pin to the KNOWN-GOOD stable line this pipeline was written for.
+          # The unpinned "yfinance>=0.2.50" was resolving to yfinance 1.5.x +
+          # pandas 3.0.x, whose mixed tz-aware/tz-naive indices crashed the
+          # fetcher on pd.concat ("Cannot join tz-naive with tz-aware
+          # DatetimeIndex") — which silently froze the daily data. Staying on
+          # the 0.2.x / pandas-2.x stack (plus the tz-normalize guard in
+          # quotes_daily.py) keeps it robust.
+          pip install "yfinance>=0.2.54,<0.3" "curl_cffi>=0.7.0" \
+                      "pandas>=2.1,<2.3" "numpy>=1.26,<2.1" \
+                      requests pytz feedparser
 
       - name: Run integrated analysis (with one retry)
         id: analysis
         run: |
           cd $GITHUB_WORKSPACE
-          # First attempt
-          python api/quotes_daily.py || true
-          # If fresh picks didn't land, retry once before giving up on this slot
-          STOCKS=$(python -c "import json; print(json.load(open('predictions.json')).get('stocks_analyzed', 0))" 2>/dev/null || echo 0)
-          STALE=$(python -c "import json; print(1 if json.load(open('predictions.json')).get('_stale') else 0)" 2>/dev/null || echo 0)
-          if [ "$STOCKS" = "0" ] || [ "$STALE" = "1" ]; then
-            echo "First attempt didn't produce fresh picks (stocks=$STOCKS, stale=$STALE). Retrying in 30s..."
+
+          # Freshness probe: prints "<age_min> <stale> <stocks>". A large age
+          # means predictions.json was NOT rewritten this run (e.g. the script
+          # crashed) — the old logic missed that and committed stale data as
+          # "FRESH". Kept as a one-line python -c to avoid heredoc/YAML issues.
+          PROBE='import json,datetime as dt; d=json.load(open("predictions.json")); t=dt.datetime.fromisoformat(d["generated_at"]); print(int((dt.datetime.now(t.tzinfo)-t).total_seconds()//60), 1 if d.get("_stale") else 0, d.get("stocks_analyzed",0))'
+
+          python api/quotes_daily.py && RC=0 || RC=$?
+          INFO=$(python -c "$PROBE" 2>/dev/null || echo "999999 1 0")
+          AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
+          echo "attempt 1 -> exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
+
+          if [ "$RC" != "0" ] || [ "$AGE" -gt 120 ] || [ "$STALE" = "1" ] || [ "$STOCKS" = "0" ]; then
+            echo "Fresh data did not land (crash or stale). Retrying in 30s..."
             sleep 30
-            python api/quotes_daily.py || true
+            python api/quotes_daily.py && RC=0 || RC=$?
+            INFO=$(python -c "$PROBE" 2>/dev/null || echo "999999 1 0")
+            AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
+            echo "attempt 2 -> exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
           fi
 
       - name: Commit predictions.json and news_cache.json
