@@ -788,6 +788,71 @@ def build_rich_daily_brief(results: list, regime: dict, news_items: list,
 # ───────────────────────────────────────────────────────────────────────────
 # MAIN PIPELINE
 # ───────────────────────────────────────────────────────────────────────────
+# ───────────────────────────────────────────────────────────────────────────
+# BROAD PRICE UNIVERSE → quotes.json (central store for portfolio LTPs)
+# ───────────────────────────────────────────────────────────────────────────
+def build_and_write_quotes(now):
+    """Fetch EOD prices for the broad universe and write quotes.json.
+
+    This is the price map the app's portfolio reads from the central store, so
+    holdings outside the scored set still get an LTP without any per-user API
+    call. Independent of scoring — runs even if the scoring fetch has an off day.
+    Preserves the last-good file if this run resolves far fewer symbols.
+    """
+    try:
+        from universe_symbols import UNIVERSE
+    except Exception:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from universe_symbols import UNIVERSE
+
+    tickers = [f"{s}.NS" for s in UNIVERSE]
+    print(f"\n[quotes] fetching {len(tickers)} universe symbols for quotes.json...")
+    df_all = fetch_prices_resilient(tickers, period="7d", interval="1d")
+
+    quotes = {}
+    if df_all is not None and not df_all.empty and isinstance(df_all.columns, pd.MultiIndex):
+        avail = set(df_all.columns.get_level_values(0))
+        for t in tickers:
+            if t not in avail:
+                continue
+            try:
+                c = df_all[t]["Close"].dropna()
+                if len(c) < 1:
+                    continue
+                price = float(c.iloc[-1])
+                prev = float(c.iloc[-2]) if len(c) > 1 else price
+                quotes[t.replace(".NS", "")] = {
+                    "price": round(price, 2),
+                    "prev_close": round(prev, 2),
+                    "change": round(price - prev, 2),
+                    "change_pct": round((price - prev) / prev * 100, 2) if prev else 0.0,
+                }
+            except Exception:
+                continue
+
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "quotes.json")
+    # Preserve-last-good: don't clobber a richer file with a sparse failed run.
+    try:
+        if os.path.exists(path):
+            with open(path) as f:
+                prev_q = json.load(f)
+            if len(quotes) < 0.5 * prev_q.get("count", 0):
+                print(f"      ⚠ only {len(quotes)} quotes vs {prev_q.get('count')} last-good — preserving previous quotes.json")
+                return
+    except Exception:
+        pass
+
+    out = {
+        "generated_at": now.isoformat(),
+        "market_date": now.strftime("%Y-%m-%d"),
+        "count": len(quotes),
+        "quotes": quotes,
+    }
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(out, f, separators=(",", ":"), default=str)
+    print(f"      → quotes.json saved ({len(quotes)} symbols)")
+
+
 def main():
     now = datetime.now(IST)
     print(f"═══════════════════════════════════════════════════════════")
@@ -820,6 +885,14 @@ def main():
 
     macro_sentiment = aggregate_macro_sentiment(news_items)
     print(f"      → macro tone: {macro_sentiment.get('label')}")
+
+    # ── STEP 1b: broad EOD price universe → quotes.json (central store) ──
+    # Written up-front and independently so the portfolio price map survives
+    # even if the scoring path below has an off day.
+    try:
+        build_and_write_quotes(now)
+    except Exception as e:
+        print(f"      ⚠ quotes.json step failed: {e}")
 
     # ── STEP 2: Download price data ──
     print(f"\n[2/5] Downloading price data for {len(STOCKS)} stocks...")

@@ -87,7 +87,7 @@ jobs:
         run: |
           git config --global user.name  "stocksage-bot"
           git config --global user.email "bot@stocksage.india"
-          git add predictions.json news_cache.json 2>/dev/null || true
+          git add predictions.json news_cache.json quotes.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
