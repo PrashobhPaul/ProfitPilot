@@ -800,10 +800,10 @@ def build_and_write_quotes(now):
     Preserves the last-good file if this run resolves far fewer symbols.
     """
     try:
-        from universe_symbols import UNIVERSE
+        from universe_symbols import UNIVERSE, TIER_OF
     except Exception:
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from universe_symbols import UNIVERSE
+        from universe_symbols import UNIVERSE, TIER_OF
 
     tickers = [f"{s}.NS" for s in UNIVERSE]
     print(f"\n[quotes] fetching {len(tickers)} universe symbols for quotes.json...")
@@ -821,11 +821,13 @@ def build_and_write_quotes(now):
                     continue
                 price = float(c.iloc[-1])
                 prev = float(c.iloc[-2]) if len(c) > 1 else price
-                quotes[t.replace(".NS", "")] = {
+                sym = t.replace(".NS", "")
+                quotes[sym] = {
                     "price": round(price, 2),
                     "prev_close": round(prev, 2),
                     "change": round(price - prev, 2),
                     "change_pct": round((price - prev) / prev * 100, 2) if prev else 0.0,
+                    "tier": TIER_OF.get(sym, 750),
                 }
             except Exception:
                 continue
