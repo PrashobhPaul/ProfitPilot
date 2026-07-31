@@ -461,6 +461,40 @@
     .fb-summary { flex-basis: 100%; font-size: 11px; color: var(--text-tertiary); margin-top: 2px; }
     .fb-summary strong { color: var(--hz-color, var(--accent)); }
 
+    /* ═══════ PORTFOLIO ═══════ */
+    .pf-input-wrap { margin: 12px; padding: 14px; border-radius: 16px;
+      background: var(--surface, rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.07); }
+    @media (min-width: 768px) { .pf-input-wrap, .pf-results { max-width: 1200px; margin-left: auto; margin-right: auto; } }
+    .pf-label { display: block; font-size: 10px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 6px; }
+    .pf-textarea { width: 100%; box-sizing: border-box; resize: vertical; min-height: 64px;
+      background: rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.1); color: var(--text-primary, #e8f5e8);
+      border-radius: 11px; padding: 11px 12px; font-size: 15px; font-family: inherit; letter-spacing: .04em; }
+    .pf-textarea:focus { outline: none; border-color: var(--accent); }
+    .pf-actions { display: flex; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+    .pf-btn { background: transparent; border: 1px solid rgba(255,255,255,.16); color: var(--text-secondary);
+      border-radius: 10px; padding: 10px 16px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; }
+    .pf-btn.primary { background: var(--accent); border-color: var(--accent); color: #05230f; }
+    .pf-btn:active { transform: scale(.96); }
+    .pf-hint { font-size: 11px; color: var(--text-tertiary); }
+    .pf-results { padding: 0 12px 12px; display: flex; flex-direction: column; gap: 10px; }
+    @media (min-width: 768px) { .pf-results { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+    .pf-row { display: flex; align-items: stretch; gap: 12px; padding: 13px 14px; border-radius: 14px;
+      background: var(--surface, rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.07); border-left: 4px solid var(--v-color, #888); }
+    .pf-row-main { flex: 1; min-width: 0; }
+    .pf-row-head { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+    .pf-sym { font-size: 16px; font-weight: 800; letter-spacing: .02em; }
+    .pf-name { font-size: 11px; color: var(--text-tertiary); }
+    .pf-verdict { font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 999px; color: var(--v-color, #888); background: color-mix(in srgb, var(--v-color, #888) 15%, transparent);
+      border: 1px solid color-mix(in srgb, var(--v-color, #888) 45%, transparent); }
+    .pf-metrics { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 7px; font-size: 12px; color: var(--text-secondary); }
+    .pf-metrics b { color: var(--text-primary, #e8f5e8); font-weight: 700; }
+    .pf-reasons { margin-top: 8px; font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+    .pf-reasons span { color: var(--text-tertiary); }
+    .pf-score { flex: 0 0 auto; align-self: center; font-size: 20px; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--v-color, #888); }
+    .pf-row.untracked { border-left-color: rgba(255,255,255,.14); opacity: .82; }
+    .pf-empty { text-align: center; color: var(--text-tertiary); font-size: 13px; padding: 26px 16px; }
+
     /* Honest "below buy threshold" ribbon for relaxed / non-qualified picks */
     .pc-tier-watch { display: inline-flex; align-items: center; gap: 4px; margin-top: 6px;
       font-size: 9.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
@@ -1093,6 +1127,28 @@
     </div>
   </div>
 
+  <!-- PORTFOLIO -->
+  <div class="panel" id="panel-portfolio">
+    <div class="horizon-head" style="--hz-color:var(--accent)">
+      <div class="hz-top"><div class="hz-title">My Portfolio <span class="hz-badge" style="background:var(--accent)">EVALUATE</span></div></div>
+      <div class="hz-desc">Enter the NSE symbols you hold. Each is evaluated against today's analysis with a plain HOLD / ADD / TRIM / EXIT verdict and the reasons behind it.</div>
+    </div>
+    <div class="pf-input-wrap">
+      <label class="pf-label" for="pfInput">Your holdings (symbols, comma or space separated)</label>
+      <textarea id="pfInput" class="pf-textarea" rows="3" placeholder="e.g. RELIANCE, TCS, INFY, HDFCBANK, ITC" autocomplete="off" autocapitalize="characters" spellcheck="false"></textarea>
+      <div class="pf-actions">
+        <button class="pf-btn primary" type="button" onclick="evaluatePortfolio()">Evaluate</button>
+        <button class="pf-btn" type="button" onclick="clearPortfolio()">Clear</button>
+        <span class="pf-hint" id="pfHint"></span>
+      </div>
+    </div>
+    <div class="pf-results" id="pfResults"></div>
+    <div class="disclaimer">
+      <div class="disc-label">Disclaimer</div>
+      <div class="disc-text">Verdicts are generated from predefined strategies and market data — they do not account for your buy price, financial situation, or goals. Investing involves risk. Consult a SEBI-registered advisor.</div>
+    </div>
+  </div>
+
   <!-- AI BRIEFING -->
   <div class="panel" id="panel-ai">
     <div class="ai-panel" id="aiBriefingContent">
@@ -1131,6 +1187,11 @@
   <button class="nav-item" style="--tab-color:var(--purple)" id="nav-ai" onclick="switchTab('ai')">
     <span class="nav-icon-wrap">&#x2728;</span>
     <span class="nav-label">AI Brief</span>
+  </button>
+  <button class="nav-item" style="--tab-color:var(--accent)" id="nav-portfolio" onclick="switchTab('portfolio')">
+    <span class="nav-icon-wrap">&#x1F4BC;</span>
+    <span class="nav-label">Portfolio</span>
+    <span class="nav-badge" id="nc-portfolio"></span>
   </button>
 </nav>
 
@@ -1251,11 +1312,12 @@ function switchTab(tab) {
   document.getElementById('nav-'+tab).classList.add('active');
   window.scrollTo({top:0, behavior:'smooth'});
   if (tab === 'ai') renderAI();
+  if (tab === 'portfolio') renderPortfolio();
 }
 
 function handleHash() {
   const h = location.hash.replace('#','');
-  if (['short','medium','long','market','ai'].includes(h)) switchTab(h);
+  if (['short','medium','long','market','ai','portfolio'].includes(h)) switchTab(h);
 }
 window.addEventListener('hashchange', handleHash);
 
@@ -1609,11 +1671,135 @@ function renderAI() {
   ${conv?`<div class="ai-card"><div class="ai-section-title">Conviction Board</div>${conv}</div>`:''}`;
 }
 
+// ═══════ PORTFOLIO EVALUATOR (tracked-only, offline) ═══════
+const PF_KEY = 'pp_portfolio';
+
+function parseSymbols(raw) {
+  const seen = {}, out = [];
+  (raw || '').toUpperCase().split(/[^A-Z0-9&.\-]+/).forEach(t => {
+    t = t.replace(/\.NS$/, '').trim();
+    if (t && !seen[t]) { seen[t] = 1; out.push(t); }
+  });
+  return out;
+}
+
+// Evaluate a single held symbol against today's analysis → HOLD/ADD/TRIM/EXIT.
+function evalHolding(sym) {
+  const p = getUniverse().find(x => (x.symbol || '').toUpperCase() === sym);
+  if (!p) return { symbol: sym, tracked: false };
+
+  const rsi = p.indicators ? p.indicators.rsi : null;
+  const cur = p.current_price;
+  const tgt = p.target_price != null ? p.target_price
+            : (p.trade_plan && p.trade_plan.exit ? p.trade_plan.exit.target_ideal : null);
+  const upside = (tgt && cur) ? ((tgt - cur) / cur * 100) : null;
+  const sig = (p.signal || '').toUpperCase();
+  const score = p.score || 0;
+
+  let verdict, color;
+  const why = [];
+  if (sig === 'AVOID' || p.verdict === 'EXIT' || score < 40) {
+    verdict = 'EXIT'; color = '#ff5252';
+    why.push(`Signal has turned bearish (score ${score}).`);
+  } else if (rsi != null && rsi >= 78) {
+    verdict = 'TRIM'; color = '#ffab40';
+    why.push(`Overbought (RSI ${rsi.toFixed(0)}) — consider booking partial profit.`);
+  } else if (upside != null && upside <= 1.5) {
+    verdict = 'TRIM'; color = '#ffab40';
+    why.push(`Near the ideal target (₹${fmt(tgt)}) — limited remaining upside.`);
+  } else if ((sig === 'STRONG BUY' || sig === 'BUY') && p.qualified !== false) {
+    verdict = 'ADD'; color = '#00e676';
+    why.push(`Still a qualified ${sig.toLowerCase()} (score ${score})${upside != null ? ` with ~${upside.toFixed(0)}% to target` : ''}.`);
+  } else {
+    verdict = 'HOLD'; color = '#8ab4f8';
+    why.push('Constructive but not a fresh buy — hold your position.');
+  }
+  (p.reasons || []).slice(0, 2).forEach(r => why.push(r));
+  return { symbol: sym, tracked: true, verdict, color, score, cur, tgt, upside, name: p.name || '', sector: p.sector || '', why };
+}
+
+function renderPortfolioResults(symbols) {
+  const box = document.getElementById('pfResults');
+  const badge = document.getElementById('nc-portfolio');
+  if (badge) { badge.textContent = symbols.length || ''; badge.classList.toggle('visible', symbols.length > 0); }
+
+  if (!symbols.length) {
+    box.innerHTML = `<div class="pf-empty">Add the symbols you hold above, then tap <strong style="color:var(--accent)">Evaluate</strong>.</div>`;
+    return;
+  }
+  if (!getUniverse().length) {
+    box.innerHTML = `<div class="pf-empty">Today's analysis hasn't loaded yet — pull to refresh, then evaluate.</div>`;
+    return;
+  }
+
+  const evals = symbols.map(evalHolding);
+  const tracked = evals.filter(e => e.tracked);
+  const untracked = evals.filter(e => !e.tracked);
+
+  const rows = tracked.map(e => `
+    <div class="pf-row" style="--v-color:${e.color}">
+      <div class="pf-row-main">
+        <div class="pf-row-head">
+          <span class="pf-sym">${e.symbol}</span>
+          <span class="pf-verdict">${e.verdict}</span>
+          ${e.name ? `<span class="pf-name">${e.name}${e.sector ? ' · ' + e.sector : ''}</span>` : ''}
+        </div>
+        <div class="pf-metrics">
+          <span>Price <b>₹${fmt(e.cur)}</b></span>
+          ${e.tgt != null ? `<span>Target <b>₹${fmt(e.tgt)}</b></span>` : ''}
+          ${e.upside != null ? `<span>Upside <b>${e.upside >= 0 ? '+' : ''}${e.upside.toFixed(1)}%</b></span>` : ''}
+        </div>
+        <div class="pf-reasons">${e.why.map(w => `<div><span>→</span> ${w}</div>`).join('')}</div>
+      </div>
+      <div class="pf-score">${e.score}</div>
+    </div>`).join('');
+
+  const untrackedRows = untracked.map(e => `
+    <div class="pf-row untracked">
+      <div class="pf-row-main">
+        <div class="pf-row-head"><span class="pf-sym">${e.symbol}</span><span class="pf-verdict" style="--v-color:#9aa">Not covered</span></div>
+        <div class="pf-reasons"><span>→</span> Not in the tracked universe yet, so no verdict today.</div>
+      </div>
+    </div>`).join('');
+
+  box.innerHTML = rows + untrackedRows;
+}
+
+function evaluatePortfolio() {
+  const raw = document.getElementById('pfInput').value;
+  const symbols = parseSymbols(raw);
+  try { localStorage.setItem(PF_KEY, symbols.join(', ')); } catch (e) {}
+  const hint = document.getElementById('pfHint');
+  if (hint) {
+    const n = getUniverse().length;
+    const covered = symbols.filter(s => getUniverse().some(p => (p.symbol || '').toUpperCase() === s)).length;
+    hint.textContent = symbols.length ? `${covered}/${symbols.length} covered` : '';
+  }
+  renderPortfolioResults(symbols);
+}
+
+function clearPortfolio() {
+  document.getElementById('pfInput').value = '';
+  const hint = document.getElementById('pfHint'); if (hint) hint.textContent = '';
+  try { localStorage.removeItem(PF_KEY); } catch (e) {}
+  renderPortfolioResults([]);
+}
+
+function renderPortfolio() {
+  const input = document.getElementById('pfInput');
+  let saved = '';
+  try { saved = localStorage.getItem(PF_KEY) || ''; } catch (e) {}
+  if (input && !input.value && saved) input.value = saved;
+  const symbols = parseSymbols(input ? input.value : saved);
+  renderPortfolioResults(symbols);
+}
+
 function renderAll() {
   installFilterBars();
   renderTicker(); renderHorizon('short'); renderHorizon('medium'); renderHorizon('long');
   renderIndices(); renderBreadth(); renderSectors(); renderLists();
   if (data.daily_brief) renderAI();
+  renderPortfolio();
   updateMarketStatus();
 }
 
