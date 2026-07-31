@@ -66,31 +66,21 @@ jobs:
           # Freshness probe: prints "<age_min> <stale> <stocks>". A large age
           # means predictions.json was NOT rewritten this run (e.g. the script
           # crashed) — the old logic missed that and committed stale data as
-          # "FRESH".
-          probe() {
-            python - <<'PY'
-import json
-from datetime import datetime
-try:
-    d = json.load(open('predictions.json'))
-    ts = datetime.fromisoformat(d['generated_at'])
-    age = int((datetime.now(ts.tzinfo) - ts).total_seconds() // 60)
-    print(age, 1 if d.get('_stale') else 0, d.get('stocks_analyzed', 0))
-except Exception:
-    print(999999, 1, 0)
-PY
-          }
+          # "FRESH". Kept as a one-line python -c to avoid heredoc/YAML issues.
+          PROBE='import json,datetime as dt; d=json.load(open("predictions.json")); t=dt.datetime.fromisoformat(d["generated_at"]); print(int((dt.datetime.now(t.tzinfo)-t).total_seconds()//60), 1 if d.get("_stale") else 0, d.get("stocks_analyzed",0))'
 
           python api/quotes_daily.py && RC=0 || RC=$?
-          INFO=$(probe); AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
-          echo "attempt 1 → exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
+          INFO=$(python -c "$PROBE" 2>/dev/null || echo "999999 1 0")
+          AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
+          echo "attempt 1 -> exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
 
           if [ "$RC" != "0" ] || [ "$AGE" -gt 120 ] || [ "$STALE" = "1" ] || [ "$STOCKS" = "0" ]; then
             echo "Fresh data did not land (crash or stale). Retrying in 30s..."
             sleep 30
             python api/quotes_daily.py && RC=0 || RC=$?
-            INFO=$(probe); AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
-            echo "attempt 2 → exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
+            INFO=$(python -c "$PROBE" 2>/dev/null || echo "999999 1 0")
+            AGE=$(echo $INFO | cut -d' ' -f1); STALE=$(echo $INFO | cut -d' ' -f2); STOCKS=$(echo $INFO | cut -d' ' -f3)
+            echo "attempt 2 -> exit=$RC age=${AGE}m stale=$STALE stocks=$STOCKS"
           fi
 
       - name: Commit predictions.json and news_cache.json
