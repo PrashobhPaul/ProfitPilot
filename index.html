@@ -3,21 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <script>
+    // Manual hard-reset escape hatch only. Visit ?reset=1 to unregister the
+    // service worker, clear all caches, and reload once.
+    //
+    // NOTE: the previous version auto-reloaded whenever a "pp_loading" flag was
+    // still set from a prior page load. If render ever threw before clearing it,
+    // that produced an INFINITE unregister+reload loop — the app looked "stalled"
+    // / stuck on the loading splash. That auto-heal is removed. The in-app 15s
+    // failsafe (see init()) now renders a usable error state instead of trapping
+    // the user, and the v7 network-first service worker keeps data fresh.
     (function () {
       try {
-        var params = new URLSearchParams(location.search);
-        var manualReset = params.get('reset') === '1';
-        var prevHung = sessionStorage.getItem('pp_loading') === '1';
-        if ((manualReset || prevHung) && 'serviceWorker' in navigator) {
-          sessionStorage.removeItem('pp_loading');
-          navigator.serviceWorker.getRegistrations().then(function (regs) {
-            return Promise.all(regs.map(function (r) { return r.unregister(); }));
-          }).then(function () {
-            if (window.caches) return caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); });
-          }).then(function () { location.replace(location.origin + location.pathname); });
-          return;
-        }
-        sessionStorage.setItem('pp_loading', '1');
+        if (new URLSearchParams(location.search).get('reset') !== '1') return;
+        var done = function () { location.replace(location.origin + location.pathname); };
+        if (!('serviceWorker' in navigator)) { done(); return; }
+        navigator.serviceWorker.getRegistrations()
+          .then(function (regs) { return Promise.all(regs.map(function (r) { return r.unregister(); })); })
+          .then(function () { return window.caches ? caches.keys().then(function (keys) { return Promise.all(keys.map(function (k) { return caches.delete(k); })); }) : null; })
+          .then(done).catch(done);
       } catch (e) {}
     })();
   </script>
@@ -1140,7 +1143,33 @@ function dismissInstall() {
 }
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(console.warn));
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').then(reg => {
+      // When a new SW is found, let it take over immediately.
+      reg.addEventListener('updatefound', () => {
+        const nw = reg.installing;
+        if (!nw) return;
+        nw.addEventListener('statechange', () => {
+          if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+            nw.postMessage('SKIP_WAITING');
+          }
+        });
+      });
+      // Check for a newer SW each time the app regains focus.
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') reg.update().catch(() => {});
+      });
+    }).catch(console.warn);
+
+    // Reload once (and only once) when a new SW takes control, so the user
+    // lands on the freshest shell without a manual refresh.
+    let swReloaded = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (swReloaded) return;
+      swReloaded = true;
+      location.reload();
+    });
+  });
 }
 
 // Helpers
