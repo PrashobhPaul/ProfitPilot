@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T17:58:25.325149+05:30",
+  "generated_at": "2026-08-04T20:26:31.714058+05:30",
   "market_date": "2026-08-04",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -166,240 +166,6 @@
         "rank": 1
       },
       {
-        "symbol": "NESTLEIND",
-        "score": 54,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 1520.0,
-        "change_pct": -0.65,
-        "change": -10.0,
-        "target_price": 2204.0,
-        "stop_loss": 1428.8,
-        "risk_reward": 7.8,
-        "holding_category": "short",
-        "sector": "FMCG",
-        "penalty": 0,
-        "scores": {
-          "trend": 22,
-          "momentum": 11,
-          "volume": 10,
-          "breakout": 5,
-          "price_action": 6
-        },
-        "indicators": {
-          "rsi": 69.9,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Full Bull (>20>50>200)",
-          "volume_ratio": 1.6,
-          "week52_pct": 1.0,
-          "bb_position": 0.88,
-          "adx": null
-        },
-        "reasons": [
-          "Full bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "RSI strong (69.9)",
-          "MACD bullish",
-          "Above avg vol 1.6x",
-          "OBV trending up"
-        ],
-        "trade_plan": {
-          "category": "long",
-          "cat_score": 10,
-          "atr": 39.14,
-          "atr_pct": 2.58,
-          "entry": {
-            "ideal_price": 1490.64,
-            "limit_order": 1489.6,
-            "acceptable_max": 1535.2,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "GTC limit \u2014 no urgency",
-            "note": "Prev close \u20b91,520.00 | Dip ~\u20b929.36"
-          },
-          "exit": {
-            "target_conservative": 1900.0,
-            "target_ideal": 2204.0,
-            "target_stretch": 2508.0,
-            "upside_conservative": 27.5,
-            "upside_ideal": 47.9,
-            "upside_stretch": 68.2,
-            "hold_min_days": 180,
-            "hold_max_days": 540,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit if fundamentals deteriorate or \u20b92,204.00 hit",
-            "hold_note": "Review monthly"
-          }
-        },
-        "name": "Nestle India",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1476.95,
-              "mid": 1520.0,
-              "high": 1563.05,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 70 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1423.73,
-              "mid": 1520.0,
-              "high": 1616.27,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1322.7,
-              "mid": 1520.0,
-              "high": 1717.3,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "NESTLEIND scores 54/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Bull case: sustains above \u20b91,520 and pushes towards \u20b91,616 as trend followers pile in. Bear case: a slip below \u20b91,424 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b91,474 and \u20b91,556. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "rank": 2
-      },
-      {
-        "symbol": "HINDALCO",
-        "score": 53,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 1020.0,
-        "change_pct": 2.52,
-        "change": 25.1,
-        "target_price": 1068.3,
-        "stop_loss": 958.8,
-        "risk_reward": 0.9,
-        "holding_category": "short",
-        "sector": "Metals",
-        "penalty": 0,
-        "scores": {
-          "trend": 18,
-          "momentum": 9,
-          "volume": 10,
-          "breakout": 10,
-          "price_action": 6
-        },
-        "indicators": {
-          "rsi": 72.8,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Bull (>50>200)",
-          "volume_ratio": 1.57,
-          "week52_pct": 12.8,
-          "bb_position": 1.25,
-          "adx": null
-        },
-        "reasons": [
-          "Bullish SMA alignment",
-          "EMA 12/26 bullish",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "Above avg vol 1.6x",
-          "OBV trending up"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 12,
-          "atr": 17.25,
-          "atr_pct": 1.69,
-          "entry": {
-            "ideal_price": 1015.17,
-            "limit_order": 1014.46,
-            "acceptable_max": 1023.06,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b91,020.00 | Dip ~\u20b94.83"
-          },
-          "exit": {
-            "target_conservative": 1051.05,
-            "target_ideal": 1068.3,
-            "target_stretch": 1089.0,
-            "upside_conservative": 3.5,
-            "upside_ideal": 5.2,
-            "upside_stretch": 7.3,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,068.30",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "Hindalco Industries",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 1001.02,
-              "mid": 1020.0,
-              "high": 1038.97,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 73 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 977.57,
-              "mid": 1020.0,
-              "high": 1062.43,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Bull (>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 933.05,
-              "mid": 1020.0,
-              "high": 1106.95,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "HINDALCO scores 53/100 on our engine. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,062 if volume confirms. Bear case: fades below \u20b9978 \u2014 failed rally territory. Needs to resolve \u20b9989\u2013\u20b91,044 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "rank": 3
-      },
-      {
         "symbol": "BAJFINANCE",
         "score": 50,
         "signal": "WATCH",
@@ -514,7 +280,7 @@
           }
         },
         "narrative": "BAJFINANCE's momentum is running hot with RSI at 76. The question is whether this leg has more room or needs a breather. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b91,149 and pushes towards \u20b91,223 as trend followers pile in. Bear case: a slip below \u20b91,075 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b91,115\u2013\u20b91,177 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "rank": 4
+        "rank": 2
       },
       {
         "symbol": "INDUSINDBK",
@@ -630,6 +396,240 @@
           }
         },
         "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. Momentum is flat \u2014 RSI at 54 sits in no-man's land. The stock is waiting for a trigger. Volume is thin (0.3x) \u2014 take any move with a pinch of salt. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 33) \u2014 an extra headwind. Bull case: sustains above \u20b91,026 and pushes towards \u20b91,084 as trend followers pile in. Bear case: a slip below \u20b9968 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b9995 and \u20b91,051. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+        "rank": 3
+      },
+      {
+        "symbol": "NESTLEIND",
+        "score": 49,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 1520.0,
+        "change_pct": -0.65,
+        "change": -10.0,
+        "target_price": 2204.0,
+        "stop_loss": 1428.8,
+        "risk_reward": 7.8,
+        "holding_category": "short",
+        "sector": "FMCG",
+        "penalty": 0,
+        "scores": {
+          "trend": 22,
+          "momentum": 11,
+          "volume": 10,
+          "breakout": 5,
+          "price_action": 6
+        },
+        "indicators": {
+          "rsi": 69.9,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Full Bull (>20>50>200)",
+          "volume_ratio": 1.6,
+          "week52_pct": 1.0,
+          "bb_position": 0.88,
+          "adx": null
+        },
+        "reasons": [
+          "Full bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "RSI strong (69.9)",
+          "MACD bullish",
+          "Above avg vol 1.6x",
+          "OBV trending up"
+        ],
+        "trade_plan": {
+          "category": "long",
+          "cat_score": 10,
+          "atr": 39.14,
+          "atr_pct": 2.58,
+          "entry": {
+            "ideal_price": 1490.64,
+            "limit_order": 1489.6,
+            "acceptable_max": 1535.2,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "GTC limit \u2014 no urgency",
+            "note": "Prev close \u20b91,520.00 | Dip ~\u20b929.36"
+          },
+          "exit": {
+            "target_conservative": 1900.0,
+            "target_ideal": 2204.0,
+            "target_stretch": 2508.0,
+            "upside_conservative": 27.5,
+            "upside_ideal": 47.9,
+            "upside_stretch": 68.2,
+            "hold_min_days": 180,
+            "hold_max_days": 540,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit if fundamentals deteriorate or \u20b92,204.00 hit",
+            "hold_note": "Review monthly"
+          }
+        },
+        "name": "Nestle India",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 41.5,
+            "price_band": {
+              "low": 1467.16,
+              "mid": 1510.21,
+              "high": 1553.27,
+              "move_pct_mid": -0.64
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 44.5,
+            "price_band": {
+              "low": 1401.85,
+              "mid": 1498.12,
+              "high": 1594.39,
+              "move_pct_mid": -1.44
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 46.8,
+            "price_band": {
+              "low": 1322.7,
+              "mid": 1520.0,
+              "high": 1717.3,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          }
+        },
+        "narrative": "Headlines are negative but the chart hasn't cracked. In these situations, price usually leads sentiment \u2014 watch what it does, not what they say. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns' (ET Industry) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Watch \u20b91,474 \u2014 a break below opens further downside. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Neutral.",
+        "rank": 4
+      },
+      {
+        "symbol": "HINDALCO",
+        "score": 49,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 1020.0,
+        "change_pct": 2.52,
+        "change": 25.1,
+        "target_price": 1068.3,
+        "stop_loss": 958.8,
+        "risk_reward": 0.9,
+        "holding_category": "short",
+        "sector": "Metals",
+        "penalty": 0,
+        "scores": {
+          "trend": 18,
+          "momentum": 9,
+          "volume": 10,
+          "breakout": 10,
+          "price_action": 6
+        },
+        "indicators": {
+          "rsi": 72.8,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Bull (>50>200)",
+          "volume_ratio": 1.57,
+          "week52_pct": 12.8,
+          "bb_position": 1.25,
+          "adx": null
+        },
+        "reasons": [
+          "Bullish SMA alignment",
+          "EMA 12/26 bullish",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "Above avg vol 1.6x",
+          "OBV trending up"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 12,
+          "atr": 17.25,
+          "atr_pct": 1.69,
+          "entry": {
+            "ideal_price": 1015.17,
+            "limit_order": 1014.46,
+            "acceptable_max": 1023.06,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b91,020.00 | Dip ~\u20b94.83"
+          },
+          "exit": {
+            "target_conservative": 1051.05,
+            "target_ideal": 1068.3,
+            "target_stretch": 1089.0,
+            "upside_conservative": 3.5,
+            "upside_ideal": 5.2,
+            "upside_stretch": 7.3,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,068.30",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Hindalco Industries",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 43.0,
+            "price_band": {
+              "low": 996.71,
+              "mid": 1015.69,
+              "high": 1034.66,
+              "move_pct_mid": -0.42
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 45.4,
+            "price_band": {
+              "low": 977.57,
+              "mid": 1020.0,
+              "high": 1062.43,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 47.2,
+            "price_band": {
+              "low": 933.05,
+              "mid": 1020.0,
+              "high": 1106.95,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          }
+        },
+        "narrative": "A word of caution \u2014 momentum is surging but the moving average structure hasn't confirmed. This could be a counter-trend bounce rather than a genuine reversal. There's no discernible trend. The stock is range-bound and waiting for direction. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tuesday' (ET Markets) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. \u20b9989 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Neutral \u2192 Neutral.",
         "rank": 5
       }
     ]
@@ -1928,240 +1928,6 @@
       "rank": 1
     },
     {
-      "symbol": "NESTLEIND",
-      "score": 54,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 1520.0,
-      "change_pct": -0.65,
-      "change": -10.0,
-      "target_price": 2204.0,
-      "stop_loss": 1428.8,
-      "risk_reward": 7.8,
-      "holding_category": "long",
-      "sector": "FMCG",
-      "penalty": 0,
-      "scores": {
-        "trend": 22,
-        "momentum": 11,
-        "volume": 10,
-        "breakout": 5,
-        "price_action": 6
-      },
-      "indicators": {
-        "rsi": 69.9,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Full Bull (>20>50>200)",
-        "volume_ratio": 1.6,
-        "week52_pct": 1.0,
-        "bb_position": 0.88,
-        "adx": null
-      },
-      "reasons": [
-        "Full bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "RSI strong (69.9)",
-        "MACD bullish",
-        "Above avg vol 1.6x",
-        "OBV trending up"
-      ],
-      "trade_plan": {
-        "category": "long",
-        "cat_score": 10,
-        "atr": 39.14,
-        "atr_pct": 2.58,
-        "entry": {
-          "ideal_price": 1490.64,
-          "limit_order": 1489.6,
-          "acceptable_max": 1535.2,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "GTC limit \u2014 no urgency",
-          "note": "Prev close \u20b91,520.00 | Dip ~\u20b929.36"
-        },
-        "exit": {
-          "target_conservative": 1900.0,
-          "target_ideal": 2204.0,
-          "target_stretch": 2508.0,
-          "upside_conservative": 27.5,
-          "upside_ideal": 47.9,
-          "upside_stretch": 68.2,
-          "hold_min_days": 180,
-          "hold_max_days": 540,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit if fundamentals deteriorate or \u20b92,204.00 hit",
-          "hold_note": "Review monthly"
-        }
-      },
-      "name": "Nestle India",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 1476.95,
-            "mid": 1520.0,
-            "high": 1563.05,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "RSI at 70 \u2014 momentum carryover likely",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 1423.73,
-            "mid": 1520.0,
-            "high": 1616.27,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 54.0,
-          "price_band": {
-            "low": 1322.7,
-            "mid": 1520.0,
-            "high": 1717.3,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "NESTLEIND scores 54/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Bull case: sustains above \u20b91,520 and pushes towards \u20b91,616 as trend followers pile in. Bear case: a slip below \u20b91,424 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b91,474 and \u20b91,556. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-      "rank": 2
-    },
-    {
-      "symbol": "HINDALCO",
-      "score": 53,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 1020.0,
-      "change_pct": 2.52,
-      "change": 25.1,
-      "target_price": 1068.3,
-      "stop_loss": 958.8,
-      "risk_reward": 0.9,
-      "holding_category": "short",
-      "sector": "Metals",
-      "penalty": 0,
-      "scores": {
-        "trend": 18,
-        "momentum": 9,
-        "volume": 10,
-        "breakout": 10,
-        "price_action": 6
-      },
-      "indicators": {
-        "rsi": 72.8,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Bull (>50>200)",
-        "volume_ratio": 1.57,
-        "week52_pct": 12.8,
-        "bb_position": 1.25,
-        "adx": null
-      },
-      "reasons": [
-        "Bullish SMA alignment",
-        "EMA 12/26 bullish",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "Above avg vol 1.6x",
-        "OBV trending up"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 12,
-        "atr": 17.25,
-        "atr_pct": 1.69,
-        "entry": {
-          "ideal_price": 1015.17,
-          "limit_order": 1014.46,
-          "acceptable_max": 1023.06,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b91,020.00 | Dip ~\u20b94.83"
-        },
-        "exit": {
-          "target_conservative": 1051.05,
-          "target_ideal": 1068.3,
-          "target_stretch": 1089.0,
-          "upside_conservative": 3.5,
-          "upside_ideal": 5.2,
-          "upside_stretch": 7.3,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,068.30",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Hindalco Industries",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 53.0,
-          "price_band": {
-            "low": 1001.02,
-            "mid": 1020.0,
-            "high": 1038.97,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "RSI at 73 \u2014 momentum carryover likely",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 53.0,
-          "price_band": {
-            "low": 977.57,
-            "mid": 1020.0,
-            "high": 1062.43,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Bull (>50>200) bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 53.0,
-          "price_band": {
-            "low": 933.05,
-            "mid": 1020.0,
-            "high": 1106.95,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "HINDALCO scores 53/100 on our engine. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,062 if volume confirms. Bear case: fades below \u20b9978 \u2014 failed rally territory. Needs to resolve \u20b9989\u2013\u20b91,044 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-      "rank": 3
-    },
-    {
       "symbol": "BAJFINANCE",
       "score": 50,
       "signal": "WATCH",
@@ -2276,7 +2042,7 @@
         }
       },
       "narrative": "BAJFINANCE's momentum is running hot with RSI at 76. The question is whether this leg has more room or needs a breather. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Bull case: sustains above \u20b91,149 and pushes towards \u20b91,223 as trend followers pile in. Bear case: a slip below \u20b91,075 triggers trailing stops and dents the short-term thesis. Needs to resolve \u20b91,115\u2013\u20b91,177 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-      "rank": 4
+      "rank": 2
     },
     {
       "symbol": "INDUSINDBK",
@@ -2392,6 +2158,240 @@
         }
       },
       "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. Momentum is flat \u2014 RSI at 54 sits in no-man's land. The stock is waiting for a trigger. Volume is thin (0.3x) \u2014 take any move with a pinch of salt. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 33) \u2014 an extra headwind. Bull case: sustains above \u20b91,026 and pushes towards \u20b91,084 as trend followers pile in. Bear case: a slip below \u20b9968 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b9995 and \u20b91,051. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
+      "rank": 3
+    },
+    {
+      "symbol": "NESTLEIND",
+      "score": 49,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 1520.0,
+      "change_pct": -0.65,
+      "change": -10.0,
+      "target_price": 2204.0,
+      "stop_loss": 1428.8,
+      "risk_reward": 7.8,
+      "holding_category": "long",
+      "sector": "FMCG",
+      "penalty": 0,
+      "scores": {
+        "trend": 22,
+        "momentum": 11,
+        "volume": 10,
+        "breakout": 5,
+        "price_action": 6
+      },
+      "indicators": {
+        "rsi": 69.9,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Full Bull (>20>50>200)",
+        "volume_ratio": 1.6,
+        "week52_pct": 1.0,
+        "bb_position": 0.88,
+        "adx": null
+      },
+      "reasons": [
+        "Full bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "RSI strong (69.9)",
+        "MACD bullish",
+        "Above avg vol 1.6x",
+        "OBV trending up"
+      ],
+      "trade_plan": {
+        "category": "long",
+        "cat_score": 10,
+        "atr": 39.14,
+        "atr_pct": 2.58,
+        "entry": {
+          "ideal_price": 1490.64,
+          "limit_order": 1489.6,
+          "acceptable_max": 1535.2,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "GTC limit \u2014 no urgency",
+          "note": "Prev close \u20b91,520.00 | Dip ~\u20b929.36"
+        },
+        "exit": {
+          "target_conservative": 1900.0,
+          "target_ideal": 2204.0,
+          "target_stretch": 2508.0,
+          "upside_conservative": 27.5,
+          "upside_ideal": 47.9,
+          "upside_stretch": 68.2,
+          "hold_min_days": 180,
+          "hold_max_days": 540,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit if fundamentals deteriorate or \u20b92,204.00 hit",
+          "hold_note": "Review monthly"
+        }
+      },
+      "name": "Nestle India",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 41.5,
+          "price_band": {
+            "low": 1467.16,
+            "mid": 1510.21,
+            "high": 1553.27,
+            "move_pct_mid": -0.64
+          },
+          "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+          "primary_risk": "Negative news flow could accelerate downside"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 44.5,
+          "price_band": {
+            "low": 1401.85,
+            "mid": 1498.12,
+            "high": 1594.39,
+            "move_pct_mid": -1.44
+          },
+          "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+          "primary_risk": "Negative news flow could accelerate downside"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 46.8,
+          "price_band": {
+            "low": 1322.7,
+            "mid": 1520.0,
+            "high": 1717.3,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+          "primary_risk": "Negative news flow could accelerate downside"
+        }
+      },
+      "narrative": "Headlines are negative but the chart hasn't cracked. In these situations, price usually leads sentiment \u2014 watch what it does, not what they say. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns' (ET Industry) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Watch \u20b91,474 \u2014 a break below opens further downside. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Neutral.",
+      "rank": 4
+    },
+    {
+      "symbol": "HINDALCO",
+      "score": 49,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 1020.0,
+      "change_pct": 2.52,
+      "change": 25.1,
+      "target_price": 1068.3,
+      "stop_loss": 958.8,
+      "risk_reward": 0.9,
+      "holding_category": "short",
+      "sector": "Metals",
+      "penalty": 0,
+      "scores": {
+        "trend": 18,
+        "momentum": 9,
+        "volume": 10,
+        "breakout": 10,
+        "price_action": 6
+      },
+      "indicators": {
+        "rsi": 72.8,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Bull (>50>200)",
+        "volume_ratio": 1.57,
+        "week52_pct": 12.8,
+        "bb_position": 1.25,
+        "adx": null
+      },
+      "reasons": [
+        "Bullish SMA alignment",
+        "EMA 12/26 bullish",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "Above avg vol 1.6x",
+        "OBV trending up"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 12,
+        "atr": 17.25,
+        "atr_pct": 1.69,
+        "entry": {
+          "ideal_price": 1015.17,
+          "limit_order": 1014.46,
+          "acceptable_max": 1023.06,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b91,020.00 | Dip ~\u20b94.83"
+        },
+        "exit": {
+          "target_conservative": 1051.05,
+          "target_ideal": 1068.3,
+          "target_stretch": 1089.0,
+          "upside_conservative": 3.5,
+          "upside_ideal": 5.2,
+          "upside_stretch": 7.3,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b91,068.30",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Hindalco Industries",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bearish",
+          "confidence": "Medium",
+          "composite": 43.0,
+          "price_band": {
+            "low": 996.71,
+            "mid": 1015.69,
+            "high": 1034.66,
+            "move_pct_mid": -0.42
+          },
+          "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+          "primary_risk": "Negative news flow could accelerate downside"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 45.4,
+          "price_band": {
+            "low": 977.57,
+            "mid": 1020.0,
+            "high": 1062.43,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+          "primary_risk": "Negative news flow could accelerate downside"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 47.2,
+          "price_band": {
+            "low": 933.05,
+            "mid": 1020.0,
+            "high": 1106.95,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+          "primary_risk": "Negative news flow could accelerate downside"
+        }
+      },
+      "narrative": "A word of caution \u2014 momentum is surging but the moving average structure hasn't confirmed. This could be a counter-trend bounce rather than a genuine reversal. There's no discernible trend. The stock is range-bound and waiting for direction. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tuesday' (ET Markets) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. \u20b9989 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Neutral \u2192 Neutral.",
       "rank": 5
     },
     {
@@ -3562,24 +3562,6 @@
   ],
   "watchlist": [
     {
-      "symbol": "NESTLEIND",
-      "name": "Nestle India",
-      "sector": "FMCG",
-      "current_price": 1520.0,
-      "score": 54,
-      "signal": "WATCH",
-      "reason": "Full bullish SMA alignment"
-    },
-    {
-      "symbol": "HINDALCO",
-      "name": "Hindalco Industries",
-      "sector": "Metals",
-      "current_price": 1020.0,
-      "score": 53,
-      "signal": "WATCH",
-      "reason": "Bullish SMA alignment"
-    },
-    {
       "symbol": "BAJFINANCE",
       "name": "Bajaj Finance",
       "sector": "NBFC",
@@ -3598,6 +3580,24 @@
       "reason": "Full bullish SMA alignment"
     },
     {
+      "symbol": "NESTLEIND",
+      "name": "Nestle India",
+      "sector": "FMCG",
+      "current_price": 1520.0,
+      "score": 49,
+      "signal": "WATCH",
+      "reason": "Full bullish SMA alignment"
+    },
+    {
+      "symbol": "HINDALCO",
+      "name": "Hindalco Industries",
+      "sector": "Metals",
+      "current_price": 1020.0,
+      "score": 49,
+      "signal": "WATCH",
+      "reason": "Bullish SMA alignment"
+    },
+    {
       "symbol": "SBIN",
       "name": "State Bank of India",
       "sector": "Banking",
@@ -3609,20 +3609,20 @@
   ],
   "avoid": [
     {
-      "symbol": "BAJAJ-AUTO",
-      "name": "Bajaj Auto",
-      "sector": "Automobiles",
-      "current_price": 11600.0,
-      "score": 39,
-      "reason": "Full bullish SMA alignment"
-    },
-    {
       "symbol": "HAL",
       "name": "Hindustan Aeronautics",
       "sector": "Defence",
       "current_price": 4635.0,
       "score": 38,
       "reason": "Full bullish SMA alignment"
+    },
+    {
+      "symbol": "LT",
+      "name": "Larsen & Toubro",
+      "sector": "Infrastructure",
+      "current_price": 3990.0,
+      "score": 37,
+      "reason": "Above 200 SMA"
     },
     {
       "symbol": "POLYCAB",
@@ -3696,7 +3696,7 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-08-04T17:59:59.008242+05:30",
+    "generated_at": "2026-08-04T20:28:48.053047+05:30",
     "date": "2026-08-04",
     "source": "rules_engine_v4_news_fusion",
     "headline": "SIDEWAYS regime \u2014 58% breadth, selective stance; macro neutral",
@@ -3709,7 +3709,7 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": 0.29,
+      "score": 0.16,
       "count": 149,
       "highlights": [
         {
@@ -3723,25 +3723,14 @@
           "link": "https://economictimes.indiatimes.com/industry/banking/finance/banking/hsbc-india-profit-rises-4-to-965-million-in-h1-2026-corporate-and-institutional-banking-drives-growth/articleshow/132859484.cms"
         },
         {
-          "title": "ICICI Securities initiates coverage on 7 PSU banks with positive valuations",
+          "title": "Keystone Realtors Q1 profit jumps over 3-times to Rs 52cr",
           "source": "ET Markets",
           "category": "market",
           "sentiment": "BULLISH",
           "sectors": [
-            "Banking"
+            "Realty"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/icici-securities-initiates-coverage-on-7-psu-banks-with-positive-valuations/articleshow/132853068.cms"
-        },
-        {
-          "title": "13 smallcap stocks see MF buying for 4 straight quarters; shares rally up to 103%",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Pharma",
-            "Telecom"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/13-smallcap-stocks-see-mf-buying-for-4-straight-quarters-shares-rally-up-to-103/slideshow/132855879.cms"
+          "link": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/keystone-realtors-q1-profit-jumps-over-3-times-to-rs-52cr/articleshow/132862482.cms"
         },
         {
           "title": "Sensex today | Stock Market Highlights: Markets end in the red; Sensex drops 210 points, Nifty slips 159",
@@ -3763,21 +3752,31 @@
           "link": "https://www.cnbc.com/2026/08/04/hsbc-profit-beats-estimates-higher-net-interest-income-fees.html"
         },
         {
-          "title": "Explained: Why Dow Jones closed at lifetime high despite caution over AI frenzy",
+          "title": "A crash coming? Ray Dalio warns AI rally looks like 1929 and 2000 bubbles",
           "source": "ET Markets",
           "category": "market",
-          "sentiment": "BULLISH",
+          "sentiment": "BEARISH",
           "sectors": [
-            "Oil & Gas"
+            "Telecom"
           ],
-          "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/explained-why-dow-jones-closed-at-lifetime-high-despite-caution-over-ai-frenzy/articleshow/132850484.cms"
+          "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/a-crash-coming-ray-dalio-warns-ai-rally-looks-like-1929-and-2000-bubbles/articleshow/132862682.cms"
+        },
+        {
+          "title": "Will a repo rate pause make RBI fall behind the curve?",
+          "source": "Mint Economy",
+          "category": "macro",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.livemint.com/economy/repo-rate-pause-rbi-inflation-india-west-asia-war-monsoon-rainfall-11785724366428.html"
         }
       ]
     },
     "key_insight": "Range-bound tape with 58% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 149 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Healthcare leads at 61 while Oil & Gas lags at 1 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 58% \u00b7 median momentum -0.3% \u00b7 ATR 2.0%",
-      "Book: 1 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 2 EXIT",
+      "Book: 1 ADD \u00b7 0 ACCUMULATE \u00b7 44 HOLD \u00b7 3 EXIT",
       "Macro tone: NEUTRAL from 149 items across 11 sources",
       "Strongest sector: Healthcare (avg score 61)"
     ],
@@ -3785,8 +3784,8 @@
       "total_analyzed": 48,
       "strong_buys": 0,
       "actionable_buys": 1,
-      "holds": 45,
-      "risk_alerts": 2,
+      "holds": 44,
+      "risk_alerts": 3,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -3813,15 +3812,15 @@
         "change_pct": 2.52,
         "price": 1020.0,
         "action": "HOLD",
-        "score": 53
+        "score": 49
       },
       {
         "symbol": "TRENT",
         "name": "Trent",
         "change_pct": 1.89,
         "price": 3107.7,
-        "action": "HOLD",
-        "score": 18
+        "action": "EXIT",
+        "score": 14
       },
       {
         "symbol": "HEROMOTOCO",
@@ -3839,7 +3838,7 @@
         "change_pct": -2.16,
         "price": 11600.0,
         "action": "HOLD",
-        "score": 39
+        "score": 43
       },
       {
         "symbol": "RELIANCE",
@@ -3847,7 +3846,7 @@
         "change_pct": -2.13,
         "price": 1290.9,
         "action": "HOLD",
-        "score": 9
+        "score": 7
       },
       {
         "symbol": "NTPC",
@@ -3863,7 +3862,7 @@
         "change_pct": -1.94,
         "price": 2096.5,
         "action": "HOLD",
-        "score": 0
+        "score": 1
       },
       {
         "symbol": "TATACONSUM",
@@ -3930,138 +3929,6 @@
               "move_pct_mid": 1.71
             },
             "catalyst": "Structural trend full bull (>20>50>200); SIDEWAYS regime supportive",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "news_info": {
-          "score": 0,
-          "label": "NEUTRAL",
-          "count": 0,
-          "modifier": 0,
-          "top_headline": null
-        }
-      },
-      {
-        "symbol": "NESTLEIND",
-        "name": "Nestle India",
-        "sector": "FMCG",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 54,
-        "rsi": 69.9,
-        "trend": "Full Bull (>20>50>200)",
-        "reason": "Full bullish SMA alignment",
-        "narrative": "NESTLEIND scores 54/100 on our engine. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Bull case: sustains above \u20b91,520 and pushes towards \u20b91,616 as trend followers pile in. Bear case: a slip below \u20b91,424 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b91,474 and \u20b91,556. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1476.95,
-              "mid": 1520.0,
-              "high": 1563.05,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 70 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1423.73,
-              "mid": 1520.0,
-              "high": 1616.27,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Full Bull (>20>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 54.0,
-            "price_band": {
-              "low": 1322.7,
-              "mid": 1520.0,
-              "high": 1717.3,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "news_info": {
-          "score": 0,
-          "label": "NEUTRAL",
-          "count": 0,
-          "modifier": 0,
-          "top_headline": null
-        }
-      },
-      {
-        "symbol": "HINDALCO",
-        "name": "Hindalco Industries",
-        "sector": "Metals",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 53,
-        "rsi": 72.8,
-        "trend": "Bull (>50>200)",
-        "reason": "Bullish SMA alignment",
-        "narrative": "HINDALCO scores 53/100 on our engine. The setup is building. Price is above the 50 and 200-day averages \u2014 the foundation is there, it just needs follow-through. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. Bull case: momentum carries to \u20b91,062 if volume confirms. Bear case: fades below \u20b9978 \u2014 failed rally territory. Needs to resolve \u20b9989\u2013\u20b91,044 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 1001.02,
-              "mid": 1020.0,
-              "high": 1038.97,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "RSI at 73 \u2014 momentum carryover likely",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 977.57,
-              "mid": 1020.0,
-              "high": 1062.43,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Bull (>50>200) bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 53.0,
-            "price_band": {
-              "low": 933.05,
-              "mid": 1020.0,
-              "high": 1106.95,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
             "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
           }
         },
@@ -4206,6 +4073,142 @@
         }
       },
       {
+        "symbol": "NESTLEIND",
+        "name": "Nestle India",
+        "sector": "FMCG",
+        "action": "HOLD",
+        "verdict": "HOLD",
+        "score": 49,
+        "rsi": 69.9,
+        "trend": "Full Bull (>20>50>200)",
+        "reason": "Full bullish SMA alignment",
+        "narrative": "Headlines are negative but the chart hasn't cracked. In these situations, price usually leads sentiment \u2014 watch what it does, not what they say. Moving averages are bullish. Not pristine, but the kind of structure where you buy dips rather than sell rallies. Momentum is strong and backed by volume (1.6x average). That's the kind of conviction that sustains moves. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns' (ET Industry) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. FMCG is lagging the broader tape (score 21) \u2014 an extra headwind. Watch \u20b91,474 \u2014 a break below opens further downside. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Mildly Bearish \u2192 Neutral.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 41.5,
+            "price_band": {
+              "low": 1467.16,
+              "mid": 1510.21,
+              "high": 1553.27,
+              "move_pct_mid": -0.64
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 44.5,
+            "price_band": {
+              "low": 1401.85,
+              "mid": 1498.12,
+              "high": 1594.39,
+              "move_pct_mid": -1.44
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 46.8,
+            "price_band": {
+              "low": 1322.7,
+              "mid": 1520.0,
+              "high": 1717.3,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+            "primary_risk": "Negative news flow could accelerate downside"
+          }
+        },
+        "news_info": {
+          "score": -3.3,
+          "label": "BEARISH",
+          "count": 1,
+          "modifier": -5,
+          "top_headline": "Nestle flags near-term consumption slowdown amid West Asia conflict, El Nino concerns",
+          "top_source": "ET Industry",
+          "top_link": "https://economictimes.indiatimes.com/industry/cons-products/fmcg/nestle-flags-near-term-consumption-slowdown-amid-west-asia-conflict-el-nino-concerns/articleshow/132862936.cms"
+        }
+      },
+      {
+        "symbol": "HINDALCO",
+        "name": "Hindalco Industries",
+        "sector": "Metals",
+        "action": "HOLD",
+        "verdict": "HOLD",
+        "score": 49,
+        "rsi": 72.8,
+        "trend": "Bull (>50>200)",
+        "reason": "Bullish SMA alignment",
+        "narrative": "A word of caution \u2014 momentum is surging but the moving average structure hasn't confirmed. This could be a counter-trend bounce rather than a genuine reversal. There's no discernible trend. The stock is range-bound and waiting for direction. RSI at 73 with 1.6x volume \u2014 buyers mean business. Above-average volume (1.6x) adds weight to the move. News sentiment is negative across 1 recent item \u2014 'Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tuesday' (ET Markets) is the headline to watch. The tape is chopping sideways with 58% breadth. Stock-picking matters more than market direction here. \u20b9989 is the line in the sand. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bearish \u2192 Neutral \u2192 Neutral.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bearish",
+            "confidence": "Medium",
+            "composite": 43.0,
+            "price_band": {
+              "low": 996.71,
+              "mid": 1015.69,
+              "high": 1034.66,
+              "move_pct_mid": -0.42
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 45.4,
+            "price_band": {
+              "low": 977.57,
+              "mid": 1020.0,
+              "high": 1062.43,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 47.2,
+            "price_band": {
+              "low": 933.05,
+              "mid": 1020.0,
+              "high": 1106.95,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "News flow: Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tues",
+            "primary_risk": "Negative news flow could accelerate downside"
+          }
+        },
+        "news_info": {
+          "score": -2.4,
+          "label": "BEARISH",
+          "count": 1,
+          "modifier": -4,
+          "top_headline": "Market wrap: RIL, Hindalco, Trent among top gainers and losers on Nifty and Sensex on Tuesday",
+          "top_source": "ET Markets",
+          "top_link": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-ril-hindalco-trent-among-top-gainers-and-losers-on-nifty-and-sensex-on-tuesday/articleshow/132861901.cms"
+        }
+      },
+      {
         "symbol": "SBIN",
         "name": "State Bank of India",
         "sector": "Banking",
@@ -4276,6 +4279,24 @@
     ],
     "risk_watchlist": [
       {
+        "symbol": "NESTLEIND",
+        "name": "Nestle India",
+        "action": "HOLD",
+        "flags": [
+          "negative news (1)"
+        ],
+        "verdict": "HOLD"
+      },
+      {
+        "symbol": "HINDALCO",
+        "name": "Hindalco Industries",
+        "action": "HOLD",
+        "flags": [
+          "negative news (1)"
+        ],
+        "verdict": "HOLD"
+      },
+      {
         "symbol": "SBIN",
         "name": "State Bank of India",
         "action": "HOLD",
@@ -4328,24 +4349,6 @@
           "RSI 86 overbought"
         ],
         "verdict": "HOLD"
-      },
-      {
-        "symbol": "TRENT",
-        "name": "Trent",
-        "action": "HOLD",
-        "flags": [
-          "RSI 79 overbought"
-        ],
-        "verdict": "HOLD"
-      },
-      {
-        "symbol": "ADANIPORTS",
-        "name": "Adani Ports",
-        "action": "HOLD",
-        "flags": [
-          "RSI 26 oversold"
-        ],
-        "verdict": "HOLD"
       }
     ],
     "breakout_watch": [
@@ -4384,11 +4387,11 @@
       },
       {
         "sector": "Metals",
-        "avg_score": 46.3,
+        "avg_score": 45.0,
         "count": 3,
         "trend": "flat",
-        "news_count": 3,
-        "news_label": "BEARISH"
+        "news_count": 5,
+        "news_label": "NEUTRAL"
       },
       {
         "sector": "NBFC",
@@ -4407,19 +4410,19 @@
         "news_label": "NEUTRAL"
       },
       {
+        "sector": "Automobiles",
+        "avg_score": 36.5,
+        "count": 4,
+        "trend": "down",
+        "news_count": 0,
+        "news_label": "NEUTRAL"
+      },
+      {
         "sector": "Pharma",
         "avg_score": 36.2,
         "count": 4,
         "trend": "down",
-        "news_count": 6,
-        "news_label": "BULLISH"
-      },
-      {
-        "sector": "Automobiles",
-        "avg_score": 35.5,
-        "count": 4,
-        "trend": "down",
-        "news_count": 0,
+        "news_count": 5,
         "news_label": "NEUTRAL"
       },
       {
@@ -4435,27 +4438,38 @@
         "avg_score": 29.5,
         "count": 6,
         "trend": "down",
-        "news_count": 26,
+        "news_count": 23,
         "news_label": "BEARISH"
       },
       {
-        "sector": "Telecom",
-        "avg_score": 27.0,
-        "count": 1,
+        "sector": "Infrastructure",
+        "avg_score": 26.0,
+        "count": 2,
         "trend": "down",
-        "news_count": 7,
+        "news_count": 5,
         "news_label": "BULLISH"
       },
       {
-        "sector": "Infrastructure",
-        "avg_score": 23.5,
-        "count": 2,
+        "sector": "Telecom",
+        "avg_score": 26.0,
+        "count": 1,
         "trend": "down",
-        "news_count": 4,
-        "news_label": "NEUTRAL"
+        "news_count": 11,
+        "news_label": "BEARISH"
       }
     ],
     "action_plan": [
+      {
+        "priority": 1,
+        "type": "EXIT",
+        "symbol": "TRENT",
+        "name": "Trent",
+        "price": 3107.7,
+        "instruction": "Market order at open \u2014 rule ladder triggered.",
+        "reason": "EMA 12/26 bullish",
+        "confidence": "LOW",
+        "verdict": "EXIT"
+      },
       {
         "priority": 1,
         "type": "EXIT",
@@ -4524,46 +4538,54 @@
         "link": "https://economictimes.indiatimes.com/industry/banking/finance/banking/hsbc-india-profit-rises-4-to-965-million-in-h1-2026-corporate-and-institutional-banking-drives-growth/articleshow/132859484.cms"
       },
       {
-        "title": "Restaurant Brands Asia shares surge nearly 20% on strong Q1 results. What Motilal, other brokerages said",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-04T09:23:45+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/restaurant-brands-asia-shares-surge-nearly-20-on-strong-q1-results-what-motilal-other-brokerages-said/articleshow/132854910.cms"
-      },
-      {
-        "title": "Aimtron Electronics shares can rally to Rs 2,036? Here\u2019s why Nuvama initiated coverage on the platform stock",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-04T08:45:17+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/aimtron-electronics-shares-can-rally-to-rs-2036-heres-why-nuvama-initiated-coverage-on-the-platform-stock/articleshow/132853368.cms"
-      },
-      {
-        "title": "ICICI Securities initiates coverage on 7 PSU banks with positive valuations",
+        "title": "Keystone Realtors Q1 profit jumps over 3-times to Rs 52cr",
         "source": "ET Markets",
         "category": "market",
         "sentiment": "BULLISH",
         "tickers": [],
         "sectors": [
-          "Banking"
+          "Realty"
         ],
-        "published": "2026-08-04T08:33:35+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/icici-securities-initiates-coverage-on-7-psu-banks-with-positive-valuations/articleshow/132853068.cms"
+        "published": "2026-08-04T13:33:31+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/digital-real-estate/realty-news/keystone-realtors-q1-profit-jumps-over-3-times-to-rs-52cr/articleshow/132862482.cms"
       },
       {
-        "title": "Epack Prefab Technologies shares rally 10% after Q1 revenue jumps 24%",
+        "title": "SBI, HDFC Bank, to ICICI Bank, Axis Bank: Bank stocks fall ahead of RBI monetary policy decision tomorrow",
+        "source": "Mint Markets",
+        "category": "market",
+        "sentiment": "BEARISH",
+        "tickers": [
+          "HDFCBANK",
+          "ICICIBANK",
+          "AXISBANK",
+          "SBIN"
+        ],
+        "sectors": [],
+        "published": "2026-08-04T04:58:59+00:00",
+        "link": "https://www.livemint.com/market/stock-market-news/sbi-hdfc-bank-to-icici-bank-axis-bank-bank-stocks-fall-ahead-of-rbi-monetary-policy-decision-tomorrow-11785816258149.html"
+      },
+      {
+        "title": "US stocks: S&P 500, Dow hit record highs on strong AI-linked earnings, Mideast deal hopes",
         "source": "ET Markets",
         "category": "market",
         "sentiment": "BULLISH",
         "tickers": [],
         "sectors": [],
-        "published": "2026-08-04T07:30:49+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/epack-prefab-technologies-shares-rally-10-after-q1-revenue-jumps-24/articleshow/132851604.cms"
+        "published": "2026-08-04T13:35:02+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-sp-500-hits-record-high-on-strong-ai-linked-earnings-mideast-deal-hopes/articleshow/132862570.cms"
+      },
+      {
+        "title": "TVS Motor Company among 7 stocks hitting 52-week highs; surge up to 20% in a month",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [
+          "BAJAJ-AUTO",
+          "PIDILITIND"
+        ],
+        "sectors": [],
+        "published": "2026-08-04T12:07:17+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/tvs-motor-company-among-7-stocks-hitting-52-week-highs-surge-up-to-20-in-a-month/slideshow/132860377.cms"
       },
       {
         "title": "Sensex falls 210 points, Nifty closes below 24,650 as market snaps 4-day gaining streak",
@@ -4586,32 +4608,16 @@
         "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/jindal-stainless-q1-net-profit-up-8-price-hikes-offset-cost-surge/articleshow/132817725.cms"
       },
       {
-        "title": "13 smallcap stocks see MF buying for 4 straight quarters; shares rally up to 103%",
-        "source": "ET Markets",
+        "title": "Marico Q1 profit jumps 25% on strong India business and volume growth",
+        "source": "Hindu BusinessLine",
         "category": "market",
         "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [
-          "Pharma",
-          "Telecom"
-        ],
-        "published": "2026-08-04T09:39:39+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/13-smallcap-stocks-see-mf-buying-for-4-straight-quarters-shares-rally-up-to-103/slideshow/132855879.cms"
-      },
-      {
-        "title": "SBI, HDFC Bank, to ICICI Bank, Axis Bank: Bank stocks fall ahead of RBI monetary policy decision tomorrow",
-        "source": "Mint Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
         "tickers": [
-          "HDFCBANK",
-          "ICICIBANK",
-          "AXISBANK",
-          "SBIN"
+          "MARICO"
         ],
         "sectors": [],
-        "published": "2026-08-04T04:58:59+00:00",
-        "link": "https://www.livemint.com/market/stock-market-news/sbi-hdfc-bank-to-icici-bank-axis-bank-bank-stocks-fall-ahead-of-rbi-monetary-policy-decision-tomorrow-11785816258149.html"
+        "published": "2026-08-04T13:48:52+00:00",
+        "link": "https://www.thehindubusinessline.com/companies/marico-q1-profit-jumps-25-on-strong-india-business-and-volume-growth/article71305271.ece"
       },
       {
         "title": "Pidilite Industries posts 27.7% jump in Q1 profit, revenue up 22% to \u20b94,237 crore",
@@ -4622,16 +4628,29 @@
           "PIDILITIND"
         ],
         "sectors": [],
-        "published": "2026-08-04T11:13:01+00:00",
+        "published": "2026-08-04T13:41:17+00:00",
         "link": "https://www.thehindubusinessline.com/companies/pidilite-industries-posts-277-jump-in-q1-profit-revenue-up-22-to-4237-crore/article71304964.ece"
+      },
+      {
+        "title": "Sensex today | Stock Market Highlights: Markets end in the red; Sensex drops 210 points, Nifty slips 159",
+        "source": "Hindu BusinessLine",
+        "category": "market",
+        "sentiment": "BEARISH",
+        "tickers": [],
+        "sectors": [
+          "Banking",
+          "Oil & Gas"
+        ],
+        "published": "2026-08-04T10:37:19+00:00",
+        "link": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-4th-august-2026/article71301258.ece"
       }
     ],
     "news_stats": {
-      "total_items": 260,
+      "total_items": 263,
       "sources": 11,
-      "with_tickers": 25,
-      "bullish": 92,
-      "bearish": 48
+      "with_tickers": 31,
+      "bullish": 86,
+      "bearish": 46
     }
   }
 }
