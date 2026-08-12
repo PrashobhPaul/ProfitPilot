@@ -12,12 +12,24 @@ name: 📈 Daily Stock Analysis
 #   10:45 UTC = 16:15 IST   main EOD run
 #   12:30 UTC = 18:00 IST   post-close safety retry
 #   02:00 UTC = 07:30 IST   morning fallback (Tue–Sat, covers yesterday)
+#
+# Intraday (NSE trading hours are 09:15–15:30 IST = 03:45–10:00 UTC):
+#   03:45 UTC           = 09:15 IST  market open
+#   04:15–09:45 UTC     = 09:45–15:15 IST, every 30 min
+# Without these, data generated before the open aged all day and the app's
+# staleness banner fired every afternoon. A 30-min cadence keeps prices and
+# scores current while staying gentle on Yahoo (the 15-min job timeout, the
+# concurrency group below, and preserve-last-good make repeated runs safe —
+# a failed pulse just leaves the previous good data in place). GitHub cron
+# firings can drift by some minutes; that is fine at this cadence.
 on:
   schedule:
     - cron: "15 10 * * 1-5"
     - cron: "45 10 * * 1-5"
     - cron: "30 12 * * 1-5"
     - cron: "0 2 * * 2-6"
+    - cron: "45 3 * * 1-5"
+    - cron: "15,45 4-9 * * 1-5"
   workflow_dispatch:
 
 # Serialize runs so two crons never race on the same git push
