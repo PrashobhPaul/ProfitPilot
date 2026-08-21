@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T16:32:02.066077+05:30",
+  "generated_at": "2026-08-21T18:53:07.320511+05:30",
   "market_date": "2026-08-21",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -283,6 +283,123 @@
         "rank": 2
       },
       {
+        "symbol": "KOTAKBANK",
+        "score": 54,
+        "signal": "WATCH",
+        "confidence": "MEDIUM",
+        "current_price": 402.8,
+        "change_pct": 1.37,
+        "change": 5.45,
+        "target_price": 420.77,
+        "stop_loss": 378.63,
+        "risk_reward": 0.8,
+        "holding_category": "short",
+        "sector": "Banking",
+        "penalty": 6,
+        "scores": {
+          "trend": 12,
+          "momentum": 21,
+          "volume": 10,
+          "breakout": 10,
+          "price_action": 5
+        },
+        "indicators": {
+          "rsi": 56.2,
+          "macd_signal": "Bullish",
+          "sma_alignment": "Above 200 SMA",
+          "volume_ratio": 1.59,
+          "week52_pct": 11.0,
+          "bb_position": 1.05,
+          "adx": null
+        },
+        "reasons": [
+          "Above 200 SMA",
+          "EMA 12/26 bullish",
+          "RSI ideal zone (56.2)",
+          "MACD bullish",
+          "MACD histogram expanding",
+          "Above avg vol 1.6x"
+        ],
+        "trade_plan": {
+          "category": "short",
+          "cat_score": 15,
+          "atr": 6.42,
+          "atr_pct": 1.59,
+          "entry": {
+            "ideal_price": 401.0,
+            "limit_order": 400.72,
+            "acceptable_max": 404.01,
+            "entry_window": "09:15\u201309:45 AM IST",
+            "order_strategy": "Place limit order before 9:14 AM",
+            "note": "Prev close \u20b9402.80 | Dip ~\u20b91.8"
+          },
+          "exit": {
+            "target_conservative": 414.35,
+            "target_ideal": 420.77,
+            "target_stretch": 428.47,
+            "upside_conservative": 3.3,
+            "upside_ideal": 4.9,
+            "upside_stretch": 6.9,
+            "hold_min_days": 5,
+            "hold_max_days": 15,
+            "hold_duration": "5\u201315 trading days",
+            "sell_trigger": "Exit when RSI > 72 or price hits \u20b9420.77",
+            "hold_note": "Review daily"
+          }
+        },
+        "name": "Kotak Mahindra Bank",
+        "verdict": "HOLD",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 57.0,
+            "price_band": {
+              "low": 397.34,
+              "mid": 404.41,
+              "high": 411.47,
+              "move_pct_mid": 0.4
+            },
+            "catalyst": "Above 200 SMA setup, score 54/100",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 55.8,
+            "price_band": {
+              "low": 390.6,
+              "mid": 406.39,
+              "high": 422.18,
+              "move_pct_mid": 0.89
+            },
+            "catalyst": "Range-bound week; Above 200 SMA bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 54.9,
+            "price_band": {
+              "low": 370.44,
+              "mid": 402.8,
+              "high": 435.16,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "narrative": "KOTAKBANK scores 54/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Market wrap: Kotak Mahindra Bank, Power Grid, Maruti Suzuki, Trent top gainers and losers on' (ET Markets) is the headline to watch. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9422 if volume confirms. Bear case: fades below \u20b9391 \u2014 failed rally territory. Look for a close above \u20b9412 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Neutral.",
+        "rank": 3
+      },
+      {
         "symbol": "JSWSTEEL",
         "score": 53,
         "signal": "WATCH",
@@ -396,123 +513,6 @@
           }
         },
         "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. RSI 50. Neutral. Nothing to act on from momentum alone. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Metals is lagging the broader tape (score 31) \u2014 an extra headwind. Bull case: sustains above \u20b91,294 and pushes towards \u20b91,356 as trend followers pile in. Bear case: a slip below \u20b91,231 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b91,255 and \u20b91,325. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "rank": 3
-      },
-      {
-        "symbol": "KOTAKBANK",
-        "score": 52,
-        "signal": "WATCH",
-        "confidence": "MEDIUM",
-        "current_price": 402.8,
-        "change_pct": 1.37,
-        "change": 5.45,
-        "target_price": 420.77,
-        "stop_loss": 378.63,
-        "risk_reward": 0.8,
-        "holding_category": "short",
-        "sector": "Banking",
-        "penalty": 6,
-        "scores": {
-          "trend": 12,
-          "momentum": 21,
-          "volume": 10,
-          "breakout": 10,
-          "price_action": 5
-        },
-        "indicators": {
-          "rsi": 56.2,
-          "macd_signal": "Bullish",
-          "sma_alignment": "Above 200 SMA",
-          "volume_ratio": 1.59,
-          "week52_pct": 11.0,
-          "bb_position": 1.05,
-          "adx": null
-        },
-        "reasons": [
-          "Above 200 SMA",
-          "EMA 12/26 bullish",
-          "RSI ideal zone (56.2)",
-          "MACD bullish",
-          "MACD histogram expanding",
-          "Above avg vol 1.6x"
-        ],
-        "trade_plan": {
-          "category": "short",
-          "cat_score": 15,
-          "atr": 6.42,
-          "atr_pct": 1.59,
-          "entry": {
-            "ideal_price": 401.0,
-            "limit_order": 400.72,
-            "acceptable_max": 404.01,
-            "entry_window": "09:15\u201309:45 AM IST",
-            "order_strategy": "Place limit order before 9:14 AM",
-            "note": "Prev close \u20b9402.80 | Dip ~\u20b91.8"
-          },
-          "exit": {
-            "target_conservative": 414.35,
-            "target_ideal": 420.77,
-            "target_stretch": 428.47,
-            "upside_conservative": 3.3,
-            "upside_ideal": 4.9,
-            "upside_stretch": 6.9,
-            "hold_min_days": 5,
-            "hold_max_days": 15,
-            "hold_duration": "5\u201315 trading days",
-            "sell_trigger": "Exit when RSI > 72 or price hits \u20b9420.77",
-            "hold_note": "Review daily"
-          }
-        },
-        "name": "Kotak Mahindra Bank",
-        "verdict": "HOLD",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 395.74,
-              "mid": 402.8,
-              "high": 409.86,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Above 200 SMA setup, score 52/100",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 387.01,
-              "mid": 402.8,
-              "high": 418.59,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Above 200 SMA bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 370.44,
-              "mid": 402.8,
-              "high": 435.16,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "narrative": "KOTAKBANK scores 52/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9419 if volume confirms. Bear case: fades below \u20b9387 \u2014 failed rally territory. Needs to resolve \u20b9391\u2013\u20b9412 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
         "rank": 4
       },
       {
@@ -1459,6 +1459,123 @@
       "rank": 2
     },
     {
+      "symbol": "KOTAKBANK",
+      "score": 54,
+      "signal": "WATCH",
+      "confidence": "MEDIUM",
+      "current_price": 402.8,
+      "change_pct": 1.37,
+      "change": 5.45,
+      "target_price": 420.77,
+      "stop_loss": 378.63,
+      "risk_reward": 0.8,
+      "holding_category": "short",
+      "sector": "Banking",
+      "penalty": 6,
+      "scores": {
+        "trend": 12,
+        "momentum": 21,
+        "volume": 10,
+        "breakout": 10,
+        "price_action": 5
+      },
+      "indicators": {
+        "rsi": 56.2,
+        "macd_signal": "Bullish",
+        "sma_alignment": "Above 200 SMA",
+        "volume_ratio": 1.59,
+        "week52_pct": 11.0,
+        "bb_position": 1.05,
+        "adx": null
+      },
+      "reasons": [
+        "Above 200 SMA",
+        "EMA 12/26 bullish",
+        "RSI ideal zone (56.2)",
+        "MACD bullish",
+        "MACD histogram expanding",
+        "Above avg vol 1.6x"
+      ],
+      "trade_plan": {
+        "category": "short",
+        "cat_score": 15,
+        "atr": 6.42,
+        "atr_pct": 1.59,
+        "entry": {
+          "ideal_price": 401.0,
+          "limit_order": 400.72,
+          "acceptable_max": 404.01,
+          "entry_window": "09:15\u201309:45 AM IST",
+          "order_strategy": "Place limit order before 9:14 AM",
+          "note": "Prev close \u20b9402.80 | Dip ~\u20b91.8"
+        },
+        "exit": {
+          "target_conservative": 414.35,
+          "target_ideal": 420.77,
+          "target_stretch": 428.47,
+          "upside_conservative": 3.3,
+          "upside_ideal": 4.9,
+          "upside_stretch": 6.9,
+          "hold_min_days": 5,
+          "hold_max_days": 15,
+          "hold_duration": "5\u201315 trading days",
+          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9420.77",
+          "hold_note": "Review daily"
+        }
+      },
+      "name": "Kotak Mahindra Bank",
+      "verdict": "HOLD",
+      "forecasts": {
+        "1d": {
+          "label": "Tomorrow",
+          "days": 1,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 57.0,
+          "price_band": {
+            "low": 397.34,
+            "mid": 404.41,
+            "high": 411.47,
+            "move_pct_mid": 0.4
+          },
+          "catalyst": "Above 200 SMA setup, score 54/100",
+          "primary_risk": "Gap risk at open; size positions accordingly"
+        },
+        "1w": {
+          "label": "1 Week",
+          "days": 5,
+          "bias": "Mildly Bullish",
+          "confidence": "Medium",
+          "composite": 55.8,
+          "price_band": {
+            "low": 390.6,
+            "mid": 406.39,
+            "high": 422.18,
+            "move_pct_mid": 0.89
+          },
+          "catalyst": "Range-bound week; Above 200 SMA bias",
+          "primary_risk": "Regime shift or sector rotation could invalidate setup"
+        },
+        "1m": {
+          "label": "1 Month",
+          "days": 21,
+          "bias": "Neutral",
+          "confidence": "Medium",
+          "composite": 54.9,
+          "price_band": {
+            "low": 370.44,
+            "mid": 402.8,
+            "high": 435.16,
+            "move_pct_mid": 0.0
+          },
+          "catalyst": "Consolidation phase in SIDEWAYS regime",
+          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+        }
+      },
+      "narrative": "KOTAKBANK scores 54/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Market wrap: Kotak Mahindra Bank, Power Grid, Maruti Suzuki, Trent top gainers and losers on' (ET Markets) is the headline to watch. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9422 if volume confirms. Bear case: fades below \u20b9391 \u2014 failed rally territory. Look for a close above \u20b9412 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Neutral.",
+      "rank": 3
+    },
+    {
       "symbol": "JSWSTEEL",
       "score": 53,
       "signal": "WATCH",
@@ -1572,123 +1689,6 @@
         }
       },
       "narrative": "Here's the wrinkle: the trend is intact but momentum has started to cool. That usually means consolidation ahead, not a collapse \u2014 but chasing here is risky. The trend is solidly positive \u2014 price sits above all key averages, though alignment isn't perfect. RSI 50. Neutral. Nothing to act on from momentum alone. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Metals is lagging the broader tape (score 31) \u2014 an extra headwind. Bull case: sustains above \u20b91,294 and pushes towards \u20b91,356 as trend followers pile in. Bear case: a slip below \u20b91,231 triggers trailing stops and dents the short-term thesis. Range-bound between \u20b91,255 and \u20b91,325. Patience over conviction. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-      "rank": 3
-    },
-    {
-      "symbol": "KOTAKBANK",
-      "score": 52,
-      "signal": "WATCH",
-      "confidence": "MEDIUM",
-      "current_price": 402.8,
-      "change_pct": 1.37,
-      "change": 5.45,
-      "target_price": 420.77,
-      "stop_loss": 378.63,
-      "risk_reward": 0.8,
-      "holding_category": "short",
-      "sector": "Banking",
-      "penalty": 6,
-      "scores": {
-        "trend": 12,
-        "momentum": 21,
-        "volume": 10,
-        "breakout": 10,
-        "price_action": 5
-      },
-      "indicators": {
-        "rsi": 56.2,
-        "macd_signal": "Bullish",
-        "sma_alignment": "Above 200 SMA",
-        "volume_ratio": 1.59,
-        "week52_pct": 11.0,
-        "bb_position": 1.05,
-        "adx": null
-      },
-      "reasons": [
-        "Above 200 SMA",
-        "EMA 12/26 bullish",
-        "RSI ideal zone (56.2)",
-        "MACD bullish",
-        "MACD histogram expanding",
-        "Above avg vol 1.6x"
-      ],
-      "trade_plan": {
-        "category": "short",
-        "cat_score": 15,
-        "atr": 6.42,
-        "atr_pct": 1.59,
-        "entry": {
-          "ideal_price": 401.0,
-          "limit_order": 400.72,
-          "acceptable_max": 404.01,
-          "entry_window": "09:15\u201309:45 AM IST",
-          "order_strategy": "Place limit order before 9:14 AM",
-          "note": "Prev close \u20b9402.80 | Dip ~\u20b91.8"
-        },
-        "exit": {
-          "target_conservative": 414.35,
-          "target_ideal": 420.77,
-          "target_stretch": 428.47,
-          "upside_conservative": 3.3,
-          "upside_ideal": 4.9,
-          "upside_stretch": 6.9,
-          "hold_min_days": 5,
-          "hold_max_days": 15,
-          "hold_duration": "5\u201315 trading days",
-          "sell_trigger": "Exit when RSI > 72 or price hits \u20b9420.77",
-          "hold_note": "Review daily"
-        }
-      },
-      "name": "Kotak Mahindra Bank",
-      "verdict": "HOLD",
-      "forecasts": {
-        "1d": {
-          "label": "Tomorrow",
-          "days": 1,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 52.0,
-          "price_band": {
-            "low": 395.74,
-            "mid": 402.8,
-            "high": 409.86,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Above 200 SMA setup, score 52/100",
-          "primary_risk": "Gap risk at open; size positions accordingly"
-        },
-        "1w": {
-          "label": "1 Week",
-          "days": 5,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 52.0,
-          "price_band": {
-            "low": 387.01,
-            "mid": 402.8,
-            "high": 418.59,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Range-bound week; Above 200 SMA bias",
-          "primary_risk": "Regime shift or sector rotation could invalidate setup"
-        },
-        "1m": {
-          "label": "1 Month",
-          "days": 21,
-          "bias": "Neutral",
-          "confidence": "Low",
-          "composite": 52.0,
-          "price_band": {
-            "low": 370.44,
-            "mid": 402.8,
-            "high": 435.16,
-            "move_pct_mid": 0.0
-          },
-          "catalyst": "Consolidation phase in SIDEWAYS regime",
-          "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-        }
-      },
-      "narrative": "KOTAKBANK scores 52/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9419 if volume confirms. Bear case: fades below \u20b9387 \u2014 failed rally territory. Needs to resolve \u20b9391\u2013\u20b9412 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
       "rank": 4
     },
     {
@@ -2973,6 +2973,15 @@
       "reason": "Full bullish SMA alignment"
     },
     {
+      "symbol": "KOTAKBANK",
+      "name": "Kotak Mahindra Bank",
+      "sector": "Banking",
+      "current_price": 402.8,
+      "score": 54,
+      "signal": "WATCH",
+      "reason": "Above 200 SMA"
+    },
+    {
       "symbol": "JSWSTEEL",
       "name": "JSW Steel",
       "sector": "Metals",
@@ -2980,15 +2989,6 @@
       "score": 53,
       "signal": "WATCH",
       "reason": "Full bullish SMA alignment"
-    },
-    {
-      "symbol": "KOTAKBANK",
-      "name": "Kotak Mahindra Bank",
-      "sector": "Banking",
-      "current_price": 402.8,
-      "score": 52,
-      "signal": "WATCH",
-      "reason": "Above 200 SMA"
     },
     {
       "symbol": "LT",
@@ -3098,7 +3098,7 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-08-21T16:33:33.582481+05:30",
+    "generated_at": "2026-08-21T18:54:49.309302+05:30",
     "date": "2026-08-21",
     "source": "rules_engine_v4_news_fusion",
     "headline": "SIDEWAYS regime \u2014 54% breadth, selective stance; macro neutral",
@@ -3111,8 +3111,8 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": 0.11,
-      "count": 155,
+      "score": 0.03,
+      "count": 154,
       "highlights": [
         {
           "title": "80% rally in YTD! Ratnaveer Precision Engineering declares rights issue worth \u20b9330 crore",
@@ -3136,32 +3136,12 @@
           "link": "https://economictimes.indiatimes.com/news/economy/finance/india-adb-sign-230-million-loan-to-upgrade-chennai-water-system/articleshow/133398651.cms"
         },
         {
-          "title": "MCX shares jump 8% in 3 days as gold, silver futures rise. What lies ahead for investors?",
-          "source": "ET Markets",
-          "category": "market",
-          "sentiment": "BULLISH",
-          "sectors": [
-            "Telecom"
-          ],
-          "link": "https://economictimes.indiatimes.com/markets/stocks/news/mcx-shares-jump-8-in-3-days-as-gold-silver-futures-rise-what-lies-ahead-for-investors/articleshow/133396946.cms"
-        },
-        {
           "title": "India's August private sector growth recovers slightly from over four-year low, PMI shows",
           "source": "ET Economy",
           "category": "macro",
           "sentiment": "BULLISH",
           "sectors": [],
           "link": "https://economictimes.indiatimes.com/news/economy/indicators/indias-august-private-sector-growth-recovers-slightly-from-over-four-year-low-pmi-shows/articleshow/133393861.cms"
-        },
-        {
-          "title": "Sensex today | Stock Market Live: Sensex, Nifty trade flat amid weak global cues",
-          "source": "Hindu BusinessLine",
-          "category": "market",
-          "sentiment": "BEARISH",
-          "sectors": [
-            "Oil & Gas"
-          ],
-          "link": "https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-21st-august-2026/article71368928.ece"
         },
         {
           "title": "Crude oil price: Futures decline as US threatens \u2018toughest sanctions\u2019 on Iran",
@@ -3172,14 +3152,34 @@
             "Oil & Gas"
           ],
           "link": "https://www.thehindubusinessline.com/markets/commodities/crude-oil-price-futures-decline-as-us-threatens-toughest-sanctions-on-iran/article71372160.ece"
+        },
+        {
+          "title": "RBI imposes monetary penalty on Progfin Private Limited",
+          "source": "RBI Press",
+          "category": "policy",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63421"
+        },
+        {
+          "title": "RBI imposes monetary penalty on Shri Ram Finance Corporation Private Limited",
+          "source": "RBI Press",
+          "category": "policy",
+          "sentiment": "BEARISH",
+          "sectors": [
+            "Banking"
+          ],
+          "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63422"
         }
       ]
     },
-    "key_insight": "Range-bound tape with 54% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 155 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Electronics leads at 56 while Retail lags at 0 \u2014 a stock-picker's tape.",
+    "key_insight": "Range-bound tape with 54% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 154 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Electronics leads at 56 while Retail lags at 0 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 54% \u00b7 median momentum -0.1% \u00b7 ATR 1.8%",
       "Book: 1 ADD \u00b7 0 ACCUMULATE \u00b7 43 HOLD \u00b7 4 EXIT",
-      "Macro tone: NEUTRAL from 155 items across 11 sources",
+      "Macro tone: NEUTRAL from 154 items across 11 sources",
       "Strongest sector: Electronics (avg score 56)"
     ],
     "market_pulse": {
@@ -3198,7 +3198,7 @@
         "change_pct": 2.87,
         "price": 272.4,
         "action": "HOLD",
-        "score": 14
+        "score": 12
       },
       {
         "symbol": "KOTAKBANK",
@@ -3206,7 +3206,7 @@
         "change_pct": 1.37,
         "price": 402.8,
         "action": "HOLD",
-        "score": 52
+        "score": 54
       },
       {
         "symbol": "NESTLEIND",
@@ -3264,7 +3264,7 @@
         "change_pct": -1.55,
         "price": 2924.0,
         "action": "HOLD",
-        "score": 0
+        "score": 2
       },
       {
         "symbol": "HCLTECH",
@@ -3272,7 +3272,7 @@
         "change_pct": -1.21,
         "price": 1302.5,
         "action": "HOLD",
-        "score": 0
+        "score": 2
       }
     ],
     "conviction_board": [
@@ -3409,6 +3409,74 @@
         }
       },
       {
+        "symbol": "KOTAKBANK",
+        "name": "Kotak Mahindra Bank",
+        "sector": "Banking",
+        "action": "HOLD",
+        "verdict": "HOLD",
+        "score": 54,
+        "rsi": 56.2,
+        "trend": "Above 200 SMA",
+        "reason": "Above 200 SMA",
+        "narrative": "KOTAKBANK scores 54/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. Newsflow is mildly positive \u2014 1 item in the last 48 hours \u2014 'Market wrap: Kotak Mahindra Bank, Power Grid, Maruti Suzuki, Trent top gainers and losers on' (ET Markets) is the headline to watch. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9422 if volume confirms. Bear case: fades below \u20b9391 \u2014 failed rally territory. Look for a close above \u20b9412 as confirmation. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Mildly Bullish \u2192 Mildly Bullish \u2192 Neutral.",
+        "forecasts": {
+          "1d": {
+            "label": "Tomorrow",
+            "days": 1,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 57.0,
+            "price_band": {
+              "low": 397.34,
+              "mid": 404.41,
+              "high": 411.47,
+              "move_pct_mid": 0.4
+            },
+            "catalyst": "Above 200 SMA setup, score 54/100",
+            "primary_risk": "Gap risk at open; size positions accordingly"
+          },
+          "1w": {
+            "label": "1 Week",
+            "days": 5,
+            "bias": "Mildly Bullish",
+            "confidence": "Medium",
+            "composite": 55.8,
+            "price_band": {
+              "low": 390.6,
+              "mid": 406.39,
+              "high": 422.18,
+              "move_pct_mid": 0.89
+            },
+            "catalyst": "Range-bound week; Above 200 SMA bias",
+            "primary_risk": "Regime shift or sector rotation could invalidate setup"
+          },
+          "1m": {
+            "label": "1 Month",
+            "days": 21,
+            "bias": "Neutral",
+            "confidence": "Medium",
+            "composite": 54.9,
+            "price_band": {
+              "low": 370.44,
+              "mid": 402.8,
+              "high": 435.16,
+              "move_pct_mid": 0.0
+            },
+            "catalyst": "Consolidation phase in SIDEWAYS regime",
+            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
+          }
+        },
+        "news_info": {
+          "score": 1.2,
+          "label": "MILDLY_BULLISH",
+          "count": 1,
+          "modifier": 2,
+          "top_headline": "Market wrap: Kotak Mahindra Bank, Power Grid, Maruti Suzuki, Trent top gainers and losers on Nifty and Sensex on Friday",
+          "top_source": "ET Markets",
+          "top_link": "https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-kotak-mahindra-bank-power-grid-maruti-suzuki-trent-top-gainers-and-losers-on-nifty-and-sensex-on-friday/articleshow/133402032.cms"
+        }
+      },
+      {
         "symbol": "JSWSTEEL",
         "name": "JSW Steel",
         "sector": "Metals",
@@ -3474,72 +3542,6 @@
           "top_headline": "JSW Steel aims to eliminate iron ore imports as domestic supply improves",
           "top_source": "Mint Companies",
           "top_link": "https://www.livemint.com/companies/jsw-steel-iron-ore-imports-domestic-mining-nmdc-steel-captive-mines-bigmint-steel-capacity-logistics-11787278557955.html"
-        }
-      },
-      {
-        "symbol": "KOTAKBANK",
-        "name": "Kotak Mahindra Bank",
-        "sector": "Banking",
-        "action": "HOLD",
-        "verdict": "HOLD",
-        "score": 52,
-        "rsi": 56.2,
-        "trend": "Above 200 SMA",
-        "reason": "Above 200 SMA",
-        "narrative": "KOTAKBANK scores 52/100 on our engine. Price has reclaimed its 200-day average \u2014 the first hurdle for any recovery. But the 50-day hasn't confirmed yet, so this is early days. The momentum profile is constructive. RSI at 56 means the move is early-to-mid phase, not late innings. Above-average volume (1.6x) adds weight to the move. The tape is chopping sideways with 54% breadth. Stock-picking matters more than market direction here. Banking is lagging the broader tape (score 25) \u2014 an extra headwind. Bull case: momentum carries to \u20b9419 if volume confirms. Bear case: fades below \u20b9387 \u2014 failed rally territory. Needs to resolve \u20b9391\u2013\u20b9412 before a directional bet pays. Verdict: HOLD. Own it? Let it work. Don't own it? Cleaner entries exist elsewhere. Outlook: Neutral \u2192 Neutral \u2192 Neutral.",
-        "forecasts": {
-          "1d": {
-            "label": "Tomorrow",
-            "days": 1,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 395.74,
-              "mid": 402.8,
-              "high": 409.86,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Above 200 SMA setup, score 52/100",
-            "primary_risk": "Gap risk at open; size positions accordingly"
-          },
-          "1w": {
-            "label": "1 Week",
-            "days": 5,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 387.01,
-              "mid": 402.8,
-              "high": 418.59,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Range-bound week; Above 200 SMA bias",
-            "primary_risk": "Regime shift or sector rotation could invalidate setup"
-          },
-          "1m": {
-            "label": "1 Month",
-            "days": 21,
-            "bias": "Neutral",
-            "confidence": "Low",
-            "composite": 52.0,
-            "price_band": {
-              "low": 370.44,
-              "mid": 402.8,
-              "high": 435.16,
-              "move_pct_mid": 0.0
-            },
-            "catalyst": "Consolidation phase in SIDEWAYS regime",
-            "primary_risk": "Macro shocks or earnings surprises are the biggest swing factor"
-          }
-        },
-        "news_info": {
-          "score": 0,
-          "label": "NEUTRAL",
-          "count": 0,
-          "modifier": 0,
-          "top_headline": null
         }
       },
       {
@@ -3783,7 +3785,7 @@
         "avg_score": 31.3,
         "count": 3,
         "trend": "down",
-        "news_count": 5,
+        "news_count": 4,
         "news_label": "BULLISH"
       },
       {
@@ -3796,11 +3798,11 @@
       },
       {
         "sector": "Banking",
-        "avg_score": 25.5,
+        "avg_score": 25.8,
         "count": 6,
         "trend": "down",
-        "news_count": 26,
-        "news_label": "BULLISH"
+        "news_count": 28,
+        "news_label": "BEARISH"
       },
       {
         "sector": "Automobiles",
@@ -3836,7 +3838,7 @@
       },
       {
         "sector": "Conglomerate",
-        "avg_score": 17.0,
+        "avg_score": 18.0,
         "count": 1,
         "trend": "down",
         "news_count": 0,
@@ -3847,8 +3849,8 @@
         "avg_score": 17.0,
         "count": 1,
         "trend": "down",
-        "news_count": 10,
-        "news_label": "BULLISH"
+        "news_count": 6,
+        "news_label": "NEUTRAL"
       }
     ],
     "action_plan": [
@@ -3920,28 +3922,6 @@
         "link": "https://economictimes.indiatimes.com/markets/cryptocurrency/crypto-news/bitcoin-jumps-9-in-a-single-day-to-cross-79k-as-institutional-flows-regulatory-optimism-fuel-crypto-rally/articleshow/133399434.cms"
       },
       {
-        "title": "Aditya Infotech shares can rally up to 27%? Why Motilal Oswal initiated coverage on the stock",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-21T07:25:41+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/aditya-infotech-shares-can-rally-up-to-27-why-motilal-oswal-initiated-coverage-on-the-stock/articleshow/133396815.cms"
-      },
-      {
-        "title": "Air India international traffic plunges 36% as war, airspace curbs hit overseas operations",
-        "source": "ET Industry",
-        "category": "sector",
-        "sentiment": "BEARISH",
-        "tickers": [
-          "RELIANCE"
-        ],
-        "sectors": [],
-        "published": "2026-08-21T02:59:56+00:00",
-        "link": "https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/air-india-international-traffic-plunges-36-as-war-airspace-curbs-hit-overseas-operations/articleshow/133391381.cms"
-      },
-      {
         "title": "Jefferies retains Buy on Crompton Greaves; sees up to 29% upside",
         "source": "ET Markets",
         "category": "market",
@@ -3950,26 +3930,6 @@
         "sectors": [],
         "published": "2026-08-21T08:02:17+00:00",
         "link": "https://economictimes.indiatimes.com/markets/stocks/news/jefferies-retains-buy-on-crompton-greaves-sees-up-to-29-upside/articleshow/133397789.cms"
-      },
-      {
-        "title": "Why Jefferies\u2019 Chris Wood sees gold as the second-best hedge amid Iran war and fiscal risks",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-21T07:15:56+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/why-jefferies-chris-wood-sees-gold-as-the-second-best-hedge-amid-iran-war-and-fiscal-risks/articleshow/133396588.cms"
-      },
-      {
-        "title": "Kronox Lab Sciences shares rally 32% in 2 days as Indo Borax, Zenrock Chemicals eye stake acquisition",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BULLISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-21T06:31:48+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/stocks/news/kronox-lab-sciences-shares-rally-32-in-2-days-as-indo-borax-zenrock-chemicals-eye-stake-acquisition/articleshow/133395336.cms"
       },
       {
         "title": "Carlsberg India posts strong volume growth in H1, IPO process underway: Global CEO Aarup-Andersen.",
@@ -3982,6 +3942,16 @@
         "link": "https://economictimes.indiatimes.com/industry/cons-products/liquor/carlsberg-india-posts-strong-volume-growth-in-h1-ipo-process-underway-global-ceo-aarup-andersen-/articleshow/133396666.cms"
       },
       {
+        "title": "Shanti Gold among 7 consumer discretionary stocks that hit 52-week highs and surged up to 37% in a month",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-08-21T12:16:11+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/shanti-gold-among-7-consumer-discretionary-stocks-that-hit-52-week-highs-and-surged-up-to-37-in-a-month/slideshow/133404296.cms"
+      },
+      {
         "title": "Missed the AI rally? After bumper 600% market debut, Chinese robot maker Unitree's CEO still feels a software leap is years away",
         "source": "ET Markets",
         "category": "market",
@@ -3989,7 +3959,7 @@
         "tickers": [],
         "sectors": [],
         "published": "2026-08-21T08:45:35+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/missed-the-ai-rally-after-bumper-600-market-debut-chinese-robot-maker-unitrees-ceo-still-feels-a-software-leap-is-years-away/articleshow/133398647.cms"
+        "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/missed-the-ai-rally-after-bumper-600-market-debut-chinese-robot-maker-unitrees-ceo-still-feels-a-software-leap-is-years-away/articleshow/133398647.cms"
       },
       {
         "title": "80% rally in YTD! Ratnaveer Precision Engineering declares rights issue worth \u20b9330 crore",
@@ -4024,22 +3994,58 @@
         "link": "https://www.livemint.com/market/stock-market-news/welspun-corp-share-price-nearly-186-returns-in-2026-alone-whats-driving-the-rally-11787288613073.html"
       },
       {
-        "title": "NCLT admits Pen India's plea against Reliance Entertainment Studios",
-        "source": "ET Industry",
-        "category": "sector",
+        "title": "RBI imposes monetary penalty on Shri Ram Finance Corporation Private Limited",
+        "source": "RBI Press",
+        "category": "policy",
         "sentiment": "BEARISH",
         "tickers": [],
+        "sectors": [
+          "Banking"
+        ],
+        "published": "2026-08-21T13:23:08.437452+00:00",
+        "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63422"
+      },
+      {
+        "title": "RBI imposes monetary penalty on Progfin Private Limited",
+        "source": "RBI Press",
+        "category": "policy",
+        "sentiment": "BEARISH",
+        "tickers": [],
+        "sectors": [
+          "Banking"
+        ],
+        "published": "2026-08-21T13:23:08.437580+00:00",
+        "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63421"
+      },
+      {
+        "title": "US Treasury intervention gives Japanese bonds temporary relief as 3% yield looms",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BEARISH",
+        "tickers": [
+          "PERSISTENT"
+        ],
         "sectors": [],
-        "published": "2026-08-20T18:24:54+00:00",
-        "link": "https://economictimes.indiatimes.com/industry/media/entertainment/media/nclt-admits-pen-indias-plea-against-reliance-entertainment-studios/articleshow/133386080.cms"
+        "published": "2026-08-21T09:53:21+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/us-treasury-intervention-gives-japanese-bonds-temporary-relief-as-3-yield-looms/articleshow/133400257.cms"
+      },
+      {
+        "title": "Bharat Coking Coal shares jump over 7%. What's behind the sharp surge?",
+        "source": "ET Markets",
+        "category": "market",
+        "sentiment": "BULLISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-08-21T07:46:26+00:00",
+        "link": "https://economictimes.indiatimes.com/markets/stocks/news/bharat-coking-coal-shares-jump-over-7-whats-behind-the-sharp-surge/articleshow/133397234.cms"
       }
     ],
     "news_stats": {
-      "total_items": 273,
+      "total_items": 269,
       "sources": 11,
-      "with_tickers": 34,
-      "bullish": 91,
-      "bearish": 43
+      "with_tickers": 31,
+      "bullish": 88,
+      "bearish": 44
     }
   }
 }
