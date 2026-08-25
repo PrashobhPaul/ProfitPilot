@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:18:53.643942+05:30",
+  "generated_at": "2026-08-25T16:33:26.592832+05:30",
   "market_date": "2026-08-25",
   "analysis_version": "5.0-rules+news+forecast+narrative",
   "engine": "rules_engine_v5_news_fusion",
@@ -3569,10 +3569,10 @@
     }
   ],
   "daily_brief": {
-    "generated_at": "2026-08-25T16:20:45.232440+05:30",
+    "generated_at": "2026-08-25T16:35:34.143054+05:30",
     "date": "2026-08-25",
     "source": "rules_engine_v4_news_fusion",
-    "headline": "SIDEWAYS tape \u2014 3 ADDs, 1 cautious; 145 macro items in focus",
+    "headline": "SIDEWAYS tape \u2014 3 ADDs, 0 cautious; 149 macro items in focus",
     "regime": {
       "label": "SIDEWAYS",
       "breadth_pct": 54.2,
@@ -3582,8 +3582,8 @@
     },
     "macro_context": {
       "label": "NEUTRAL",
-      "score": -0.26,
-      "count": 145,
+      "score": -0.24,
+      "count": 149,
       "highlights": [
         {
           "title": "Rupee falls 4 paise to 95.74 against US dollar in early trade",
@@ -3641,19 +3641,19 @@
         }
       ]
     },
-    "key_insight": "Range-bound tape with 54% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 145 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Electronics leads at 61 while Oil & Gas lags at 0 \u2014 a stock-picker's tape.",
+    "key_insight": "Range-bound tape with 54% breadth. No directional edge \u2014 let existing positions work, avoid fresh breakout trades, save dry powder for the next regime shift. Macro flow is neutral with 149 policy/global items in focus \u2014 factor this into position sizing. Sector dispersion is wide: Electronics leads at 61 while Oil & Gas lags at 0 \u2014 a stock-picker's tape.",
     "narrative": [
       "Regime: SIDEWAYS \u00b7 breadth 54% \u00b7 median momentum +0.6% \u00b7 ATR 1.7%",
-      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 44 HOLD \u00b7 1 EXIT",
-      "Macro tone: NEUTRAL from 145 items across 11 sources",
+      "Book: 3 ADD \u00b7 0 ACCUMULATE \u00b7 45 HOLD \u00b7 0 EXIT",
+      "Macro tone: NEUTRAL from 149 items across 11 sources",
       "Strongest sector: Electronics (avg score 61)"
     ],
     "market_pulse": {
       "total_analyzed": 48,
       "strong_buys": 0,
       "actionable_buys": 3,
-      "holds": 44,
-      "risk_alerts": 1,
+      "holds": 45,
+      "risk_alerts": 0,
       "earnings_blackouts": 0,
       "do_not_trade": 0
     },
@@ -4186,16 +4186,6 @@
         "verdict": "HOLD"
       },
       {
-        "symbol": "HCLTECH",
-        "name": "HCL Technologies",
-        "action": "EXIT",
-        "flags": [
-          "rule \u2192 EXIT",
-          "negative news (1)"
-        ],
-        "verdict": "EXIT"
-      },
-      {
         "symbol": "TRENT",
         "name": "Trent",
         "action": "HOLD",
@@ -4297,11 +4287,19 @@
       },
       {
         "sector": "Banking",
-        "avg_score": 25.7,
+        "avg_score": 25.5,
         "count": 6,
         "trend": "down",
         "news_count": 33,
         "news_label": "BEARISH"
+      },
+      {
+        "sector": "Defence",
+        "avg_score": 22.0,
+        "count": 2,
+        "trend": "down",
+        "news_count": 3,
+        "news_label": "BULLISH"
       },
       {
         "sector": "Conglomerate",
@@ -4310,14 +4308,6 @@
         "trend": "down",
         "news_count": 0,
         "news_label": "NEUTRAL"
-      },
-      {
-        "sector": "Defence",
-        "avg_score": 20.0,
-        "count": 2,
-        "trend": "down",
-        "news_count": 2,
-        "news_label": "BULLISH"
       },
       {
         "sector": "Telecom",
@@ -4329,17 +4319,6 @@
       }
     ],
     "action_plan": [
-      {
-        "priority": 1,
-        "type": "EXIT",
-        "symbol": "HCLTECH",
-        "name": "HCL Technologies",
-        "price": 1315.8,
-        "instruction": "Market order at open \u2014 rule ladder triggered.",
-        "reason": "EMA 12/26 bullish",
-        "confidence": "LOW",
-        "verdict": "EXIT"
-      },
       {
         "priority": 3,
         "type": "ADD",
@@ -4432,16 +4411,6 @@
         "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-porsche-stock-falls-as-mhp-sale-weak-revenue-keep-investors-on-edge/articleshow/133495008.cms"
       },
       {
-        "title": "Global Market: Nikkei drops as Japanese chip stocks track US tech selloff",
-        "source": "ET Markets",
-        "category": "market",
-        "sentiment": "BEARISH",
-        "tickers": [],
-        "sectors": [],
-        "published": "2026-08-25T05:35:53+00:00",
-        "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/global-market-nikkei-drops-as-japanese-chip-stocks-track-us-tech-selloff/articleshow/133494573.cms"
-      },
-      {
         "title": "Why did FACT, RCF, NFL and other fertiliser stocks rally up to 14% today? Explained",
         "source": "Mint Markets",
         "category": "market",
@@ -4482,7 +4451,7 @@
         "sectors": [
           "Banking"
         ],
-        "published": "2026-08-25T10:48:54.610691+00:00",
+        "published": "2026-08-25T11:03:27.548445+00:00",
         "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63435"
       },
       {
@@ -4494,7 +4463,7 @@
         "sectors": [
           "Banking"
         ],
-        "published": "2026-08-25T10:48:54.610813+00:00",
+        "published": "2026-08-25T11:03:27.548572+00:00",
         "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63434"
       },
       {
@@ -4506,16 +4475,26 @@
         "sectors": [
           "Banking"
         ],
-        "published": "2026-08-25T10:48:54.610927+00:00",
+        "published": "2026-08-25T11:03:27.548683+00:00",
         "link": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=63433"
+      },
+      {
+        "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+        "source": "BBC Business",
+        "category": "global",
+        "sentiment": "BEARISH",
+        "tickers": [],
+        "sectors": [],
+        "published": "2026-08-23T19:11:30+00:00",
+        "link": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss"
       }
     ],
     "news_stats": {
-      "total_items": 266,
+      "total_items": 269,
       "sources": 11,
-      "with_tickers": 30,
-      "bullish": 69,
-      "bearish": 60
+      "with_tickers": 31,
+      "bullish": 72,
+      "bearish": 59
     }
   }
 }
